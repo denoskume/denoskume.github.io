@@ -5,148 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Denos Kume - Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        nav {
-            margin-top: 20px;
-            text-align: center;
-        }
-        nav a {
-            text-decoration: none;
-            color: #333;
-            margin: 0 15px;
-            font-size: 1.2em;
-        }
-        section {
-            margin-bottom: 40px;
-        }
-        h2 {
-            color: #333;
-            border-bottom: 2px solid #e2e2e2;
-            padding-bottom: 10px;
-        }
-        p {
-            line-height: 1.6;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        ul li {
-            background-color: #f9f9f9;
-            padding: 10px;
-            margin-bottom: 10px;
-            border-left: 4px solid #333;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            margin-top: 20px;
-        }
-        footer a {
-            color: #fff;
-            text-decoration: none;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="container">
             <h1>Denos Kume - Portfolio</h1>
             <nav>
-                <a href="#home">Home</a>
-                <a href="#about">About Me</a>
-                <a href="#education">Education</a>
-                <a href="#training">Training</a>
-                <a href="#certification">Certification</a>
-                <a href="#contact">Contact</a>
-                <a href="#social-media">Social Media</a>
+                <a href="#" onclick="loadContent('home')">Home</a>
+                <a href="#" onclick="loadContent('about')">About Me</a>
+                <a href="#" onclick="loadContent('education')">Education</a>
+                <a href="#" onclick="loadContent('training')">Training</a>
+                <a href="#" onclick="loadContent('certification')">Certification</a>
+                <a href="#" onclick="loadContent('contact')">Contact</a>
+                <a href="#" onclick="loadContent('social')">Social Media</a>
             </nav>
         </div>
     </header>
 
-    <div class="container">
-        <!-- Home Section -->
-        <section id="home">
-            <h2>Home</h2>
-            <p>Welcome to my portfolio! I am Denos Kume, a passionate Data Analyst and Embedded Systems Enthusiast with a strong foundation in programming, data analytics, and IoT systems. This portfolio showcases my education, training, certifications, and projects.</p>
-        </section>
-
-        <!-- About Me Section -->
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I hold a BSc in Computer Science and Electronics, with a focus on data analysis and embedded systems. My skills include Python, SQL, Power BI, AI, and microcontroller programming. I am passionate about using data to drive decision-making and innovative technology solutions.</p>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education">
-            <h2>Education</h2>
-            <ul>
-                <li><strong>BSc in Computer Science & Electronics</strong> - University of XYZ (Graduated 2024)</li>
-                <li><strong>Relevant Courses:</strong> Data Structures, Microcontroller Programming, Internet of Things (IoT), Data Analysis, Artificial Intelligence</li>
-            </ul>
-        </section>
-
-        <!-- Training Section -->
-        <section id="training">
-            <h2>Training</h2>
-            <ul>
-                <li><strong>Data Analytics with Python</strong> - Simplilearn (2024)</li>
-                <li><strong>Power BI and Data Visualization</strong> - Coursera (2024)</li>
-                <li><strong>Introduction to AI and Machine Learning</strong> - Udemy (2023)</li>
-            </ul>
-        </section>
-
-        <!-- Certification Section -->
-        <section id="certification">
-            <h2>Certification</h2>
-            <ul>
-                <li><strong>Google Data Analytics Professional Certificate</strong> - Coursera (2024)</li>
-                <li><strong>Certified Data Analyst</strong> - Simplilearn (2024)</li>
-                <li><strong>Python Programming Certification</strong> - Python Institute (2023)</li>
-            </ul>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>If you have any questions or would like to connect, feel free to reach out to me at <strong>denoskume@example.com</strong>.</p>
-        </section>
-
-        <!-- Social Media Section -->
-        <section id="social-media">
-            <h2>Social Media</h2>
-            <p>Follow me on <a href="https://linkedin.com/in/denoskume" target="_blank">LinkedIn</a> for updates on my projects and professional journey.</p>
-        </section>
+    <div id="content" class="container">
+        <!-- Content will dynamically load here -->
     </div>
 
     <footer>
         <p>&copy; 2024 Denos Kume | <a href="https://denoskume.github.io">denoskume.github.io</a></p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
