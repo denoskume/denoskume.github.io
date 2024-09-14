@@ -30,7 +30,16 @@
                     <li><a href="#" onclick="loadContent('training')">Training</a></li>
                     <li><a href="#" onclick="loadContent('certification')">Certification</a></li>
                     <li><a href="#" onclick="loadContent('contact')">Contact</a></li>
-                    <li><a href="#" onclick="loadContent('social')">Social Media</a></li>
+                    <!-- Social Media Dropdown Menu -->
+                    <li class="dropdown">
+                        <a href="#">Social Media &#9662;</a> <!-- Down arrow symbol -->
+                        <div class="dropdown-content">
+                            <a href="https://www.linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a>
+                            <a href="https://github.com/your-github" target="_blank">GitHub</a>
+                            <a href="https://twitter.com/your-twitter" target="_blank">Twitter</a>
+                            <a href="https://www.instagram.com/your-instagram" target="_blank">Instagram</a>
+                        </div>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -46,7 +55,7 @@
         <a href="#" onclick="loadContent('training')">Training</a>
         <a href="#" onclick="loadContent('certification')">Certification</a>
         <a href="#" onclick="loadContent('contact')">Contact</a>
-        <a href="#" onclick="loadContent('social')">Social Media</a>
+        <a href="#">Social Media</a> <!-- No dropdown for mobile -->
     </div>
 
     <!-- Main Content Area -->
@@ -59,7 +68,31 @@
         <p>&copy; 2024 Denos Kume | <a href="https://denoskume.github.io">denoskume.github.io</a></p>
     </footer>
 
-    <!-- JavaScript for Side Navigation -->
-    <script src="script.js"></script>
+    <!-- JavaScript for Side Navigation and Dynamic Content Loading -->
+    <script>
+        // Open and close side navigation for mobile
+        function openNav() {
+            document.getElementById("sideNav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("sideNav").style.width = "0";
+        }
+
+        // Function to load content dynamically based on the clicked link
+        function loadContent(page) {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                document.getElementById("content").innerHTML = this.responseText;
+            };
+            xhttp.open("GET", `${page}.html`, true); // Load the corresponding HTML file dynamically
+            xhttp.send();
+        }
+
+        // Load the home content by default when the page first loads
+        window.onload = function() {
+            loadContent('home'); // Load 'home.html' by default
+        };
+    </script>
 </body>
 </html>
