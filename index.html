@@ -16,7 +16,7 @@
       function googleTranslateElementInit() {
         new google.translate.TranslateElement({
           pageLanguage: 'en', // Default language of the page
-          includedLanguages: 'en,fr,es', // Languages you want to support (English, French, Spanish)
+          includedLanguages: 'en,fr,es', // Languages to support (English, French, Spanish)
           layout: google.translate.TranslateElement.InlineLayout.SIMPLE
         }, 'google_translate_element');
       }
@@ -31,8 +31,8 @@
             <!-- Logo -->
             <img src="logo.png" alt="Denos Kume Logo" class="logo">
             
-            <!-- Language Selector (Google Translate) -->
-            <div id="google_translate_element"></div>
+            <!-- Google Translate Element (aligned right) -->
+            <div id="google_translate_element" style="float: right; margin-right: 20px;"></div>
 
             <!-- Hamburger Menu Icon (for mobile) -->
             <div class="hamburger" onclick="openNav()">
@@ -99,7 +99,7 @@
     <script>
         // Open and close side navigation for mobile
         function openNav() {
-            document.getElementById("sideNav").style.width = "125px"; // Adjusted width to 125px
+            document.getElementById("sideNav").style.width = "150px"; // Adjusted width to 150px
         }
 
         function closeNav() {
@@ -127,7 +127,7 @@
             var hamburger = document.querySelector('.hamburger');
             
             // If the menu is open and the click is outside the sideNav or hamburger, close the sideNav
-            if (sideNav.style.width === "125px" && !sideNav.contains(event.target) && !hamburger.contains(event.target)) {
+            if (sideNav.style.width === "150px" && !sideNav.contains(event.target) && !hamburger.contains(event.target)) {
                 closeNav();
             }
         });
@@ -140,7 +140,6 @@
         document.querySelector('.hamburger').addEventListener('click', function(event) {
             event.stopPropagation(); // Prevents clicks on the hamburger from closing the sideNav
         });
-
     </script>
 </body>
 </html>
