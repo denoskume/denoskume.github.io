@@ -14,7 +14,14 @@
         <div class="container">
             <!-- Logo -->
             <img src="logo.png" alt="Denos Kume Logo" class="logo">
-            <nav>
+            
+            <!-- Hamburger Menu Icon -->
+            <div class="hamburger" onclick="toggleMenu()">
+                &#9776; <!-- This is the hamburger icon (☰) -->
+            </div>
+            
+            <!-- Navigation Menu -->
+            <nav id="nav-menu">
                 <ul>
                     <li><a href="#" onclick="loadContent('home')">Home</a></li>
                     <li><a href="#" onclick="loadContent('about')">About Me</a></li>
@@ -58,7 +65,7 @@
         <p>&copy; 2024 Denos Kume | <a href="https://denoskume.github.io">denoskume.github.io</a></p>
     </footer>
 
-    <!-- JavaScript file that handles dynamic content loading -->
+    <!-- JavaScript file that handles dynamic content loading and menu toggle -->
     <script src="script.js"></script>
 </body>
 </html>
