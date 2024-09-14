@@ -27,22 +27,23 @@ header {
 
 /* Hamburger Icon */
 .hamburger {
+    display: none; /* Hidden by default on larger screens */
     font-size: 30px;
     cursor: pointer;
     color: white;
 }
 
-/* Side Navigation Menu */
+/* Side Navigation Menu (for mobile view) */
 .sidenav {
-    height: 100%; /* Full height */
-    width: 0; /* Initial width of 0, hidden by default */
+    height: 100%;
+    width: 0;
     position: fixed;
     z-index: 1;
     top: 0;
-    right: 0; /* Slide in from the right */
-    background-color: #007bff; /* Background color for the menu */
+    right: 0;
+    background-color: #007bff;
     overflow-x: hidden;
-    transition: 0.5s; /* Animation effect */
+    transition: 0.5s;
     padding-top: 60px;
 }
 
@@ -66,14 +67,49 @@ header {
     font-size: 36px;
 }
 
-/* Main Content */
-#content {
-    padding: 20px;
+/* Navigation Menu for Desktop */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
 }
 
-/* Responsive Adjustments */
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: #0056b3;
+    border-radius: 5px;
+}
+
+/* Hide the full navigation menu and display hamburger for smaller screens */
 @media (max-width: 768px) {
-    .logo {
-        max-width: 80px;
+    nav ul {
+        display: none; /* Hide full menu on mobile */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger on mobile */
+    }
+}
+
+/* For larger screens (desktop/tablets), show the full navigation menu */
+@media (min-width: 769px) {
+    .hamburger {
+        display: none; /* Hide hamburger on larger screens */
+    }
+
+    .sidenav {
+        display: none; /* Hide sidenav for larger screens */
     }
 }
