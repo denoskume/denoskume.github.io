@@ -5,6 +5,7 @@ body {
     padding: 0;
 }
 
+/* Container */
 .container {
     display: flex;
     justify-content: space-between;
@@ -16,19 +17,22 @@ body {
 
 /* Header Styling */
 header {
-    background-color: #007bff; /* Blue background for header */
+    background-color: #007bff;
     color: white;
 }
 
 .logo {
-    height: 50px; /* Adjust logo height */
+    height: 50px;
+    max-width: 100px; /* Ensure the logo scales properly */
 }
 
+/* Nav Styling */
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
+    flex-wrap: wrap; /* Flex wrap to handle mobile better */
     gap: 15px;
 }
 
@@ -74,10 +78,11 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
+    background-color: #007bff;
     background-image: url('background.jpg'); /* Replace with your background image */
     background-size: cover;
     background-position: center;
-    height: 400px;
+    height: 300px; /* Adjust height for mobile */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,13 +91,13 @@ nav ul li a:hover {
 
 .hero-text h1 {
     color: white;
-    font-size: 3em;
+    font-size: 2.5em;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-text p {
     color: white;
-    font-size: 1.2em;
+    font-size: 1.1em;
     margin-top: 10px;
     max-width: 600px;
 }
@@ -113,28 +118,39 @@ footer a {
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column;
+        flex-direction: column; /* Stack nav items vertically on smaller screens */
+        padding-left: 0; /* Adjust padding for mobile */
     }
 
     .hero-text h1 {
-        font-size: 2.5em;
+        font-size: 2em; /* Adjust size for smaller screens */
     }
 
-    .hero-text p {
-        font-size: 1.1em;
+    .hero {
+        height: 250px; /* Smaller height for mobile */
+    }
+
+    .logo {
+        max-width: 80px; /* Adjust logo size for mobile */
+        height: auto;
     }
 }
 
 @media (max-width: 480px) {
     .hero {
-        height: 300px;
+        height: 200px; /* Smaller height for very small devices */
     }
 
     .hero-text h1 {
-        font-size: 2em;
+        font-size: 1.5em; /* Further adjust text size for smaller devices */
     }
 
     .hero-text p {
-        font-size: 1em;
+        font-size: 1em; /* Reduce font size for better readability on small screens */
+    }
+
+    nav ul {
+        flex-direction: column; /* Ensure nav items stack vertically on mobile */
+        padding: 0;
     }
 }
