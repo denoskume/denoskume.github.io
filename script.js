@@ -11,3 +11,8 @@ function loadContent(page) {
 window.onload = function() {
     loadContent('home'); // This will load 'home.html' by default
 };
+// Toggle the display of the navigation menu
+function toggleMenu() {
+    const header = document.querySelector('header');
+    header.classList.toggle('show-menu');
+}
