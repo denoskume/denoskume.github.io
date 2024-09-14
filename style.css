@@ -23,16 +23,15 @@ header {
 
 .logo {
     height: 50px;
-    max-width: 100px; /* Ensure the logo scales properly */
+    max-width: 100px;
 }
 
-/* Nav Styling */
+/* Hide the full navigation menu on mobile */
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    flex-wrap: wrap; /* Flex wrap to handle mobile better */
     gap: 15px;
 }
 
@@ -47,9 +46,12 @@ nav ul li a {
     font-weight: bold;
 }
 
-nav ul li a:hover {
-    background-color: #0056b3;
-    border-radius: 5px;
+/* Hamburger Icon */
+.hamburger {
+    display: none; /* Hidden by default, only shown on mobile */
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
 }
 
 /* Dropdown Menu */
@@ -82,7 +84,7 @@ nav ul li a:hover {
     background-image: url('background.jpg'); /* Replace with your background image */
     background-size: cover;
     background-position: center;
-    height: 300px; /* Adjust height for mobile */
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,40 +119,48 @@ footer a {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+    .logo {
+        max-width: 80px;
+    }
+
+    /* Hide the regular menu and show the hamburger icon */
     nav ul {
-        flex-direction: column; /* Stack nav items vertically on smaller screens */
-        padding-left: 0; /* Adjust padding for mobile */
+        display: none;
+        flex-direction: column;
+        padding-left: 0;
+        background-color: #007bff;
+        width: 100%; /* Make the dropdown take full width on mobile */
+        text-align: center;
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger on mobile */
     }
 
     .hero-text h1 {
-        font-size: 2em; /* Adjust size for smaller screens */
+        font-size: 2em;
     }
 
     .hero {
-        height: 250px; /* Smaller height for mobile */
+        height: 250px;
     }
+}
 
-    .logo {
-        max-width: 80px; /* Adjust logo size for mobile */
-        height: auto;
-    }
+/* When the hamburger is clicked, show the menu */
+.show-menu nav ul {
+    display: flex;
 }
 
 @media (max-width: 480px) {
     .hero {
-        height: 200px; /* Smaller height for very small devices */
+        height: 200px;
     }
 
     .hero-text h1 {
-        font-size: 1.5em; /* Further adjust text size for smaller devices */
+        font-size: 1.5em;
     }
 
     .hero-text p {
-        font-size: 1em; /* Reduce font size for better readability on small screens */
-    }
-
-    nav ul {
-        flex-direction: column; /* Ensure nav items stack vertically on mobile */
-        padding: 0;
+        font-size: 1em;
     }
 }
