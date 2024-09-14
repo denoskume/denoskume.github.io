@@ -84,7 +84,7 @@
     <script>
         // Open and close side navigation for mobile
         function openNav() {
-            document.getElementById("sideNav").style.width = "150px"; // Adjusted width to 150px
+            document.getElementById("sideNav").style.width = "95px"; // Adjusted width to 150px
         }
 
         function closeNav() {
@@ -112,7 +112,7 @@
             var hamburger = document.querySelector('.hamburger');
             
             // If the menu is open and the click is outside the sideNav or hamburger, close the sideNav
-            if (sideNav.style.width === "150px" && !sideNav.contains(event.target) && !hamburger.contains(event.target)) {
+            if (sideNav.style.width === "95px" && !sideNav.contains(event.target) && !hamburger.contains(event.target)) {
                 closeNav();
             }
         });
