@@ -16,7 +16,7 @@ window.onload = function() {
 // Function to open the side navigation menu
 function openNav() {
     console.log("Opening side navigation"); // Debugging log
-    document.getElementById("sideNav").style.width = "250px"; // Opens the side navigation to 250px
+    document.getElementById("sideNav").style.width = "200px"; // Opens the side navigation to 250px
 }
 
 // Function to close the side navigation menu
