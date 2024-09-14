@@ -5,7 +5,6 @@ body {
     padding: 0;
 }
 
-/* Container */
 .container {
     display: flex;
     justify-content: space-between;
@@ -26,141 +25,55 @@ header {
     max-width: 100px;
 }
 
-/* Hide the full navigation menu on mobile */
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 15px;
-}
-
-nav ul li {
-    position: relative;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    font-weight: bold;
-}
-
 /* Hamburger Icon */
 .hamburger {
-    display: none; /* Hidden by default, only shown on mobile */
     font-size: 30px;
     cursor: pointer;
     color: white;
 }
 
-/* Dropdown Menu */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #007bff;
-    min-width: 150px;
+/* Side Navigation Menu */
+.sidenav {
+    height: 100%; /* Full height */
+    width: 0; /* Initial width of 0, hidden by default */
+    position: fixed;
     z-index: 1;
+    top: 0;
+    right: 0; /* Slide in from the right */
+    background-color: #007bff; /* Background color for the menu */
+    overflow-x: hidden;
+    transition: 0.5s; /* Animation effect */
+    padding-top: 60px;
 }
 
-.dropdown-content a {
-    color: white;
-    padding: 10px;
+.sidenav a {
+    padding: 10px 15px;
     text-decoration: none;
+    font-size: 20px;
+    color: white;
     display: block;
+    transition: 0.3s;
 }
 
-.dropdown-content a:hover {
+.sidenav a:hover {
     background-color: #0056b3;
 }
 
-/* Hero Section */
-.hero {
-    background-color: #007bff;
-    background-image: url('background.jpg'); /* Replace with your background image */
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 36px;
 }
 
-.hero-text h1 {
-    color: white;
-    font-size: 2.5em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.hero-text p {
-    color: white;
-    font-size: 1.1em;
-    margin-top: 10px;
-    max-width: 600px;
-}
-
-/* Footer Styling */
-footer {
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
+/* Main Content */
+#content {
+    padding: 20px;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .logo {
         max-width: 80px;
-    }
-
-    /* Hide the regular menu and show the hamburger icon */
-    nav ul {
-        display: none;
-        flex-direction: column;
-        padding-left: 0;
-        background-color: #007bff;
-        width: 100%; /* Make the dropdown take full width on mobile */
-        text-align: center;
-    }
-
-    .hamburger {
-        display: block; /* Show hamburger on mobile */
-    }
-
-    .hero-text h1 {
-        font-size: 2em;
-    }
-
-    .hero {
-        height: 250px;
-    }
-}
-
-/* When the hamburger is clicked, show the menu */
-.show-menu nav ul {
-    display: flex;
-}
-
-@media (max-width: 480px) {
-    .hero {
-        height: 200px;
-    }
-
-    .hero-text h1 {
-        font-size: 1.5em;
-    }
-
-    .hero-text p {
-        font-size: 1em;
     }
 }
