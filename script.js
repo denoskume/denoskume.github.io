@@ -56,23 +56,3 @@ document.querySelector('.hamburger').addEventListener('click', function(event) {
     console.log("Click on hamburger, opening sideNav and stopping propagation");
 });
 
-// Function to open the social media pop-up
-document.getElementById("socialMediaBtn").addEventListener("click", function() {
-    console.log("Opening social media popup"); // Debugging log
-    document.getElementById("socialMediaPopup").style.display = "flex"; // Show the pop-up
-});
-
-// Function to close the pop-up
-function closePopup() {
-    console.log("Closing social media popup"); // Debugging log
-    document.getElementById("socialMediaPopup").style.display = "none"; // Hide the pop-up
-}
-
-// Close the pop-up if the user clicks outside of the content
-window.addEventListener('click', function(event) {
-    const popup = document.getElementById('socialMediaPopup');
-    if (event.target === popup) {
-        popup.style.display = "none";
-        console.log("Click outside social media popup, closing it");
-    }
-});
