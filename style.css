@@ -7,8 +7,10 @@ body {
     color: #333;
 }
 
+/* Make the container adapt to screen size */
 .container {
-    max-width: 1100px;
+    width: 90%;  /* Adaptive width: takes 90% of the viewport width */
+    max-width: 1200px; /* Maximum width for larger screens */
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
@@ -87,9 +89,9 @@ body {
 }
 
 /* Responsive Adjustments */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .container {
-        padding: 15px;
+        width: 95%;  /* Slightly more width for tablets */
     }
 
     .welcome h2 {
@@ -117,13 +119,14 @@ body {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .container {
-        padding: 10px;
+        width: 100%;  /* Full width on mobile devices */
+        padding: 15px;
     }
 
     .welcome h2 {
-        font-size: 1.5em;
+        font-size: 1.6em;
     }
 
     .welcome p {
@@ -144,5 +147,36 @@ body {
 
     .call-to-action p {
         font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;  /* Full width for smaller mobile screens */
+        padding: 10px;
+    }
+
+    .welcome h2 {
+        font-size: 1.4em;
+    }
+
+    .welcome p {
+        font-size: 0.9em;
+    }
+
+    .about h3, .skills h3, .projects-overview h3 {
+        font-size: 1.2em;
+    }
+
+    .about p, .skills li, .project-item p {
+        font-size: 0.8em;
+    }
+
+    .project-item h4 {
+        font-size: 1em;
+    }
+
+    .call-to-action p {
+        font-size: 0.9em;
     }
 }
