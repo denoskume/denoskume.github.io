@@ -3,8 +3,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4; /* Light background for contrast */
+    color: #333;
 }
 
+/* Container for Header and Navigation */
 .container {
     display: flex;
     justify-content: space-between;
@@ -16,8 +19,9 @@ body {
 
 /* Header Styling */
 header {
-    background-color: #007bff;
+    background-color: #007bff; /* Blue background */
     color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
 }
 
 /* Logo Styling */
@@ -40,7 +44,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex; /* Display as flex on desktop */
-    gap: 15px;
+    gap: 20px;
 }
 
 nav ul li {
@@ -57,6 +61,7 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #0056b3;
     border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 /* Side Navigation Menu (for mobile) */
@@ -91,6 +96,7 @@ nav ul li a:hover {
     top: 0;
     right: 15px;
     font-size: 36px;
+    cursor: pointer;
 }
 
 /* Media Query for Mobile (less than 768px) */
@@ -122,7 +128,7 @@ nav ul li a:hover {
 /* Hero Section Styling */
 .hero {
     background-color: #007bff;
-    background-image: url('background.jpg');
+    background-image: url('background.jpg'); /* Replace with the actual path */
     background-size: cover;
     background-position: center;
     height: 300px;
@@ -151,9 +157,37 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
+    margin-top: 30px;
 }
 
 footer a {
     color: white;
     text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Custom Button Styling */
+.button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Layout for Small Devices */
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 2em; /* Smaller font for mobile */
+    }
 }
