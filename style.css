@@ -1,65 +1,12 @@
-/* General Styles */
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
+    padding: 0;
     background-color: #f4f4f4;
     color: #333;
 }
 
-/* Header Styling */
-header {
-    background-color: #333; /* Dark background for the header */
-    color: #fff; /* White text for good contrast */
-    text-align: left;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-/* Logo Styling */
-.logo {
-    height: 50px; /* Adjust the size of the logo */
-    width: auto;  /* Keep the aspect ratio */
-    margin-right: 20px;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-/* Header title (Portfolio name) */
-header h1 {
-    margin: 0;
-    font-size: 2em;
-    display: inline-block;
-    vertical-align: middle;
-    color: #fff; /* Ensure header text is white */
-}
-
-/* Navigation Bar Styling */
-nav {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-}
-
-nav a {
-    color: #ffffff; /* White text */
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 1em;
-    padding: 10px 15px;
-    background-color: #444; /* Darker than header background */
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Hover Effect for Navigation Links */
-nav a:hover {
-    background-color: #61dafb; /* Light blue on hover */
-    color: #333; /* Text changes to dark for contrast */
-}
-
-/* Container Styling */
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -68,7 +15,7 @@ nav a:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Home Page Section Styles */
+/* Home Section Styling */
 .home-section {
     padding: 20px;
 }
@@ -139,17 +86,63 @@ nav a:hover {
     text-align: center;
 }
 
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
 
-/* Footer Styling */
-footer {
-    background-color: #333; /* Same as header background */
-    color: #fff; /* White text */
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
+    .welcome h2 {
+        font-size: 1.8em;
+    }
+
+    .welcome p {
+        font-size: 1.1em;
+    }
+
+    .about h3, .skills h3, .projects-overview h3 {
+        font-size: 1.6em;
+    }
+
+    .about p, .skills li, .project-item p {
+        font-size: 1em;
+    }
+
+    .project-item h4 {
+        font-size: 1.2em;
+    }
+
+    .call-to-action p {
+        font-size: 1.1em;
+    }
 }
 
-footer a {
-    color: #61dafb; /* Light blue for footer links */
-    text-decoration: none;
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .welcome h2 {
+        font-size: 1.5em;
+    }
+
+    .welcome p {
+        font-size: 1em;
+    }
+
+    .about h3, .skills h3, .projects-overview h3 {
+        font-size: 1.4em;
+    }
+
+    .about p, .skills li, .project-item p {
+        font-size: 0.9em;
+    }
+
+    .project-item h4 {
+        font-size: 1.1em;
+    }
+
+    .call-to-action p {
+        font-size: 1em;
+    }
 }
