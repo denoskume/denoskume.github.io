@@ -26,10 +26,11 @@ function closeNav() {
 // Function to detect clicks outside of the sideNav and close it when clicking elsewhere
 document.addEventListener('click', function(event) {
     const sideNav = document.getElementById("sideNav");
-    
-    // Close the menu if the click is outside of the sideNav or hamburger icon
-    if (sideNav.style.width === "250px" && !sideNav.contains(event.target) && !event.target.classList.contains('hamburger')) {
-        closeNav();
+    const hamburger = document.querySelector('.hamburger');
+
+    // Check if the click is outside the sideNav and the hamburger button
+    if (sideNav.style.width === "250px" && !sideNav.contains(event.target) && !hamburger.contains(event.target)) {
+        closeNav(); // Close the side navigation
     }
 });
 
@@ -59,4 +60,3 @@ window.addEventListener('click', function(event) {
         popup.style.display = "none";
     }
 });
-
