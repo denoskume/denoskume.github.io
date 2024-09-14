@@ -9,5 +9,5 @@ function loadContent(page) {
 
 // Load Home by default
 window.onload = function() {
-    loadContent('index');
+    loadContent('home');
 };
