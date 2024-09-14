@@ -5,6 +5,7 @@ body {
     padding: 0;
 }
 
+/* Container for Header and Navigation */
 .container {
     display: flex;
     justify-content: space-between;
@@ -16,34 +17,60 @@ body {
 
 /* Header Styling */
 header {
-    background-color: #007bff;
+    background-color: #007bff; /* Blue background for header */
     color: white;
 }
 
+/* Logo Styling */
 .logo {
     height: 50px;
     max-width: 100px;
 }
 
-/* Hamburger Icon */
+/* Hamburger Icon (only visible on mobile) */
 .hamburger {
-    display: none; /* Hidden by default on larger screens */
+    display: none; /* Hidden on larger screens */
     font-size: 30px;
     cursor: pointer;
     color: white;
 }
 
-/* Side Navigation Menu (for mobile view) */
+/* Full Navigation Menu (for desktop/tablet screens) */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Flexbox layout for horizontal menu */
+    gap: 15px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: #0056b3; /* Hover effect */
+    border-radius: 5px;
+}
+
+/* Side Navigation Menu (for mobile) */
 .sidenav {
-    height: 100%;
-    width: 0;
+    height: 100%; /* Full height */
+    width: 0; /* Hidden by default */
     position: fixed;
     z-index: 1;
     top: 0;
-    right: 0;
-    background-color: #007bff;
+    right: 0; /* Slide in from the right */
+    background-color: #007bff; /* Background color */
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: 0.5s; /* Smooth transition */
     padding-top: 60px;
 }
 
@@ -67,33 +94,14 @@ header {
     font-size: 36px;
 }
 
-/* Navigation Menu for Desktop */
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 15px;
+/* Main Content */
+#content {
+    padding: 20px;
 }
 
-nav ul li {
-    position: relative;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    background-color: #0056b3;
-    border-radius: 5px;
-}
-
-/* Hide the full navigation menu and display hamburger for smaller screens */
+/* Media Queries for Mobile (Less than 768px) */
 @media (max-width: 768px) {
+    /* Hide the full navigation on mobile and display the hamburger */
     nav ul {
         display: none; /* Hide full menu on mobile */
     }
@@ -103,13 +111,57 @@ nav ul li a:hover {
     }
 }
 
-/* For larger screens (desktop/tablets), show the full navigation menu */
+/* Media Queries for Desktop/Tablet (More than 768px) */
 @media (min-width: 769px) {
+    /* Ensure the full menu is visible on larger screens */
+    nav ul {
+        display: flex; /* Show full menu on larger screens */
+    }
+
     .hamburger {
         display: none; /* Hide hamburger on larger screens */
     }
 
     .sidenav {
-        display: none; /* Hide sidenav for larger screens */
+        display: none; /* Hide sidenav on larger screens */
     }
+}
+
+/* Hero Section Styling */
+.hero {
+    background-color: #007bff;
+    background-image: url('background.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-text h1 {
+    color: white;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text p {
+    color: white;
+    font-size: 1.1em;
+    margin-top: 10px;
+    max-width: 600px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
 }
