@@ -68,6 +68,78 @@ nav a:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Home Page Section Styles */
+.home-section {
+    padding: 20px;
+}
+
+/* Welcome Section */
+.welcome h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.welcome p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* About Section */
+.about h3 {
+    font-size: 1.8em;
+    margin-top: 30px;
+}
+
+.about p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Skills Summary */
+.skills h3 {
+    font-size: 1.8em;
+    margin-top: 30px;
+}
+
+.skills ul {
+    list-style: disc;
+    margin-left: 20px;
+    line-height: 1.6;
+}
+
+.skills li {
+    font-size: 1.1em;
+}
+
+/* Projects Overview */
+.projects-overview h3 {
+    font-size: 1.8em;
+    margin-top: 30px;
+}
+
+.project-item {
+    margin-bottom: 20px;
+}
+
+.project-item h4 {
+    font-size: 1.4em;
+    margin-bottom: 5px;
+}
+
+.project-item p {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+/* Call to Action */
+.call-to-action p {
+    font-size: 1.2em;
+    margin-top: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
 /* Footer Styling */
 footer {
     background-color: #333; /* Same as header background */
