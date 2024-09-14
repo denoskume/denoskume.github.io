@@ -11,11 +11,6 @@ function loadContent(page) {
 window.onload = function() {
     loadContent('home'); // This will load 'home.html' by default
 };
-// Toggle the display of the navigation menu
-function toggleMenu() {
-    const header = document.querySelector('header');
-    header.classList.toggle('show-menu');
-}
 // Function to open the side navigation menu
 function openNav() {
     document.getElementById("sideNav").style.width = "250px"; // Open the side navigation to 250px
@@ -25,3 +20,13 @@ function openNav() {
 function closeNav() {
     document.getElementById("sideNav").style.width = "0"; // Collapse the side navigation to 0
 }
+
+// Function to detect clicks outside of the sideNav and close it
+document.addEventListener('click', function(event) {
+    var sideNav = document.getElementById("sideNav");
+    
+    // If the menu is open and the click is outside the sideNav or hamburger, close the sideNav
+    if (sideNav.style.width === "250px" && !sideNav.contains(event.target) && !event.target.classList.contains('hamburger')) {
+        closeNav();
+    }
+});
