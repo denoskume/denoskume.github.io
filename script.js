@@ -1,58 +1,42 @@
-// Function to load the content dynamically based on the clicked link
-function loadContent(page) {
-    const xhttp = new XMLHttpRequest();
-    xhttp.onload = function() {
-        document.getElementById("content").innerHTML = this.responseText;
-    };
-    xhttp.open("GET", `${page}.html`, true); // Load the corresponding HTML file
-    xhttp.send();
-}
-
-// Load the 'home' content by default when the page is first loaded
-window.onload = function() {
-    loadContent('home'); // Loads 'home.html' by default
-};
-
 // Function to open the side navigation menu
 function openNav() {
-    console.log("Opening side navigation"); // Debugging log
-    document.getElementById("sideNav").style.width = "200px"; // Opens the side navigation to 250px
+    console.log("Opening side navigation..."); // Debugging log
+    document.getElementById("sideNav").style.width = "250px"; // Open the side navigation to 250px
 }
 
 // Function to close the side navigation menu
 function closeNav() {
-    console.log("Closing side navigation"); // Debugging log
-    document.getElementById("sideNav").style.width = "0"; // Closes the side navigation
+    console.log("Closing side navigation..."); // Debugging log
+    document.getElementById("sideNav").style.width = "0"; // Collapse the side navigation to 0
 }
 
-// Detect clicks outside of sideNav and close it if necessary
+// Function to detect clicks outside of the sideNav and close it
 document.addEventListener('click', function(event) {
-    const sideNav = document.getElementById("sideNav");
-    const hamburger = document.querySelector('.hamburger');
+    var sideNav = document.getElementById("sideNav");
+    var hamburger = document.querySelector('.hamburger');
 
-    console.log("Checking for clicks outside the sideNav or hamburger"); // Debugging log
+    console.log("Click detected"); // Debugging log
     
-    // Check if the sideNav is open
-    if (sideNav.style.width === "200px") {
-        // If the click is outside of the sideNav and not on the hamburger, close the sideNav
+    // Check if sideNav is open
+    if (sideNav.style.width === "250px") {
+        // If click is outside of sideNav and hamburger, close sideNav
         if (!sideNav.contains(event.target) && !hamburger.contains(event.target)) {
-            console.log("Click detected outside, closing the sideNav");
+            console.log("Click outside sideNav, closing...");
             closeNav();
         } else {
-            console.log("Click detected inside sideNav or hamburger, keeping it open");
+            console.log("Click inside sideNav or hamburger, keeping it open");
         }
     }
 });
 
-// Prevent event propagation for sideNav and hamburger clicks
+// Add event listener to prevent event propagation on sideNav and hamburger clicks
 document.getElementById("sideNav").addEventListener('click', function(event) {
-    event.stopPropagation(); // Stops clicks inside sideNav from triggering outside click listener
+    event.stopPropagation(); // Prevent closing the menu when clicking inside it
     console.log("Click inside sideNav, stopping propagation");
 });
 
 document.querySelector('.hamburger').addEventListener('click', function(event) {
-    openNav(); // Open the sideNav when clicking on the hamburger
-    event.stopPropagation(); // Prevent the outside click listener from closing the nav
+    openNav(); // Open the sideNav when clicking the hamburger
+    event.stopPropagation(); // Prevent closing the menu immediately
     console.log("Click on hamburger, opening sideNav and stopping propagation");
 });
-
