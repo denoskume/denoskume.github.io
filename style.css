@@ -3,180 +3,138 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
 }
 
-/* Make the container adapt to screen size */
 .container {
-    width: 90%;  /* Adaptive width: takes 90% of the viewport width */
-    max-width: 1200px; /* Maximum width for larger screens */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Home Section Styling */
-.home-section {
-    padding: 20px;
+/* Header Styling */
+header {
+    background-color: #007bff; /* Blue background for header */
+    color: white;
 }
 
-/* Welcome Section */
-.welcome h2 {
-    font-size: 2em;
-    margin-bottom: 15px;
+.logo {
+    height: 50px; /* Adjust logo height */
 }
 
-.welcome p {
-    font-size: 1.2em;
-    line-height: 1.6;
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
 }
 
-/* About Section */
-.about h3 {
-    font-size: 1.8em;
-    margin-top: 30px;
+nav ul li {
+    position: relative;
 }
 
-.about p {
-    font-size: 1.1em;
-    line-height: 1.6;
-}
-
-/* Skills Summary */
-.skills h3 {
-    font-size: 1.8em;
-    margin-top: 30px;
-}
-
-.skills ul {
-    list-style: disc;
-    margin-left: 20px;
-    line-height: 1.6;
-}
-
-.skills li {
-    font-size: 1.1em;
-}
-
-/* Projects Overview */
-.projects-overview h3 {
-    font-size: 1.8em;
-    margin-top: 30px;
-}
-
-.project-item {
-    margin-bottom: 20px;
-}
-
-.project-item h4 {
-    font-size: 1.4em;
-    margin-bottom: 5px;
-}
-
-.project-item p {
-    font-size: 1.1em;
-    line-height: 1.5;
-}
-
-/* Call to Action */
-.call-to-action p {
-    font-size: 1.2em;
-    margin-top: 40px;
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
     font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: #0056b3;
+    border-radius: 5px;
+}
+
+/* Dropdown Menu */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #007bff;
+    min-width: 150px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #0056b3;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('background.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 1024px) {
-    .container {
-        width: 95%;  /* Slightly more width for tablets */
-    }
-
-    .welcome h2 {
-        font-size: 1.8em;
-    }
-
-    .welcome p {
-        font-size: 1.1em;
-    }
-
-    .about h3, .skills h3, .projects-overview h3 {
-        font-size: 1.6em;
-    }
-
-    .about p, .skills li, .project-item p {
-        font-size: 1em;
-    }
-
-    .project-item h4 {
-        font-size: 1.2em;
-    }
-
-    .call-to-action p {
-        font-size: 1.1em;
-    }
+.hero-text h1 {
+    color: white;
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.hero-text p {
+    color: white;
+    font-size: 1.2em;
+    margin-top: 10px;
+    max-width: 600px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .container {
-        width: 100%;  /* Full width on mobile devices */
-        padding: 15px;
+    nav ul {
+        flex-direction: column;
     }
 
-    .welcome h2 {
-        font-size: 1.6em;
+    .hero-text h1 {
+        font-size: 2.5em;
     }
 
-    .welcome p {
-        font-size: 1em;
-    }
-
-    .about h3, .skills h3, .projects-overview h3 {
-        font-size: 1.4em;
-    }
-
-    .about p, .skills li, .project-item p {
-        font-size: 0.9em;
-    }
-
-    .project-item h4 {
+    .hero-text p {
         font-size: 1.1em;
-    }
-
-    .call-to-action p {
-        font-size: 1em;
     }
 }
 
 @media (max-width: 480px) {
-    .container {
-        width: 100%;  /* Full width for smaller mobile screens */
-        padding: 10px;
+    .hero {
+        height: 300px;
     }
 
-    .welcome h2 {
-        font-size: 1.4em;
+    .hero-text h1 {
+        font-size: 2em;
     }
 
-    .welcome p {
-        font-size: 0.9em;
-    }
-
-    .about h3, .skills h3, .projects-overview h3 {
-        font-size: 1.2em;
-    }
-
-    .about p, .skills li, .project-item p {
-        font-size: 0.8em;
-    }
-
-    .project-item h4 {
+    .hero-text p {
         font-size: 1em;
-    }
-
-    .call-to-action p {
-        font-size: 0.9em;
     }
 }
