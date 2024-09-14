@@ -5,7 +5,6 @@ body {
     padding: 0;
 }
 
-/* Container for Header and Navigation */
 .container {
     display: flex;
     justify-content: space-between;
@@ -17,7 +16,7 @@ body {
 
 /* Header Styling */
 header {
-    background-color: #007bff; /* Blue background for header */
+    background-color: #007bff;
     color: white;
 }
 
@@ -29,18 +28,18 @@ header {
 
 /* Hamburger Icon (only visible on mobile) */
 .hamburger {
-    display: none; /* Hidden on larger screens */
+    display: none; /* Hidden on desktop, shown on mobile */
     font-size: 30px;
     cursor: pointer;
     color: white;
 }
 
-/* Full Navigation Menu (for desktop/tablet screens) */
+/* Full Navigation Menu (for desktop) */
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Flexbox layout for horizontal menu */
+    display: flex; /* Display as flex on desktop */
     gap: 15px;
 }
 
@@ -56,21 +55,21 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #0056b3; /* Hover effect */
+    background-color: #0056b3;
     border-radius: 5px;
 }
 
 /* Side Navigation Menu (for mobile) */
 .sidenav {
-    height: 100%; /* Full height */
-    width: 0; /* Hidden by default */
+    height: 100%;
+    width: 0;
     position: fixed;
     z-index: 1;
     top: 0;
     right: 0; /* Slide in from the right */
-    background-color: #007bff; /* Background color */
+    background-color: #007bff;
     overflow-x: hidden;
-    transition: 0.5s; /* Smooth transition */
+    transition: 0.5s;
     padding-top: 60px;
 }
 
@@ -94,14 +93,8 @@ nav ul li a:hover {
     font-size: 36px;
 }
 
-/* Main Content */
-#content {
-    padding: 20px;
-}
-
-/* Media Queries for Mobile (Less than 768px) */
+/* Media Query for Mobile (less than 768px) */
 @media (max-width: 768px) {
-    /* Hide the full navigation on mobile and display the hamburger */
     nav ul {
         display: none; /* Hide full menu on mobile */
     }
@@ -111,9 +104,8 @@ nav ul li a:hover {
     }
 }
 
-/* Media Queries for Desktop/Tablet (More than 768px) */
+/* Media Query for Desktop (more than 768px) */
 @media (min-width: 769px) {
-    /* Ensure the full menu is visible on larger screens */
     nav ul {
         display: flex; /* Show full menu on larger screens */
     }
@@ -130,7 +122,7 @@ nav ul li a:hover {
 /* Hero Section Styling */
 .hero {
     background-color: #007bff;
-    background-image: url('background.jpg'); /* Replace with your background image */
+    background-image: url('background.jpg');
     background-size: cover;
     background-position: center;
     height: 300px;
