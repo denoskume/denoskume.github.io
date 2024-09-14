@@ -33,7 +33,7 @@ document.addEventListener('click', function(event) {
     console.log("Checking for clicks outside the sideNav or hamburger"); // Debugging log
     
     // Check if the sideNav is open
-    if (sideNav.style.width === "250px") {
+    if (sideNav.style.width === "200px") {
         // If the click is outside of the sideNav and not on the hamburger, close the sideNav
         if (!sideNav.contains(event.target) && !hamburger.contains(event.target)) {
             console.log("Click detected outside, closing the sideNav");
