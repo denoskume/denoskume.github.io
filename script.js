@@ -16,3 +16,12 @@ function toggleMenu() {
     const header = document.querySelector('header');
     header.classList.toggle('show-menu');
 }
+// Function to open the side navigation menu
+function openNav() {
+    document.getElementById("sideNav").style.width = "250px"; // Open the side navigation to 250px
+}
+
+// Function to close the side navigation menu
+function closeNav() {
+    document.getElementById("sideNav").style.width = "0"; // Collapse the side navigation to 0
+}
