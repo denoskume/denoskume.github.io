@@ -10,7 +10,3 @@ function loadContent(page) {
     xhttp.send();
 }
 
-// Load Home content by default when the page is opened
-window.onload = function() {
-    loadContent('home'); // By default, load 'home.html'
-};
