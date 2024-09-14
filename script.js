@@ -23,27 +23,31 @@ function closeNav() {
     document.getElementById("sideNav").style.width = "0"; // Closes the side navigation
 }
 
-// Function to detect clicks outside of the sideNav and close it when clicking elsewhere
+// Detect clicks outside of sideNav and close it if necessary
 document.addEventListener('click', function(event) {
     const sideNav = document.getElementById("sideNav");
     const hamburger = document.querySelector('.hamburger');
-
-    // Check if the click is outside the sideNav and the hamburger button
-    if (sideNav.style.width === "250px" && !sideNav.contains(event.target) && !hamburger.contains(event.target)) {
-        closeNav(); // Close the side navigation
+    
+    // Check if the sideNav is open
+    if (sideNav.style.width === "250px") {
+        // If the click is outside of the sideNav and not on the hamburger, close the sideNav
+        if (!sideNav.contains(event.target) && !hamburger.contains(event.target)) {
+            closeNav();
+        }
     }
 });
 
-// Prevent event propagation for sideNav and hamburger click
+// Prevent event propagation for sideNav and hamburger clicks
 document.getElementById("sideNav").addEventListener('click', function(event) {
-    event.stopPropagation(); // Prevents clicks inside sideNav from closing it
+    event.stopPropagation(); // Stops clicks inside sideNav from triggering outside click listener
 });
 
 document.querySelector('.hamburger').addEventListener('click', function(event) {
-    event.stopPropagation(); // Prevents the click on the hamburger from closing the sideNav
+    openNav(); // Open the sideNav when clicking on the hamburger
+    event.stopPropagation(); // Prevent the outside click listener from closing the nav
 });
 
-// Function to open the pop-up
+// Function to open the social media pop-up
 document.getElementById("socialMediaBtn").addEventListener("click", function() {
     document.getElementById("socialMediaPopup").style.display = "flex"; // Show the pop-up
 });
