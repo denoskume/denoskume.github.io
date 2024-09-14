@@ -5,29 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Denos Kume - Portfolio</title>
-    <link rel="stylesheet" href="style.css"> <!-- Make sure to link the CSS file -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Header Section -->
     <header>
         <div class="container">
-             <!-- Logo added here -->
+            <!-- Logo -->
             <img src="Dedoole-2.png" alt="Denos Kume Logo" class="logo">
-            <h1>Denos Kume - Portfolio</h1>
             <nav>
-                <a href="#" onclick="loadContent('home')">Home</a>
-                <a href="#" onclick="loadContent('about')">About Me</a>
-                <a href="#" onclick="loadContent('education')">Education</a>
-                <a href="#" onclick="loadContent('training')">Training</a>
-                <a href="#" onclick="loadContent('certification')">Certification</a>
-                <a href="#" onclick="loadContent('contact')">Contact</a>
-                <a href="#" onclick="loadContent('social')">Social Media</a>
+                <ul>
+                    <li><a href="#" onclick="loadContent('home')">Home</a></li>
+                    <li><a href="#" onclick="loadContent('about')">About Me</a></li>
+                    <li class="dropdown">
+                        <a href="#">Education</a>
+                        <ul class="dropdown-content">
+                            <li><a href="#" onclick="loadContent('education')">Education</a></li>
+                            <li><a href="#">Courses</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Experience</a>
+                        <ul class="dropdown-content">
+                            <li><a href="#">Projects</a></li>
+                            <li><a href="#">Internships</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" onclick="loadContent('training')">Training</a></li>
+                    <li><a href="#" onclick="loadContent('certification')">Certification</a></li>
+                    <li><a href="#" onclick="loadContent('contact')">Contact</a></li>
+                    <li><a href="#" onclick="loadContent('social')">Social Media</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Explore my projects, skills, and experiences as I pursue a data analytics and embedded systems career.</p>
+        </div>
+    </section>
+
     <!-- Content area where dynamic content will be loaded -->
     <div id="content" class="container">
-        <!-- Content from the section (home.html, about.html, etc.) will appear here -->
+        <!-- Dynamic content will appear here based on the section clicked -->
     </div>
 
     <footer>
