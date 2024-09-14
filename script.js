@@ -41,3 +41,22 @@ document.getElementById("sideNav").addEventListener('click', function(event) {
 document.querySelector('.hamburger').addEventListener('click', function(event) {
     event.stopPropagation(); // Prevents the click on the hamburger from closing the sideNav
 });
+
+// Function to open the pop-up
+document.getElementById("socialMediaBtn").addEventListener("click", function() {
+    document.getElementById("socialMediaPopup").style.display = "flex"; // Show the pop-up
+});
+
+// Function to close the pop-up
+function closePopup() {
+    document.getElementById("socialMediaPopup").style.display = "none"; // Hide the pop-up
+}
+
+// Close the pop-up if the user clicks outside of the content
+window.addEventListener('click', function(event) {
+    const popup = document.getElementById('socialMediaPopup');
+    if (event.target === popup) {
+        popup.style.display = "none";
+    }
+});
+
