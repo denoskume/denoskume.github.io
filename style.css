@@ -311,7 +311,7 @@ footer a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 150px;
+    height: 110px;
     position: relative;
 }
 
@@ -332,8 +332,8 @@ footer a:hover {
 }
 
 .profile-pic {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%; /* Make the profile picture circular */
     border: 3px solid white;
 }
