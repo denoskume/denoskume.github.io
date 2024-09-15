@@ -7,11 +7,6 @@ body {
     color: #333;
 }
 
-/* Adjust body padding to account for header and banner height */
-body {
-    padding-top: 210px; /* 60px for header + 150px for banner */
-}
-
 .container {
     display: flex;
     justify-content: space-between;
@@ -29,10 +24,15 @@ header {
     width: 100%; /* Full width of screen */
     top: 0;
     z-index: 1000; /* Ensures it stays above all other content */
-    height: 60px; /* Adjust this height if needed */
+    height: 30px;
     padding: 10px 0;
     display: flex;
     align-items: center;
+}
+
+/* Add padding to avoid content being overlapped by header */
+body {
+    padding-top: 0; /* Height of header */
 }
 
 /* Logo Styling */
@@ -284,16 +284,16 @@ footer a:hover {
     padding: 60px 40px;
     display: flex;
     align-items: center;
-    height: 150px; /* Updated height */
+    height: 50px;
     position: fixed; /* Make banner fixed */
-    top: 60px; /* Adjusted to be below the header */
+    top: 40px; /* Adjusted to be below the header */
     width: 100%;
     z-index: 999;
 }
 
-/* Adjust padding to start content below the banner */
+/* Add padding to avoid content being overlapped by banner */
 body {
-    padding-top: 210px; /* 60px for header + 150px for banner */
+    padding-top: 0px; /* Header height (60px) + Banner height (150px) */
 }
 
 .banner::before {
