@@ -30,6 +30,11 @@ header {
     align-items: center;
 }
 
+/* Add padding to avoid content being overlapped by header */
+body {
+    padding-top: 60px; /* Height of header */
+}
+
 /* Logo Styling */
 .logo {
     height: 50px;
@@ -284,6 +289,11 @@ footer a:hover {
     top: 60px; /* Adjusted to be below the header */
     width: 100%;
     z-index: 999;
+}
+
+/* Add padding to avoid content being overlapped by banner */
+body {
+    padding-top: 210px; /* Header height (60px) + Banner height (150px) */
 }
 
 .banner::before {
