@@ -33,7 +33,7 @@ header {
 
 /* Add padding to avoid content being overlapped by header */
 body {
-    padding-top: 60px; /* Height of header */
+    padding-top: 260px; /* Height of header */
 }
 
 /* Logo Styling */
