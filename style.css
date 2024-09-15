@@ -20,7 +20,7 @@ body {
 header {
     background-color: #007bff;
     color: white;
-    position: relative; /* So the hamburger can be positioned relative to the header */
+    position: relative;
     height: 60px;
 }
 
@@ -32,13 +32,13 @@ header {
 
 /* Hamburger Icon (for mobile) */
 .hamburger {
-    display: none; /* Hidden on desktop, shown on mobile */
+    display: none;
     font-size: 30px;
     cursor: pointer;
     color: white;
-    position: absolute; /* Make it float over the header */
-    right: 20px; /* Align to the right side */
-    top: 15px; /* Adjust for vertical position */
+    position: absolute;
+    right: 20px;
+    top: 15px;
 }
 
 /* Full Navigation Menu (for desktop) */
@@ -70,13 +70,13 @@ nav ul li a:hover {
 
 /* Dropdown Menu Styling */
 nav ul li .dropdown-content {
-    display: none; /* Hidden by default */
+    display: none;
     position: absolute;
     background-color: white;
-    min-width: 120px; /* Adjusted to fit icons */
+    min-width: 120px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    top: 100%; /* Position below the parent link */
+    top: 100%;
     left: 0;
     border-radius: 5px;
     padding: 10px 0;
@@ -87,12 +87,12 @@ nav ul li .dropdown-content a {
     padding: 10px;
     text-decoration: none;
     display: flex;
-    justify-content: center; /* Center icons */
+    justify-content: center;
     align-items: center;
 }
 
 nav ul li .dropdown-content a i {
-    font-size: 24px; /* Adjust icon size */
+    font-size: 24px;
 }
 
 nav ul li .dropdown-content a:hover {
@@ -100,7 +100,7 @@ nav ul li .dropdown-content a:hover {
     color: #007bff;
 }
 
-/* Show the dropdown on hover (for desktop) */
+/* Show the dropdown on hover */
 nav ul li:hover .dropdown-content {
     display: block;
 }
@@ -112,7 +112,7 @@ nav ul li:hover .dropdown-content {
     position: fixed;
     z-index: 1;
     top: 0;
-    right: 0; /* Slide in from the right */
+    right: 0;
     background-color: #007bff;
     overflow-x: hidden;
     transition: 0.5s;
@@ -143,7 +143,7 @@ nav ul li:hover .dropdown-content {
 /* Hero Section Styling */
 .hero {
     background-color: #007bff;
-    background-image: url('background.jpg'); /* Replace with actual path */
+    background-image: url('background.jpg');
     background-size: cover;
     background-position: center;
     height: 350px;
@@ -163,7 +163,7 @@ nav ul li:hover .dropdown-content {
     color: white;
     font-size: 1.1em;
     margin-top: 10px;
-    max-width: 800px; /* Increased text area width */
+    max-width: 800px;
 }
 
 /* Footer Styling */
@@ -201,44 +201,101 @@ footer a:hover {
     background-color: #0056b3;
 }
 
+/* Training Section Styling */
+.training-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 30px 0;
+}
+
+.training-card {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 30%;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.training-card:hover {
+    transform: scale(1.05);
+}
+
+.training-card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.training-card .course-count {
+    color: #7c3aed;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.training-card .view-path {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.training-card .view-path:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Layout for Training Section */
+@media (max-width: 768px) {
+    .training-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .training-card {
+        width: 100%;
+    }
+}
+
 /* Responsive Layout for Small Devices */
 @media (max-width: 768px) {
     nav ul {
-        display: none; /* Hide full menu on mobile */
+        display: none;
     }
 
     .hamburger {
-        display: block; /* Show hamburger on mobile */
+        display: block;
     }
 
-    /* Mobile Side Navigation */
     .sidenav {
         display: block;
     }
 
     .sidenav a {
-        font-size: 18px; /* Slightly smaller text for mobile */
+        font-size: 18px;
     }
 }
 
-/* Responsive Design for Hero Text */
 @media (max-width: 480px) {
     .hero-text h1 {
-        font-size: 2em; /* Smaller font for mobile */
+        font-size: 2em;
     }
 }
 
-/* Responsive Media Query for Desktop (more than 768px) */
 @media (min-width: 769px) {
     nav ul {
-        display: flex; /* Show full menu on larger screens */
+        display: flex;
     }
 
     .hamburger {
-        display: none; /* Hide hamburger on larger screens */
+        display: none;
     }
 
     .sidenav {
-        display: none; /* Hide sidenav on larger screens */
+        display: none;
     }
 }
