@@ -31,10 +31,6 @@ header {
     align-items: center;
 }
 
-/* Add padding to avoid content being overlapped by header */
-body {
-    padding-top: 260px; /* Height of header */
-}
 
 /* Logo Styling */
 .logo {
@@ -152,10 +148,6 @@ h1, p {
     z-index: 999;
 }
 
-/* Add padding to avoid content being overlapped by banner */
-body {
-    padding-top: 0px;
-}
 
 .banner::before {
     content: '';
