@@ -32,7 +32,7 @@ header {
 
 /* Add padding to avoid content being overlapped by header */
 body {
-    padding-top: 160px; /* Height of header */
+    padding-top: 0; /* Height of header */
 }
 
 /* Logo Styling */
@@ -286,7 +286,7 @@ footer a:hover {
     align-items: center;
     height: 50px;
     position: fixed; /* Make banner fixed */
-    top: 60px; /* Adjusted to be below the header */
+    top: 80px; /* Adjusted to be below the header */
     width: 100%;
     z-index: 999;
 }
