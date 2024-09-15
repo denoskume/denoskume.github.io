@@ -337,7 +337,7 @@ footer a:hover {
     height: 120px;
     border-radius: 50%; /* Keep the profile picture circular */
     border: 3px solid white;
-    margin-right: 10px; /* Keep space between profile picture and text */
+    margin-right: 3px; /* Keep space between profile picture and text */
 }
 
 /* Ensure that the banner does not stretch or break the layout on smaller screens */
@@ -350,7 +350,7 @@ footer a:hover {
     .profile-pic {
         width: 80px;
         height: 80px;
-        margin-right: 10px;
+        margin-right: 3px;
     }
 
 }
