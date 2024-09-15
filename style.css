@@ -293,7 +293,7 @@ footer a:hover {
 
 /* Add padding to avoid content being overlapped by banner */
 body {
-    padding-top: 300px; /* Header height (60px) + Banner height (150px) */
+    padding-top: 330px; /* Header height (60px) + Banner height (150px) */
 }
 
 .banner::before {
