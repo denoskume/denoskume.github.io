@@ -299,3 +299,47 @@ footer a:hover {
         display: none;
     }
 }
+
+/* Banner Section */
+.banner {
+    background-image: url('banner_bg.jpg'); /* Add your background image here */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 300px;
+    position: relative;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adds dark overlay */
+    z-index: 1;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Make the profile picture circular */
+    border: 3px solid white;
+}
+
+.job-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 10px;
+}
