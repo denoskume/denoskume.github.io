@@ -21,7 +21,7 @@ header {
     background-color: #007bff;
     color: white;
     position: fixed; /* Make the header fixed */
-    width: 100%; /* Full width of screen */
+    width: 120%; /* Full width of screen */
     top: 0;
     z-index: 1000; /* Ensures it stays above all other content */
     height: 30px;
