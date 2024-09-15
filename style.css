@@ -313,16 +313,6 @@ footer a:hover {
     margin-right: 20px;
 }
 
-/* Line to separate the profile picture and text */
-.banner-content::after {
-    content: "";
-    display: block;
-    width: 3px;
-    height: 80px;
-    background-color: white;
-    margin-left: 10px;
-}
-
 /* Responsive adjustments for the banner */
 @media (max-width: 768px) {
     .banner {
