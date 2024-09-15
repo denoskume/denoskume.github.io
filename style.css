@@ -279,7 +279,7 @@ footer a:hover {
     padding: 60px 40px;
     display: flex;
     align-items: center;
-    height: 150px;
+    height: 130px;
     position: fixed; /* Make banner fixed */
     top: 60px; /* Adjusted to be below the header */
     width: 100%;
@@ -320,7 +320,7 @@ footer a:hover {
     width: 3px;
     height: 80px;
     background-color: white;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 /* Responsive adjustments for the banner */
@@ -373,4 +373,4 @@ footer a:hover {
         display: none;
     }
 }
-update this
+
