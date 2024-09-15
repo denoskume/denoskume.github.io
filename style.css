@@ -5,7 +5,6 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .container {
@@ -25,16 +24,15 @@ header {
     width: 100%; /* Full width of screen */
     top: 0;
     z-index: 1000; /* Ensures it stays above all other content */
-    height: 60px;
+    height: 30px;
     padding: 10px 0;
     display: flex;
     align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow to header */
 }
 
 /* Add padding to avoid content being overlapped by header */
 body {
-    padding-top: 120px; /* Ensure space for fixed header and banner */
+    padding-top: 0; /* Height of header */
 }
 
 /* Logo Styling */
@@ -163,8 +161,6 @@ nav ul li:hover .dropdown-content {
     justify-content: center;
     align-items: center;
     text-align: center;
-    position: relative;
-    z-index: 1;
 }
 
 .hero-text h1 {
@@ -288,17 +284,16 @@ footer a:hover {
     padding: 60px 40px;
     display: flex;
     align-items: center;
-    height: 150px;
+    height: 50px;
     position: fixed; /* Make banner fixed */
-    top: 60px; /* Adjusted to be below the header */
+    top: 40px; /* Adjusted to be below the header */
     width: 100%;
     z-index: 999;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow to the banner */
 }
 
 /* Add padding to avoid content being overlapped by banner */
 body {
-    padding-top: 210px; /* Adjusted for both header and banner */
+    padding-top: 0px; /* Header height (60px) + Banner height (150px) */
 }
 
 .banner::before {
@@ -388,3 +383,4 @@ body {
         display: none;
     }
 }
+Update the current css. don't chance anything from above only update with new features
