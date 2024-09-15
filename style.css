@@ -7,6 +7,11 @@ body {
     color: #333;
 }
 
+/* Adjust body padding to account for the header and banner height */
+body {
+    padding-top: 250px; /* Combined height of header and banner */
+}
+
 .container {
     display: flex;
     justify-content: space-between;
@@ -24,15 +29,10 @@ header {
     width: 100%; /* Full width of screen */
     top: 0;
     z-index: 1000; /* Ensures it stays above all other content */
-    height: 30px;
+    height: 60px; /* Adjust this height if needed */
     padding: 10px 0;
     display: flex;
     align-items: center;
-}
-
-/* Add padding to avoid content being overlapped by header */
-body {
-    padding-top: 0; /* Height of header */
 }
 
 /* Logo Styling */
@@ -284,16 +284,16 @@ footer a:hover {
     padding: 60px 40px;
     display: flex;
     align-items: center;
-    height: 50px;
+    height: 150px; /* Updated height */
     position: fixed; /* Make banner fixed */
-    top: 40px; /* Adjusted to be below the header */
+    top: 60px; /* Adjusted to be below the header */
     width: 100%;
     z-index: 999;
 }
 
 /* Add padding to avoid content being overlapped by banner */
 body {
-    padding-top: 0px; /* Header height (60px) + Banner height (150px) */
+    padding-top: 250px; /* Adjust to height of the header + banner */
 }
 
 .banner::before {
@@ -383,4 +383,3 @@ body {
         display: none;
     }
 }
-Update the current css. don't chance anything from above only update with new features
