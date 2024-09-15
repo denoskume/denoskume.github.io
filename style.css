@@ -5,7 +5,7 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
-    overflow-y: auto;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .container {
@@ -21,16 +21,21 @@ body {
 header {
     background-color: #007bff;
     color: white;
-    position: fixed;
-    width: 100%;
+    position: fixed; /* Make the header fixed */
+    width: 100%; /* Full width of screen */
     top: 0;
-    z-index: 1000;
+    z-index: 1000; /* Ensures it stays above all other content */
     height: 60px;
     padding: 10px 0;
     display: flex;
     align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow to header */
 }
 
+/* Add padding to avoid content being overlapped by header */
+body {
+    padding-top: 120px; /* Ensure space for fixed header and banner */
+}
 
 /* Logo Styling */
 .logo {
@@ -38,40 +43,182 @@ header {
     max-width: 100px;
 }
 
-/* Fullscreen Banner Section */
-.fullscreen-banner {
-    position: fixed;
-    top: 60px;
-    width: 100%;
-    height: calc(100vh - 60px);
-    background-image: url('bannerbg.png');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Hamburger Icon (for mobile) */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
     color: white;
-    text-align: center;
-    z-index: 999;
-    border-right: 3px solid white; /* Adds vertical line to separate banner */
+    position: absolute;
+    right: 20px;
+    top: 15px;
 }
 
-/* Content should start below the banner */
-.content {
-    padding: 20px;
-    margin-top: calc(100vh - 60px);
-    border-left: 3px solid #007bff; /* Adds vertical line to separate body content */
-}
-
-h1, p {
+/* Full Navigation Menu (for desktop) */
+nav ul {
+    list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: #0056b3;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Dropdown Menu Styling */
+nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    border-radius: 5px;
+    padding: 10px 0;
+}
+
+nav ul li .dropdown-content a {
+    color: #333;
+    padding: 10px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li .dropdown-content a i {
+    font-size: 24px;
+}
+
+nav ul li .dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #007bff;
+}
+
+/* Show the dropdown on hover */
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+/* Side Navigation Menu (for mobile) */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #007bff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    background-color: #0056b3;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+/* Hero Section Styling */
+.hero {
+    background-color: #007bff;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-text h1 {
+    color: white;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text p {
+    color: white;
+    font-size: 1.1em;
+    margin-top: 10px;
+    max-width: 800px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 100px;
+    width: 100%;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Custom Button Styling */
+.button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3;
 }
 
 /* Training Section Styling */
 .training-section {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr); /* 4 Columns for wider screens */
     gap: 20px;
     margin: 30px 0;
 }
@@ -116,19 +263,19 @@ h1, p {
 /* Responsive Layout for Training Section */
 @media (max-width: 1024px) {
     .training-section {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr); /* 3 Columns for medium screens */
     }
 }
 
 @media (max-width: 768px) {
     .training-section {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* 2 Columns for tablets */
     }
 }
 
 @media (max-width: 480px) {
     .training-section {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Single column for mobile */
     }
 }
 
@@ -141,13 +288,18 @@ h1, p {
     padding: 60px 40px;
     display: flex;
     align-items: center;
-    height: 50px;
-    position: fixed;
-    top: 40px;
+    height: 150px;
+    position: fixed; /* Make banner fixed */
+    top: 60px; /* Adjusted to be below the header */
     width: 100%;
     z-index: 999;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow to the banner */
 }
 
+/* Add padding to avoid content being overlapped by banner */
+body {
+    padding-top: 210px; /* Adjusted for both header and banner */
+}
 
 .banner::before {
     content: '';
@@ -156,7 +308,7 @@ h1, p {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5); /* Keep dark overlay */
     z-index: 1;
 }
 
