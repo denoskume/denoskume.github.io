@@ -306,11 +306,9 @@ footer a:hover {
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 60px 0;
+    padding: 60px 40px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
     height: 95px;
     position: relative;
 }
@@ -327,15 +325,30 @@ footer a:hover {
 }
 
 .banner-content {
+   
+    display: flex;
+    align-items: center;
     position: relative;
     z-index: 2;
+    text-align: left; /* Ensure text aligns left */
 }
 
 .profile-pic {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%; /* Make the profile picture circular */
     border: 3px solid white;
+    margin-right: 20px; 
+}
+
+.banner-text {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
 }
 
 .job-title {
