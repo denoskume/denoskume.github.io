@@ -23,7 +23,7 @@ header {
     position: fixed; /* Make the header fixed */
     width: 120%; /* Full width of screen */
     top: 0;
-    z-index: 1000; /* Ensures it stays above all other content */
+   
     height: 30px;
     padding: 10px 0;
     display: flex;
