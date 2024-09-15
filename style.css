@@ -21,7 +21,7 @@ header {
     background-color: #007bff;
     color: white;
     position: fixed; /* Make the header fixed */
-    width: 120%; /* Full width of screen */
+    width: 100%; /* Full width of screen */
     top: 0;
    
     height: 30px;
@@ -286,11 +286,6 @@ footer a:hover {
     z-index: 999;
 }
 
-/* Add padding to avoid content being overlapped by banner */
-body {
-    padding-top: 210px; /* Header height (60px) + Banner height (150px) */
-}
-
 .banner::before {
     content: '';
     position: absolute;
@@ -325,7 +320,7 @@ body {
     width: 3px;
     height: 80px;
     background-color: white;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 /* Responsive adjustments for the banner */
@@ -342,7 +337,7 @@ body {
     }
 
     .banner-content::after {
-        height: 60px;
+        height: 50px;
     }
 }
 
