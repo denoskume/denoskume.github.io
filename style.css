@@ -302,7 +302,7 @@ footer a:hover {
 
 /* Banner Section */
 .banner {
-    background-image: url('bannerbg.jpg'); /* Add your background image here */
+    background-image: url('bannerbg.png'); /* Add your background image here */
     background-size: cover;
     background-position: center;
     color: white;
@@ -311,7 +311,7 @@ footer a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 110px;
+    height: 95px;
     position: relative;
 }
 
