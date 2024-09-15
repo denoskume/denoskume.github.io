@@ -286,7 +286,7 @@ footer a:hover {
     align-items: center;
     height: 50px;
     position: fixed; /* Make banner fixed */
-    top: 80px; /* Adjusted to be below the header */
+    top: 40px; /* Adjusted to be below the header */
     width: 100%;
     z-index: 999;
 }
