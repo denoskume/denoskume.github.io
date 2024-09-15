@@ -7,9 +7,9 @@ body {
     color: #333;
 }
 
-/* Adjust body padding to account for the header and banner height */
+/* Adjust body padding to account for header and banner height */
 body {
-    padding-top: 250px; /* Combined height of header and banner */
+    padding-top: 210px; /* 60px for header + 150px for banner */
 }
 
 .container {
@@ -291,9 +291,9 @@ footer a:hover {
     z-index: 999;
 }
 
-/* Add padding to avoid content being overlapped by banner */
+/* Adjust padding to start content below the banner */
 body {
-    padding-top: 250px; /* Adjust to height of the header + banner */
+    padding-top: 210px; /* 60px for header + 150px for banner */
 }
 
 .banner::before {
