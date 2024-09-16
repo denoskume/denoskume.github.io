@@ -319,6 +319,7 @@ footer {
     background-color: #545655; /* Adjust background color if needed */
     color: white;
     display: flex;
+    max-width: 145%;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
