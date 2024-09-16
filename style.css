@@ -383,6 +383,7 @@ footer {
 
 /* Time Display */
 .time-display {
+    background-color: red; /* Temporary background to test visibility */
     color: white; /* Make sure the text is visible */
     font-size: 16px;
     font-weight: bold;
