@@ -26,7 +26,7 @@ body {
     padding: 60px 40px;
     display: flex;
     align-items: center;
-    height: 80px;
+    height: 60px;
     position: relative; /* Updated to make it sit on top */
     width: 100%;
     z-index: 999;
