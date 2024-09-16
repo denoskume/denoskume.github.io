@@ -329,7 +329,7 @@ footer {
 /* Social Media Icons Styling */
 .social-icons {
     display: flex;
-    gap: 2px;
+    gap: 10px;
 }
 
 .social-icons a {
