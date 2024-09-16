@@ -295,8 +295,7 @@ nav ul li:hover .dropdown-content {
     text-decoration: underline;
 }
 
-/* Footer Section */
-
+/* BEGIN FOOTER SECTION */
 /* Footer Styling */
 footer {
     background-color: #000; /* Adjust background color if needed */
@@ -370,8 +369,8 @@ footer {
 .system-icons svg:hover {
     color: #007bff;
 }
+/* END FOOTER SECTION */
 
-/* End Footer Section 
 
 
 /* Custom Button Styling */
