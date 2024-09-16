@@ -387,7 +387,7 @@ footer {
     color: white; /* Make sure the text is visible */
     font-size: 16px;
     font-weight: bold;
-    margin-left: 10px; /* Add some spacing from the system icons */
+    margin-left: 200px; /* Add some spacing from the system icons */
     display: inline-block; /* Ensure it's aligned properly */    
 }
 
