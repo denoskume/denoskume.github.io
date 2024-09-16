@@ -383,12 +383,11 @@ footer {
 
 /* Time Display */
 .time-display {
-    background-color: red; /* Temporary background to test visibility */
     color: white; /* Make sure the text is visible */
     font-size: 16px;
+    display: flex;
     font-weight: bold;
-    margin-left: 200px; /* Add some spacing from the system icons */
-    display: inline-block; /* Ensure it's aligned properly */    
+   
 }
 
 /* System Icon Styling */
