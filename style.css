@@ -29,7 +29,7 @@ body {
     height: 40px;
     position: relative; /* Updated to make it sit on top */
     width: 100%;
-    z-index: 999;
+    z-index: 1000;
 }
 
 .banner::before {
