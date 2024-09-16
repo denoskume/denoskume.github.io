@@ -125,17 +125,27 @@ nav ul li {
 }
 
 nav ul li a {
+    position: relative;
     color: white;
-    text-decoration: none;
+    text-decoration: none; /* Remove the default underline */
     padding: 10px;
     font-weight: bold;
     white-space: nowrap; /* Prevents text from wrapping */
 }
 
-nav ul li a:hover {
-    background-color: #0056b3;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px; /* Height of the underline   */
+    background-color: orange; /* Underline color */
+    transition: width 0.3s; /* Smooth transition for the underline */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* On hover, extend underline to full width */
 }
 
 /* Home Icon Styling */
