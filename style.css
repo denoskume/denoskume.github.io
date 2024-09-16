@@ -381,25 +381,16 @@ footer {
     gap: 20px;
 }
 
-/* Time Display */
-.time-display {
-    color: white; /* Make sure the text is visible */
-    font-size: 16px;
-    display: flex;
-    font-weight: bold;
-   
-}
+/* time display*/
 
-/* System Icon Styling */
-.system-icons svg {
-    font-size: 20px;
-    color: white;
-}
 
-.system-icons svg:hover {
-    color: #007bff;
-}
+
+
+ 
+
+
 /* END FOOTER SECTION */
+
 
 /* Custom Button Styling */
 .button {
