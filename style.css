@@ -298,7 +298,7 @@ nav ul li:hover .dropdown-content {
 /* BEGIN FOOTER SECTION */
 /* Footer Styling */
 footer {
-    background-color: #000; /* Adjust background color if needed */
+    background-color: #545655; /* Adjust background color if needed */
     color: white;
     display: flex;
     justify-content: space-between;
