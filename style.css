@@ -124,9 +124,12 @@ nav ul li a:hover {
 }
 
 /* home icon display adjustment */
-nav ul li a i {
-    font-size: 1.5em; /* Adjust the size */
-    color: white; /* Ensure the icon color matches your navigation */
+.bi-house {
+    font-size: 1.5em;
+    color: white;
+    margin-right: 10px;
+}
+
 }
 
 
