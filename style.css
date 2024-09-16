@@ -241,7 +241,7 @@ nav ul li:hover .dropdown-content {
 /* Content Section Full Width */
 .full-width-content {
     width: 100%; /* Full width for content */
-    margin: 0; /* Remove any margin */
+    margin: 50; /* Remove any margin */
     padding: 20px;
     box-sizing: border-box; /* Ensure padding is included in width */
 }
