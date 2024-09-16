@@ -26,7 +26,7 @@ body {
     padding: 60px 40px;
     display: flex;
     align-items: center;
-    height: 60px;
+    height: 50px;
     position: relative; /* Updated to make it sit on top */
     width: 100%;
     z-index: 999;
@@ -67,7 +67,7 @@ header {
     width: 100%; /* Full width of screen */
     top: 0;
     z-index: 1000; /* Ensures it stays above all other content */
-    height: 45px;
+    height: 35px;
     padding: 10px 0;
     display: flex;
     align-items: center;
@@ -220,7 +220,7 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
-    margin-top: 30px;
+    margin-top: 100px;
     width: 100%;
 }
 
