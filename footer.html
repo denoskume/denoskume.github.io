@@ -20,35 +20,5 @@
         <img src="id_photo.jpg" alt="Profile Picture" class="profile-pic-footer"> <!-- Include your profile picture -->
     </div>
 
-    <!-- Right Side: System Icons and Time -->
-    <div class="system-icons">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-wifi" viewBox="0 0 16 16">
-            <path d="M8 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM1.669 6.933c.607.515 1.291 1.01 2.011 1.456.668.405 1.343.752 2.01.994 1.334.478 2.7.668 3.98.668s2.646-.19 3.98-.668c.667-.242 1.343-.59 2.01-.994.72-.446 1.404-.941 2.011-1.456a1 1 0 0 0-1.43-1.398 11.927 11.927 0 0 0-2.762 2.045 9.2 9.2 0 0 0-4.17-1.045 9.2 9.2 0 0 0-4.17 1.045 11.927 11.927 0 0 0-2.762-2.045 1 1 0 1 0-1.43 1.398z"/>
-        </svg>
-
-        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-cloud" viewBox="0 0 16 16">
-            <path d="M13.405 8.027A5.002 5.002 0 0 0 3 9a4.992 4.992 0 0 0 3.405-1.027c.905 1.19 2.354 2 4.095 2 1.84 0 3.377-.823 4.222-2.027H13.405z"/>
-        </svg>
-
-        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-volume-up" viewBox="0 0 16 16">
-            <path d="M11.536 14.01a.5.5 0 0 1-.058.707A7.986 7.986 0 0 1 8 16a7.986 7.986 0 0 1-5.94-1.283.5.5 0 0 1-.057-.707L4 12.414V3.586L2.004 1.697A.5.5 0 0 1 2 1.5V14.5a.5.5 0 0 1-.004.197L3 13.586V2.414L11.536 14.01z"/>
-        </svg>
-
-        <!-- Time Display -->
-        <div class="time-display" id="time-display"></div>
-    </div>
+    
 </footer>
-
-<!-- Add the JavaScript to update time -->
-<script>
-    // Function to update time dynamically based on user's local time
-    function updateTime() {
-        const timeDisplay = document.getElementById("time-display");
-        const now = new Date();
-        const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-        timeDisplay.textContent = timeString;
-    }
-
-    setInterval(updateTime, 1000); // Update time every second
-    updateTime(); // Call initially to display the current time immediately
-</script>
