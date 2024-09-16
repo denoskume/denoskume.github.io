@@ -374,13 +374,6 @@ footer {
     object-fit: cover; /* Ensure the image fits within the circle */
 }
 
-/* System Icons and Time */
-.system-icons {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
 /* time display*/
 
 
