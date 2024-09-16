@@ -23,17 +23,3 @@
         <!-- TIME ELEMENT MOVED INSIDE social-icons TO KEEP IT ON SAME SIDE -->
         <span class="time" id="time"></span>
     </footer>
-
-    <script>
-        function updateTime() {
-            const timeElement = document.getElementById('time');
-            const now = new Date();
-            const hours = String(now.getHours()).padStart(2, '0');
-            const minutes = String(now.getMinutes()).padStart(2, '0');
-            const seconds = String(now.getSeconds()).padStart(2, '0');
-            const currentTime = `${hours}:${minutes}:${seconds}`;
-            timeElement.textContent = currentTime;
-        }
-        setInterval(updateTime, 1000);  // Update every second
-        updateTime();  // Initial call to display the time immediately
-    </script>
