@@ -123,6 +123,13 @@ nav ul li a:hover {
     transition: background-color 0.3s;
 }
 
+/* home icon display adjustment */
+nav ul li a i {
+    font-size: 1.5em; /* Adjust the size */
+    color: white; /* Ensure the icon color matches your navigation */
+}
+
+
 /* Dropdown Menu Styling */
 nav ul li .dropdown-content {
     display: none;
