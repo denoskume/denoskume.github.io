@@ -14,7 +14,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    max-width: 1200px;
+    max-width: 145%;
     margin: 0 auto;
     width: 100%;
     box-sizing: border-box; /* Ensure padding doesn't affect width */
@@ -24,15 +24,16 @@ body {
 header {
     background-color: #007bff;
     color: white;
-    position: sticky; /* Sticks to the top when scrolling */
+    position: relative;
+    width: 100%;
     top: 0;
     z-index: 1000;
-    height: 60px;
+    height: 50px;
     padding: 10px 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     box-sizing: border-box;
+    justify-content: space-between; /* Ensures space between logo and navigation */
 }
 
 /* Logo Styling */
@@ -45,6 +46,11 @@ header {
 .logo {
     height: 50px;
     max-width: 100px;
+}
+
+/* Align the logo to the left */
+.logo-link {
+    margin-right: auto;
 }
 
 .logo-link:hover {
@@ -124,33 +130,6 @@ nav ul li:hover .dropdown-content {
     display: block;
 }
 
-/* Search Bar Styling */
-.search-bar {
-    display: flex;
-    align-items: center;
-    background-color: #f4f4f4;
-    border-radius: 50px;
-    padding: 5px 15px;
-    width: 250px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ccc;
-}
-
-.search-bar svg {
-    fill: #333;
-    margin-right: 10px;
-    width: 16px;
-    height: 16px;
-}
-
-.search-bar input {
-    border: none;
-    outline: none;
-    background-color: transparent;
-    flex: 1;
-    font-size: 16px;
-}
-
 /* Banner Section */
 .banner {
     background-image: url('bannerbg.png');
@@ -193,6 +172,43 @@ nav ul li:hover .dropdown-content {
     border-radius: 50%;
     border: 3px solid white;
     margin-right: 15px;
+    margin-left:2px;
+}
+
+/* Side Navigation Menu (for mobile) */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #007bff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    box-sizing: border-box;
+}
+
+.sidenav a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    background-color: #0056b3;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 36px;
+    cursor: pointer;
 }
 
 /* Hero Section */
@@ -221,6 +237,14 @@ nav ul li:hover .dropdown-content {
     margin-top: 10px;
     max-width: 800px;
     box-sizing: border-box;
+}
+
+/* Content Section Full Width */
+.full-width-content {
+    width: 100%; /* Full width for content */
+    margin: 0px; /* Remove any margin */
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding is included in width */
 }
 
 /* Training Section */
@@ -271,34 +295,99 @@ nav ul li:hover .dropdown-content {
     text-decoration: underline;
 }
 
+
 /* Footer Section */
 footer {
     background-color: #007bff;
     color: white;
     text-align: center;
     padding: 10px 0;
-    margin-top: 100px;
     width: 100%;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
 }
 
-footer .footer-left {
+/* Left Side: Social Media Links */
+footer .social-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 15px;
+}
+
+footer .social-icons a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
     display: flex;
     align-items: center;
 }
 
-footer a {
-    color: white;
-    text-decoration: none;
+footer .social-icons a:hover {
+    color: #f1f1f1;
+}
+
+/* Middle: Search Bar Styling */
+footer .search-bar {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 25px;
+    padding: 5px 10px;
+    width: 200px;
+}
+
+footer .search-bar input[type="text"] {
+    border: none;
+    outline: none;
+    width: 100%;
+    margin-left: 10px;
+    font-size: 0.9em;
+}
+
+footer .search-bar svg {
+    width: 1.2em;
+    height: 1.2em;
+    color: #333;
+}
+
+/* Right Side: System Icons */
+footer .system-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
     margin-right: 15px;
 }
 
-footer a:hover {
-    text-decoration: underline;
+footer .system-icons svg {
+    width: 1.5em;
+    height: 1.5em;
+    color: white;
 }
+
+footer .system-icons .time {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/* Time Display */
+footer .time-display {
+    font-size: 1em;
+    color: white;
+    margin-right: 10px;
+}
+
+/* Hover Effects for System Icons */
+footer .system-icons svg:hover {
+    color: #f1f1f1;
+}
+
+/* End Footer Section 
 
 /* Custom Button Styling */
 .button {
