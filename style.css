@@ -385,9 +385,9 @@ footer {
 /* Time Display */
 .time-display {
     color: white;
-    font-size: 16px;
+    font-size: 10px;
     font-weight: bold;
-    margin-right: 40px; /* Add spacing from other icons */
+    margin-right: 120px; /* Add spacing from other icons */
     display: fixed;
 }
 
