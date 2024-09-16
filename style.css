@@ -7,6 +7,7 @@ body {
     color: #333;
 }
 
+/* Container Styling */
 .container {
     display: flex;
     justify-content: space-between;
@@ -16,11 +17,53 @@ body {
     margin: 0 auto;
 }
 
+/* Banner Section */
+.banner {
+    background-image: url('bannerbg.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 60px 40px;
+    display: flex;
+    align-items: center;
+    height: 130px;
+    position: relative; /* Updated to make it sit on top */
+    width: 100%;
+    z-index: 999;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Keep dark overlay */
+    z-index: 1;
+}
+
+.banner-content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    text-align: left;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-right: 20px;
+}
+
 /* Header Styling */
 header {
     background-color: #007bff;
     color: white;
-    position: fixed; /* Make the header fixed */
+    position: relative; /* Make the header relative now */
     width: 100%; /* Full width of screen */
     top: 0;
     z-index: 1000; /* Ensures it stays above all other content */
@@ -270,68 +313,6 @@ footer a:hover {
     }
 }
 
-/* Banner Section */
-.banner {
-    background-image: url('bannerbg.png');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 60px 40px;
-    display: flex;
-    align-items: center;
-    height: 130px;
-    position: fixed; /* Make banner fixed */
-    top: 60px; /* Adjusted to be below the header */
-    width: 100%;
-    z-index: 999;
-}
-
-.banner::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Keep dark overlay */
-    z-index: 1;
-}
-
-.banner-content {
-    display: flex;
-    align-items: center;
-    position: relative;
-    z-index: 2;
-    text-align: left;
-}
-
-.profile-pic {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 3px solid white;
-    margin-right: 20px;
-}
-
-
-/* Responsive adjustments for the banner */
-@media (max-width: 768px) {
-    .banner {
-        padding: 40px 20px;
-        height: auto;
-    }
-
-    .profile-pic {
-        width: 80px;
-        height: 80px;
-        margin-right: 10px;
-    }
-
-    .banner-content::after {
-        height: 60px;
-    }
-}
-
 /* Responsive Layout for Small Devices */
 @media (max-width: 768px) {
     nav ul {
@@ -364,4 +345,3 @@ footer a:hover {
         display: none;
     }
 }
-
