@@ -379,7 +379,7 @@ footer {
 .system-icons {
     display: flex;
     align-items: right;
-    gap: 2px;
+    gap: 7px;
 }
 
 /* Time Display */
