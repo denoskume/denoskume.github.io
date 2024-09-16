@@ -82,6 +82,13 @@ header {
     justify-content: space-between; /* Ensures space between logo and navigation */
 }
 
+
+/* Padding to prevent content from being hidden behind the fixed elements */
+body {
+    padding-top: 130px; /* Height of the banner + header */
+}
+
+
 /* Logo Styling */
 .logo-link {
     text-decoration: none;
