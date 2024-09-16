@@ -295,98 +295,84 @@ nav ul li:hover .dropdown-content {
     text-decoration: underline;
 }
 
-
 /* Footer Section */
+
+/* Footer Styling */
 footer {
-    background-color: black;
+    background-color: #000; /* Adjust background color if needed */
     color: white;
-    text-align: center;
-    padding: 10px 0;
-    width: 100%;
-    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    bottom: 0;
-    z-index: 1000;
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/* Left Side: Social Media Links */
-footer .social-icons {
+/* Social Media Icons Styling */
+.social-icons {
     display: flex;
-    align-items: center;
     gap: 15px;
-    margin-left: 15px;
 }
 
-footer .social-icons a {
+.social-icons a {
     color: white;
+    font-size: 24px;
     text-decoration: none;
-    font-size: 1.5em;
+}
+
+.social-icons a:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+/* Search Bar Styling */
+.search-bar {
     display: flex;
     align-items: center;
+    background-color: #f0f0f0; /* Background color for search */
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin-right: auto;
 }
 
-footer .social-icons a:hover {
-    color: #f1f1f1;
+.search-bar svg {
+    margin-right: 10px;
+    color: #555; /* Color of search icon */
 }
 
-/* Middle: Search Bar Styling */
-footer .search-bar {
-    display: flex;
-    align-items: center;
-    background-color: white;
-    border-radius: 25px;
-    padding: 5px 10px;
-    width: 200px;
-}
-
-footer .search-bar input[type="text"] {
+.search-bar input[type="text"] {
     border: none;
     outline: none;
-    width: 100%;
-    margin-left: 10px;
-    font-size: 0.9em;
+    background: none;
+    width: 200px;
+    font-size: 16px;
 }
 
-footer .search-bar svg {
-    width: 1.2em;
-    height: 1.2em;
-    color: #333;
-}
-
-/* Right Side: System Icons */
-footer .system-icons {
+/* System Icons and Time */
+.system-icons {
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin-right: 45px;
-}
-
-footer .system-icons svg {
-    width: 1.5em;
-    height: 1.5em;
-    color: white;
-}
-
-footer .system-icons .time {
-    font-size: 1em;
-    font-weight: bold;
+    gap: 20px;
 }
 
 /* Time Display */
-footer .time-display {
-    font-size: 1em;
-    color: white;
-    margin-right: 10px;
+.time-display {
+    font-size: 16px;
+    font-weight: bold;
 }
 
-/* Hover Effects for System Icons */
-footer .system-icons svg:hover {
-    color: #f1f1f1;
+/* System Icon Styling */
+.system-icons svg {
+    font-size: 20px;
+    color: white;
+}
+
+.system-icons svg:hover {
+    color: #007bff;
 }
 
 /* End Footer Section 
+
 
 /* Custom Button Styling */
 .button {
