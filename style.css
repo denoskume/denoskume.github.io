@@ -361,7 +361,7 @@ footer .system-icons {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-right: 15px;
+    margin-right: 45px;
 }
 
 footer .system-icons svg {
