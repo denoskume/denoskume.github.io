@@ -77,11 +77,28 @@ header {
     align-items: center;
     box-sizing: border-box;
 }
-
 /* Logo Styling */
+.logo-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
 .logo {
     height: 50px;
     max-width: 100px;
+}
+/* Align the logo to the left */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.logo-link:hover {
+    opacity: 0.8; /* Add hover effect for the logo */
 }
 
 /* Hamburger Icon (for mobile) */
