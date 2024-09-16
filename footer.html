@@ -1,104 +1,120 @@
-<style>
- /* BEGIN FOOTER SECTION */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updated Footer with Time Display</title>
 
-footer {
-    background-color: #545655; /* Adjust background color if needed */
-    color: white;
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    width: 100%;
-    box-sizing: border-box;
-    position: relative;
-    bottom: 0;
-}
+    <!-- FontAwesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-/* Social Media Icons Styling */
-.social-icons {
-    display: flex;
-    gap: 10px;
-}
+    <style>
+        /* BEGIN FOOTER SECTION */
+        footer {
+            background-color: #545655; /* Adjust background color if needed */
+            color: white;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            bottom: 0;
+        }
 
-.social-icons a {
-    color: white;
-    font-size: 28px;
-    text-decoration: none;
-}
+        /* Social Media Icons Styling */
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
 
-.social-icons a:hover {
-    color: #007bff; /* Change color on hover */
-}
+        .social-icons a {
+            color: white;
+            font-size: 28px;
+            text-decoration: none;
+        }
 
-/* Search Bar Styling */
-.search-bar {
-    display: flex;
-    align-items: center;
-    background-color: #f0f0f0; /* Background color for search */
-    border-radius: 20px;
-    padding: 5px 8px;
-    margin-left: 80px;
-    margin-right: auto;
-}
+        .social-icons a:hover {
+            color: #007bff; /* Change color on hover */
+        }
 
-.search-bar svg {
-    margin-right: 10px;
-    color: green; /* Color of search icon */
-}
+        /* Search Bar Styling */
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #f0f0f0; /* Background color for search */
+            border-radius: 20px;
+            padding: 5px 8px;
+            margin-left: 80px;
+            margin-right: auto;
+        }
 
-.search-bar input[type="text"] {
-    border: none;
-    outline: none;
-    background: none;
-    width: 145px;
-    font-size: 12px;
-}
+        .search-bar svg {
+            margin-right: 10px;
+            color: green; /* Color of search icon */
+        }
 
-.search-bar .profile-pic-footer {
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    margin-left: 10px;
-    object-fit: cover; /* Ensure the image fits within the circle */
-}
-/* Time Display */
-.time {
-    top: 2px;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    
-}
+        .search-bar input[type="text"] {
+            border: none;
+            outline: none;
+            background: none;
+            width: 145px;
+            font-size: 12px;
+        }
 
-</style>
+        .search-bar .profile-pic-footer {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            margin-left: 10px;
+            object-fit: cover; /* Ensure the image fits within the circle */
+        }
 
-<!-- Footer Section -->
-<footer>
-    <!-- Left Side: Social Media Links -->
-    <div class="social-icons">
-        <a href="https://www.linkedin.com/in/denos-kume" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/denoskume" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://twitter.com/your-twitter" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.instagram.com/k.denoskume" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://denoskume.github.io" target="_blank"><i class="fas fa-globe"></i></a
-                                                                                                  
-        <span class="time" id="time"></span>
-    </div>
+        /* Time Display */
+        .time {
+            top: 2px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 5px 10px;
+            background-color: #444; /* Background color for time display */
+            border-radius: 10px;
+            min-width: 80px;
+            text-align: center; /* Center the text inside the time box */
+        }
+    </style>
+</head>
+<body>
 
-    <!-- Middle: Search Bar -->
-    <div class="search-bar">
-        <strong>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 14 14">
-                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-            </svg>
-        </strong>
-        <input type="text" placeholder="Search ">
-        <img src="id_photo.jpg" alt="Profile Picture" class="profile-pic-footer"> <!-- Include your profile picture -->
-    </div>
-</footer>
+    <!-- Footer Section -->
+    <footer>
+        <!-- Left Side: Social Media Links -->
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/denos-kume" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/denoskume" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com/your-twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/k.denoskume" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://denoskume.github.io" target="_blank"><i class="fas fa-globe"></i></a>
 
-<script>
+            <!-- TIME ELEMENT MOVED INSIDE social-icons TO KEEP IT ON SAME SIDE -->
+            <span class="time" id="time"></span>
+        </div>
+
+        <!-- Middle: Search Bar -->
+        <div class="search-bar">
+            <strong>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 14 14">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                </svg>
+            </strong>
+            <input type="text" placeholder="Search ">
+            <img src="id_photo.jpg" alt="Profile Picture" class="profile-pic-footer"> <!-- Include your profile picture -->
+        </div>
+    </footer>
+
+    <script>
         function updateTime() {
             const timeElement = document.getElementById('time');
             const now = new Date();
@@ -112,3 +128,6 @@ footer {
         setInterval(updateTime, 1000);  // Update every second
         updateTime();  // Initial call to display the time immediately
     </script>
+
+</body>
+</html>
