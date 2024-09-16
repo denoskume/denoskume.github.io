@@ -344,7 +344,7 @@ footer {
     border: none;
     outline: none;
     background: none;
-    width: 150px;
+    width: 130px;
     font-size: 16px;
 }
 
@@ -357,6 +357,7 @@ footer {
 
 /* Time Display */
 .time-display {
+    color: white;
     font-size: 16px;
     font-weight: bold;
 }
