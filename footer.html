@@ -1,94 +1,71 @@
-<!-- footer.html -->
-<footer style="background-color: #007bff; color: white; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; width: 100%;">
-    <!-- Left Section: Social Media and Website -->
-    <div class="footer-left">
-        <a href="https://www.linkedin.com/in/denos-kume" target="_blank" style="color: white; text-decoration: none; margin-right: 10px;">
-            <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-        <a href="https://github.com/denoskume" target="_blank" style="color: white; text-decoration: none; margin-right: 10px;">
-            <i class="fab fa-github"></i> GitHub
-        </a>
-        <a href="https://twitter.com/your-twitter" target="_blank" style="color: white; text-decoration: none; margin-right: 10px;">
-            <i class="fab fa-twitter"></i> Twitter
-        </a>
-        <a href="https://www.instagram.com/k.denoskume" target="_blank" style="color: white; text-decoration: none; margin-right: 10px;">
-            <i class="fab fa-instagram"></i> Instagram
-        </a>
-        <a href="https://denoskume.github.io" target="_blank" style="color: white; text-decoration: none;">
-            <i class="fas fa-globe"></i> Website
-        </a>
+<footer>
+  <div class="footer-container">
+    
+    <!-- Social Media Links -->
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/denos-kume" target="_blank">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/denoskume" target="_blank">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="https://twitter.com/your-twitter" target="_blank">
+        <i class="fab fa-twitter"></i> Twitter
+      </a>
+      <a href="https://www.instagram.com/k.denoskume" target="_blank">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+      <a href="https://denoskume.github.io" target="_blank">
+        <i class="fas fa-globe"></i> Website
+      </a>
     </div>
 
-    <!-- Middle Section: Search Bar and Other Features (like Taskbar) -->
-    <div class="footer-middle">
-        <!-- Search Bar -->
-        <input type="text" id="searchBar" placeholder="Search " style="padding: 5px; font-size: 16px; border-radius: 10px; border: none; width: 200px;">
-        <button onclick="searchContent()" style="padding: 5px 10px; background-color: transparent; border: none; color: white; cursor: pointer;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-            </svg>
-        </button>
-
-        <i class="bi bi-wifi" style="font-size: 1.5em; color: white; margin-left: 15px;"></i>
-        <i class="bi bi-cloud" style="font-size: 1.5em; color: white; margin-left: 15px;"></i>
-        <i class="bi bi-volume-up-fill" style="font-size: 1.5em; color: white; margin-left: 15px;"></i>
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+      </svg>
+      <input type="text" placeholder="Search" id="search-bar" onkeyup="searchContent()" />
     </div>
 
-    <!-- Right Section: Auto-updated Local Time and Date -->
-    <div class="footer-right" style="display: flex; align-items: center;">
-        <span id="local-time" style="margin-right: 10px; font-size: 1.2em;"></span>
-        <span id="local-date" style="font-size: 1.2em;"></span>
+    <!-- System Tray Icons -->
+    <div class="system-icons">
+      <i class="bi bi-wifi"></i>
+      <i class="bi bi-cloud"></i>
+      <i class="bi bi-volume-up"></i>
     </div>
+
+    <!-- Local Time -->
+    <div class="local-time">
+      <i class="bi bi-clock"></i> 
+      <span id="current-time"></span>
+    </div>
+  </div>
 </footer>
 
-<!-- JavaScript for Search Bar Functionality -->
+<!-- Add the script to update time and search function -->
 <script>
-    function searchContent() {
-        // Get the search query
-        const query = document.getElementById('searchBar').value.toLowerCase();
+  // Function to update time
+  function updateTime() {
+    const currentTimeElement = document.getElementById('current-time');
+    const now = new Date();
+    const options = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+    const timeString = now.toLocaleTimeString([], options);
+    currentTimeElement.textContent = timeString;
+  }
 
-        // Get all content elements to search within
-        const contentElements = document.querySelectorAll('body *:not(script):not(style):not(footer):not(header)');
+  // Update time every second
+  setInterval(updateTime, 1000);
 
-        // Reset previous highlights
-        contentElements.forEach(el => {
-            el.style.backgroundColor = ''; // Reset background color
-        });
-
-        let found = false;
-
-        // Iterate through elements to find matches
-        contentElements.forEach(el => {
-            if (el.textContent.toLowerCase().includes(query) && query.trim() !== "") {
-                el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                el.style.backgroundColor = 'yellow'; // Highlight the matched text
-                found = true;
-                return;
-            }
-        });
-
-        // If no results found
-        if (!found && query.trim() !== "") {
-            alert("No matches found for: " + query);
-        }
+  // Function to search content within the page
+  function searchContent() {
+    const input = document.getElementById('search-bar').value.toLowerCase();
+    const allContent = document.body.innerText.toLowerCase();
+    
+    if (allContent.includes(input)) {
+      alert("Match Found: " + input);
+    } else {
+      console.log("No match found");
     }
-
-    // Function to update the time and date
-    function updateTime() {
-        const now = new Date();
-        const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
-        const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
-
-        // Update the time in 'HH:MM:SS' format
-        document.getElementById('local-time').textContent = now.toLocaleTimeString([], timeOptions);
-
-        // Update the date in 'Month DD, YYYY' format
-        document.getElementById('local-date').textContent = now.toLocaleDateString([], dateOptions);
-    }
-
-    // Initial call to display the time/date when the page loads
-    updateTime();
-
-    // Update the time every second
-    setInterval(updateTime, 1000);
+  }
 </script>
