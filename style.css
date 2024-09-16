@@ -20,7 +20,7 @@ body {
     box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
 
-* Banner Section */
+/* Banner Section */
 .banner {
     background-image: url('bannerbg.png');
     background-size: cover;
