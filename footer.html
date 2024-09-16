@@ -19,29 +19,62 @@
         </a>
     </div>
 
-    <!-- Middle Section: Search Icon and Other Features (like in Taskbar) -->
+    <!-- Middle Section: Search Bar and Other Features (like Taskbar) -->
     <div class="footer-middle">
-        <i class="bi bi-search" style="font-size: 1.5em; color: white; margin-right: 15px;"></i>
-        <i class="bi bi-wifi" style="font-size: 1.5em; color: white; margin-right: 15px;"></i>
-        <i class="bi bi-cloud" style="font-size: 1.5em; color: white; margin-right: 15px;"></i>
-        <i class="bi bi-volume-up-fill" style="font-size: 1.5em; color: white; margin-right: 15px;"></i>
+        <!-- Search Bar -->
+        <input type="text" id="searchBar" placeholder="Search content..." style="padding: 5px; font-size: 16px; border-radius: 4px; border: none; width: 200px;">
+        <button onclick="searchContent()" style="padding: 5px 10px; font-size: 16px; margin-left: 10px; background-color: white; color: #007bff; border-radius: 4px;">Search</button>
+
+        <i class="bi bi-wifi" style="font-size: 1.5em; color: white; margin-left: 15px;"></i>
+        <i class="bi bi-cloud" style="font-size: 1.5em; color: white; margin-left: 15px;"></i>
+        <i class="bi bi-volume-up-fill" style="font-size: 1.5em; color: white; margin-left: 15px;"></i>
     </div>
 
     <!-- Right Section: Auto-updated Local Time and Date -->
     <div class="footer-right" style="display: flex; align-items: center;">
-        <span id="local-time" style="margin-right: 10px;"></span> <!-- Placeholder for local time -->
-        <span id="local-date"></span> <!-- Placeholder for local date -->
+        <span id="local-time" style="margin-right: 10px; font-size: 1.2em;"></span>
+        <span id="local-date" style="font-size: 1.2em;"></span>
     </div>
 </footer>
 
-<!-- JavaScript to Update Time and Date -->
+<!-- JavaScript for Search Bar Functionality -->
 <script>
+    function searchContent() {
+        // Get the search query
+        const query = document.getElementById('searchBar').value.toLowerCase();
+
+        // Get all content elements to search within
+        const contentElements = document.querySelectorAll('body *:not(script):not(style):not(footer):not(header)');
+
+        // Reset previous highlights
+        contentElements.forEach(el => {
+            el.style.backgroundColor = ''; // Reset background color
+        });
+
+        let found = false;
+
+        // Iterate through elements to find matches
+        contentElements.forEach(el => {
+            if (el.textContent.toLowerCase().includes(query) && query.trim() !== "") {
+                el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                el.style.backgroundColor = 'yellow'; // Highlight the matched text
+                found = true;
+                return;
+            }
+        });
+
+        // If no results found
+        if (!found && query.trim() !== "") {
+            alert("No matches found for: " + query);
+        }
+    }
+
     // Function to update the time and date
     function updateTime() {
         const now = new Date();
         const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
         const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
-        
+
         // Update the time in 'HH:MM:SS' format
         document.getElementById('local-time').textContent = now.toLocaleTimeString([], timeOptions);
 
