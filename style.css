@@ -172,6 +172,7 @@ nav ul li:hover .dropdown-content {
     border-radius: 50%;
     border: 3px solid white;
     margin-right: 20px;
+    margin-left: 0;
 }
 
 /* Side Navigation Menu (for mobile) */
