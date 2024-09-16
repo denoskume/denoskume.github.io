@@ -24,15 +24,15 @@ body {
 header {
     background-color: #007bff;
     color: white;
+    position: fixed;  /* Makes the header fixed at the top */
     width: 100%;
-    top: 0;
-    z-index: 1000;
+    top: 60px;  /* Adjusts header to appear just below the banner */
+    z-index: 999; /* Ensures the header is below the banner */
     height: 50px;
     padding: 10px 0;
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    position: fixed;
     justify-content: space-between; /* Ensures space between logo and navigation */
 }
 
@@ -141,8 +141,9 @@ nav ul li:hover .dropdown-content {
     align-items: center;
     height: 60px;
     width: 100%;
-    position: fixed;
-    z-index: 1000;
+    position: fixed; /* Makes the banner fixed */
+    top: 0; /* Fixed at the top */
+    z-index: 1000; /* Ensures the banner stays on top of everything */
     box-sizing: border-box;
     margin: 0; /* Removes any margin around the banner */
 }
@@ -241,8 +242,8 @@ nav ul li:hover .dropdown-content {
 
 /* Content Section Full Width */
 .full-width-content {
+    margin-top: 110px; /* Adds space equivalent to banner and header height */
     width: 100%; /* Full width for content */
-    margin: 0px; /* Remove any margin */
     padding: 20px;
     box-sizing: border-box; /* Ensure padding is included in width */
 }
