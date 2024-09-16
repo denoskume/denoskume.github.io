@@ -33,7 +33,6 @@ header {
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    position: fixed;
     justify-content: space-between; /* Ensures space between logo and navigation */
 }
 
