@@ -91,51 +91,5 @@
     </div>
 
    
-    <!-- JavaScript for Side Navigation and Dynamic Content Loading -->
-    <script>
-        // Open and close side navigation for mobile
-        function openNav() {
-            document.getElementById("sideNav").style.width = "150px"; // Adjusted width to 150px
-        }
-
-        function closeNav() {
-            document.getElementById("sideNav").style.width = "0"; // Collapse the side navigation to 0
-        }
-
-        // Function to load content dynamically based on the clicked link
-        function loadContent(page) {
-            const xhttp = new XMLHttpRequest();
-            xhttp.onload = function() {
-                document.getElementById("content").innerHTML = this.responseText;
-            };
-            xhttp.open("GET", `${page}.html`, true); // Load the corresponding HTML file dynamically
-            xhttp.send();
-        }
-
-        // Load the home content by default when the page first loads
-        window.onload = function() {
-            loadContent('home'); // Load 'home.html' by default
-        };
-
-        // Function to detect clicks outside of the sideNav and close it
-        document.addEventListener('click', function(event) {
-            var sideNav = document.getElementById("sideNav");
-            var hamburger = document.querySelector('.hamburger');
-            
-            // If the menu is open and the click is outside the sideNav or hamburger, close the sideNav
-            if (sideNav.style.width === "150px" && !sideNav.contains(event.target) && !hamburger.contains(event.target)) {
-                closeNav();
-            }
-        });
-
-        // Prevent event propagation on sideNav and hamburger clicks
-        document.getElementById("sideNav").addEventListener('click', function(event) {
-            event.stopPropagation(); // Prevents clicks inside sideNav from closing it
-        });
-
-        document.querySelector('.hamburger').addEventListener('click', function(event) {
-            event.stopPropagation(); // Prevents clicks on the hamburger from closing the sideNav
-        });
-    </script>
 </body>
 </html>
