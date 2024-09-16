@@ -312,6 +312,7 @@ footer {
 .social-icons {
     display: flex;
     gap: 15px;
+    margin-right: 5px;
 }
 
 .social-icons a {
@@ -336,14 +337,14 @@ footer {
 
 .search-bar svg {
     margin-right: 10px;
-    color: #555; /* Color of search icon */
+    color: green; /* Color of search icon */
 }
 
 .search-bar input[type="text"] {
     border: none;
     outline: none;
     background: none;
-    width: 200px;
+    width: 150px;
     font-size: 16px;
 }
 
