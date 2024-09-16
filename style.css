@@ -20,13 +20,59 @@ body {
     box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
 
+/* Banner Section */
+.banner {
+    background-image: url('bannerbg.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 60px 40px;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    position: fixed; /* Makes the banner fixed */
+    top: 0; /* Fixed at the top */
+    z-index: 1000; /* Ensures the banner stays on top of everything */
+    box-sizing: border-box;
+    margin: 0; /* Removes any margin around the banner */
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.banner-content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    text-align: left;
+}
+
+.profile-pic {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-right: 15px;
+    margin-left: 2px;
+}
+
 /* Header Section */
 header {
     background-color: #007bff;
     color: white;
-    position: fixed;  /* Makes the header fixed at the top */
+    position: fixed; /* Makes the header fixed at the top */
     width: 100%;
-    top: 60px;  /* Adjusts header to appear just below the banner */
+    top: 60px; /* Adjusts header to appear just below the banner */
     z-index: 999; /* Ensures the header is below the banner */
     height: 50px;
     padding: 10px 0;
@@ -128,53 +174,6 @@ nav ul li .dropdown-content a:hover {
 /* Show the dropdown on hover */
 nav ul li:hover .dropdown-content {
     display: block;
-}
-
-/* Banner Section */
-.banner {
-    background-image: url('bannerbg.png');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 60px 40px;
-    display: flex;
-    align-items: center;
-    height: 60px;
-    width: 100%;
-    position: fixed; /* Makes the banner fixed */
-    top: 0; /* Fixed at the top */
-    z-index: 1000; /* Ensures the banner stays on top of everything */
-    box-sizing: border-box;
-    margin: 0; /* Removes any margin around the banner */
-}
-
-
-.banner::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
-
-.banner-content {
-    display: flex;
-    align-items: center;
-    position: relative;
-    z-index: 2;
-    text-align: left;
-}
-
-.profile-pic {
-    width: 85px;
-    height: 85px;
-    border-radius: 50%;
-    border: 3px solid white;
-    margin-right: 15px;
-    margin-left:2px;
 }
 
 /* Side Navigation Menu (for mobile) */
@@ -314,7 +313,6 @@ footer {
 .social-icons {
     display: flex;
     gap: 15px;
-    
 }
 
 .social-icons a {
@@ -383,8 +381,6 @@ footer {
     color: #007bff;
 }
 /* END FOOTER SECTION */
-
-
 
 /* Custom Button Styling */
 .button {
