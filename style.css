@@ -12,9 +12,9 @@ body {
 .container {
     display: flex;
     justify-content: space-between;
-    align-items: left;
+    align-items: center;
     padding: 10px 20px;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     width: 100%;
     box-sizing: border-box; /* Ensure padding doesn't affect width */
