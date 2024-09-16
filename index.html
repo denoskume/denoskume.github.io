@@ -1,55 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Denos Kume - Portfolio</title>
+    <!-- Link to Favicon -->
+    <link rel="icon" type="image/png" href="fav.png" sizes="64x64">
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+    <!-- FontAwesome for Social Media Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Banner Section (now outside header for proper positioning) -->
+    <section class="banner">
+        <div class="banner-content">
+            <img src="id_photo.jpg" alt="Profile Picture" class="profile-pic"> <!-- Add your profile picture here -->
+            <div class="text-content">
+                <p><b>Denos Kume</b><br>
+                   Aspiring DA | BSc CS & ELE Graduate
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <!-- Logo -->
+            <img src="logo.png" alt="Denos Kume Logo" class="logo">
+            
+            <!-- Google Translate Element -->
+            <div id="google_translate_element"></div>
+
+            <!-- Hamburger Menu Icon (for mobile) -->
+            <div class="hamburger" onclick="openNav()">
+                &#9776; <!-- Hamburger icon (☰) -->
+            </div>
+            
+            <!-- Full Navigation Menu (for desktop) -->
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="loadContent('home')">Home</a></li>
+                    <li><a href="#" onclick="loadContent('about')">About Me</a></li>
+                    <li><a href="#" onclick="loadContent('education')">Education</a></li>
+                    <li><a href="#" onclick="loadContent('experience')">Experience</a></li>
+                    <li><a href="#" onclick="loadContent('training')">Training</a></li>
+                    <li><a href="#" onclick="loadContent('certification')">Certification</a></li>
+                    <li><a href="#" onclick="loadContent('contact')">Contact</a></li>
+                    <!-- Social Media Dropdown Menu -->
+                    <li class="dropdown">
+                        <a href="#">Social Media &#9662;</a> <!-- Down arrow symbol -->
+                        <div class="dropdown-content">
+                            <a href="https://www.linkedin.com/in/denos-kume" target="_blank">
+                                <i class="fab fa-linkedin"></i> <!-- LinkedIn Icon -->
+                            </a>
+                            <a href="https://github.com/denoskume" target="_blank">
+                                <i class="fab fa-github"></i> <!-- GitHub Icon -->
+                            </a>
+                            <a href="https://twitter.com/your-twitter" target="_blank">
+                                <i class="fab fa-twitter"></i> <!-- Twitter Icon -->
+                            </a>
+                            <a href="https://www.instagram.com/k.denoskume" target="_blank">
+                                <i class="fab fa-instagram"></i> <!-- Instagram Icon -->
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Side Navigation Menu (for mobile view) -->
+    <div id="sideNav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#" onclick="loadContent('home')">Home</a>
+        <a href="#" onclick="loadContent('about')">About Me</a>
+        <a href="#" onclick="loadContent('education')">Education</a>
+        <a href="#" onclick="loadContent('experience')">Experience</a>
+        <a href="#" onclick="loadContent('training')">Training</a>
+        <a href="#" onclick="loadContent('certification')">Certification</a>
+        <a href="#" onclick="loadContent('contact')">Contact</a>
+        <a href="#">Social Media</a> <!-- No dropdown for mobile -->
+    </div>
+
+    <!-- Main Content Area -->
+    <div id="content" class="container">
+        <!-- Dynamic content will load here -->
+    </div>
 
     <!-- Footer Section -->
     <footer>
-        <!-- Left Side: Social Media Links -->
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/denos-kume" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/denoskume" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://twitter.com/your-twitter" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/k.denoskume" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://denoskume.github.io" target="_blank"><i class="fas fa-globe"></i></a>
-        </div>
-
-        <!-- Middle: Search Bar -->
-        <div class="search-bar">
-            <strong>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 14 14">
-                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                </svg>
-            </strong>
-            <input type="text" placeholder="Search ">
-            <img src="id_photo.jpg" alt="Profile Picture" class="profile-pic-footer"> <!-- Include your profile picture -->
-        </div>
-
-        <!-- Right Side: Time and Date Display -->
-        <div class="time-container">
-            <span class="time" id="time"></span>
-            <span class="date" id="date"></span>
-        </div>
+        <p>&copy; 2024 Denos Kume | <a href="https://denoskume.github.io">denoskume.github.io</a></p>
     </footer>
 
+    <!-- JavaScript for Side Navigation and Dynamic Content Loading -->
     <script>
-        function updateTime() {
-            const timeElement = document.getElementById('time');
-            const dateElement = document.getElementById('date');
-            
-            const now = new Date();
-
-            // Update Time
-            const hours = String(now.getHours()).padStart(2, '0');
-            const minutes = String(now.getMinutes()).padStart(2, '0');
-            const seconds = String(now.getSeconds()).padStart(2, '0');
-            const currentTime = `${hours}:${minutes}:${seconds}`;
-            timeElement.textContent = currentTime;
-
-            // Update Date
-            const day = String(now.getDate()).padStart(2, '0');
-            const month = String(now.getMonth() + 1).padStart(2, '0'); // Months are 0-based
-            const year = now.getFullYear();
-            const currentDate = `${day}/${month}/${year}`;
-            dateElement.textContent = currentDate;
+        // Open and close side navigation for mobile
+        function openNav() {
+            document.getElementById("sideNav").style.width = "150px"; // Adjusted width to 150px
         }
 
-        setInterval(updateTime, 1000);  // Update every second
-        updateTime();  // Initial call to display the time and date immediately
+        function closeNav() {
+            document.getElementById("sideNav").style.width = "0"; // Collapse the side navigation to 0
+        }
+
+        // Function to load content dynamically based on the clicked link
+        function loadContent(page) {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                document.getElementById("content").innerHTML = this.responseText;
+            };
+            xhttp.open("GET", `${page}.html`, true); // Load the corresponding HTML file dynamically
+            xhttp.send();
+        }
+
+        // Load the home content by default when the page first loads
+        window.onload = function() {
+            loadContent('home'); // Load 'home.html' by default
+        };
+
+        // Function to detect clicks outside of the sideNav and close it
+        document.addEventListener('click', function(event) {
+            var sideNav = document.getElementById("sideNav");
+            var hamburger = document.querySelector('.hamburger');
+            
+            // If the menu is open and the click is outside the sideNav or hamburger, close the sideNav
+            if (sideNav.style.width === "150px" && !sideNav.contains(event.target) && !hamburger.contains(event.target)) {
+                closeNav();
+            }
+        });
+
+        // Prevent event propagation on sideNav and hamburger clicks
+        document.getElementById("sideNav").addEventListener('click', function(event) {
+            event.stopPropagation(); // Prevents clicks inside sideNav from closing it
+        });
+
+        document.querySelector('.hamburger').addEventListener('click', function(event) {
+            event.stopPropagation(); // Prevents clicks on the hamburger from closing the sideNav
+        });
     </script>
+</body>
+</html>
