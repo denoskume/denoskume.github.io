@@ -14,7 +14,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    max-width: 100%;
+    max-width: 125%;
     margin: 0 auto;
     width: 100%;
     box-sizing: border-box; /* Ensure padding doesn't affect width */
