@@ -73,18 +73,13 @@ header {
     position: fixed; /* Makes the header fixed at the top */
     width: 100%;
     top: 60px; /* Adjusts header to appear just below the banner */
-    z-index: 9999; /* Ensure the header appears above content but below the banner */
+    z-index: 999; /* Ensures the header is below the banner */
     height: 50px;
     padding: 10px 0;
     display: flex;
     align-items: center;
     box-sizing: border-box;
     justify-content: space-between; /* Ensures space between logo and navigation */
-}
-
-/* Padding to prevent content from being hidden behind the fixed elements */
-body {
-    padding-top: 110px; /* Height of the banner + header */
 }
 
 /* Logo Styling */
@@ -300,6 +295,92 @@ nav ul li:hover .dropdown-content {
 .training-card .view-path:hover {
     text-decoration: underline;
 }
+
+/* BEGIN FOOTER SECTION */
+/* Footer Styling */
+footer {
+    background-color: #545655; /* Adjust background color if needed */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Social Media Icons Styling */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 28px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+/* Search Bar Styling */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0; /* Background color for search */
+    border-radius: 20px;
+    padding: 5px 8px;
+    margin-left: 45px;
+    margin-right: auto;
+}
+
+.search-bar svg {
+    margin-right: 10px;
+    color: green; /* Color of search icon */
+}
+
+.search-bar input[type="text"] {
+    border: none;
+    outline: none;
+    background: none;
+    width: 145px;
+    font-size: 12px;
+}
+
+.search-bar .profile-pic-footer {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    margin-left: 10px;
+    object-fit: cover; /* Ensure the image fits within the circle */
+}
+
+/* System Icons and Time */
+.system-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Time Display */
+.time-display {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* System Icon Styling */
+.system-icons svg {
+    font-size: 20px;
+    color: white;
+}
+
+.system-icons svg:hover {
+    color: #007bff;
+}
+/* END FOOTER SECTION */
 
 /* Custom Button Styling */
 .button {
