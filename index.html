@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
     <!-- FontAwesome for Social Media Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 <body>
 
@@ -17,7 +18,7 @@
     <section class="banner">
         <div class="banner-content">
             <img src="id_photo.jpg" alt="Profile Picture" class="profile-pic"> <!-- Add your profile picture here -->
-            <div class="text-content">
+            <div class="text-content"> <br><br>
                 <p><b>Denos Kume</b><br>
                    Aspiring DA | BSc CS & ELE Graduate
                 </p>
@@ -28,8 +29,10 @@
     <!-- Header Section -->
     <header>
         <div class="container">
-            <!-- Logo -->
+            <!-- Clickable Logo that links to the Home page -->
+        <a href="#" onclick="loadContent('home')" class="logo-link">
             <img src="logo.png" alt="Denos Kume Logo" class="logo">
+        </a>
             
             <!-- Google Translate Element -->
             <div id="google_translate_element"></div>
@@ -42,7 +45,7 @@
             <!-- Full Navigation Menu (for desktop) -->
             <nav>
                 <ul>
-                    <li><a href="#" onclick="loadContent('home')">Home</a></li>
+                    <li><a href="#" onclick="loadContent('home')"><i class="bi bi-house-fill"></i>
                     <li><a href="#" onclick="loadContent('about')">About Me</a></li>
                     <li><a href="#" onclick="loadContent('education')">Education</a></li>
                     <li><a href="#" onclick="loadContent('experience')">Experience</a></li>
@@ -90,6 +93,64 @@
         <!-- Dynamic content will load here -->
     </div>
 
-   
+    <!-- JavaScript for Footer and other dynamic sections -->
+    <script>
+        // Open and close side navigation for mobile
+        function openNav() {
+            document.getElementById("sideNav").style.width = "150px"; // Adjusted width to 150px
+        }
+
+        function closeNav() {
+            document.getElementById("sideNav").style.width = "0"; // Collapse the side navigation to 0
+        }
+
+        // Function to load content dynamically based on the clicked link
+        function loadContent(page) {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                document.getElementById("content").innerHTML = this.responseText;
+            };
+            xhttp.open("GET", `${page}.html`, true); // Load the corresponding HTML file dynamically
+            xhttp.send();
+        }
+
+        // Load the home content by default when the page first loads
+        window.onload = function() {
+            loadContent('home'); // Load 'home.html' by default
+
+            // Load footer from external HTML file
+            loadFooter();
+        };
+
+        // Function to load footer dynamically
+        function loadFooter() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                document.body.insertAdjacentHTML('beforeend', this.responseText); // Insert footer at the bottom of the page
+            };
+            xhttp.open("GET", "footer.html", true); // Load footer.html dynamically
+            xhttp.send();
+        }
+
+        // Function to detect clicks outside of the sideNav and close it
+        document.addEventListener('click', function(event) {
+            var sideNav = document.getElementById("sideNav");
+            var hamburger = document.querySelector('.hamburger');
+            
+            // If the menu is open and the click is outside the sideNav or hamburger, close the sideNav
+            if (sideNav.style.width === "150px" && !sideNav.contains(event.target) && !hamburger.contains(event.target)) {
+                closeNav();
+            }
+        });
+
+        // Prevent event propagation on sideNav and hamburger clicks
+        document.getElementById("sideNav").addEventListener('click', function(event) {
+            event.stopPropagation(); // Prevents clicks inside sideNav from closing it
+        });
+
+        document.querySelector('.hamburger').addEventListener('click', function(event) {
+            event.stopPropagation(); // Prevents clicks on the hamburger from closing the sideNav
+        });
+    </script>
 </body>
 </html>
