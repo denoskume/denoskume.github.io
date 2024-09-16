@@ -359,6 +359,7 @@ nav ul li:hover .dropdown-content {
         
         /* Time and Date Styling */
         .time-container {
+            margin-right: 80px;
             text-align: right;
         }
 
