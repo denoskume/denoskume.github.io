@@ -1,71 +1,50 @@
+<!-- Footer Section -->
 <footer>
-  <div class="footer-container">
-    
-    <!-- Social Media Links -->
-    <div class="social-links">
-      <a href="https://www.linkedin.com/in/denos-kume" target="_blank">
-        <i class="fab fa-linkedin"></i> LinkedIn
-      </a>
-      <a href="https://github.com/denoskume" target="_blank">
-        <i class="fab fa-github"></i> GitHub
-      </a>
-      <a href="https://twitter.com/your-twitter" target="_blank">
-        <i class="fab fa-twitter"></i> Twitter
-      </a>
-      <a href="https://www.instagram.com/k.denoskume" target="_blank">
-        <i class="fab fa-instagram"></i> Instagram
-      </a>
-      <a href="https://denoskume.github.io" target="_blank">
-        <i class="fas fa-globe"></i> Website
-      </a>
+    <!-- Left Side: Social Media Links -->
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/denos-kume" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/denoskume" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://twitter.com/your-twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/k.denoskume" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://denoskume.github.io" target="_blank"><i class="fas fa-globe"></i></a>
     </div>
 
-    <!-- Search Bar -->
+    <!-- Middle: Search Bar -->
     <div class="search-bar">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-      </svg>
-      <input type="text" placeholder="Search" id="search-bar" onkeyup="searchContent()" />
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+        </svg>
+        <input type="text" placeholder="Search...">
     </div>
 
-    <!-- System Tray Icons -->
+    <!-- Right Side: System Icons and Time -->
     <div class="system-icons">
-      <i class="bi bi-wifi"></i>
-      <i class="bi bi-cloud"></i>
-      <i class="bi bi-volume-up"></i>
-    </div>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-wifi" viewBox="0 0 16 16">
+            <path d="M8 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM1.669 6.933c.607.515 1.291 1.01 2.011 1.456.668.405 1.343.752 2.01.994 1.334.478 2.7.668 3.98.668s2.646-.19 3.98-.668c.667-.242 1.343-.59 2.01-.994.72-.446 1.404-.941 2.011-1.456a1 1 0 0 0-1.43-1.398 11.927 11.927 0 0 0-2.762 2.045 9.2 9.2 0 0 0-4.17-1.045 9.2 9.2 0 0 0-4.17 1.045 11.927 11.927 0 0 0-2.762-2.045 1 1 0 1 0-1.43 1.398zM6 10.5a1.5 1.5 0 1 1-2.12 0 1.5 1.5 0 0 1 2.12 0zm-2.12-.4a1.5 1.5 0 0 1 2.12 0 1.5 1.5 0 0 1-2.12 0zm2.12 0a1.5 1.5 0 0 1 2.12 0 1.5 1.5 0 0 1-2.12 0z"/>
+        </svg>
 
-    <!-- Local Time -->
-    <div class="local-time">
-      <i class="bi bi-clock"></i> 
-      <span id="current-time"></span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-cloud" viewBox="0 0 16 16">
+            <path d="M13.405 8.027A5.002 5.002 0 0 0 3 9a4.992 4.992 0 0 0 3.405-1.027c.905 1.19 2.354 2 4.095 2 1.84 0 3.377-.823 4.222-2.027H13.405zM9.34 4a4.992 4.992 0 0 1 3.095-1c1.74 0 3.19.81 4.095 2A5.002 5.002 0 0 0 6 7a4.992 4.992 0 0 0 3.34-1z"/>
+        </svg>
+
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-volume-up" viewBox="0 0 16 16">
+            <path d="M11.536 14.01a.5.5 0 0 1-.058.707A7.986 7.986 0 0 1 8 16a7.986 7.986 0 0 1-5.94-1.283.5.5 0 0 1-.057-.707L4 12.414V3.586L2.004 1.697A.5.5 0 0 1 2 1.5V14.5a.5.5 0 0 1-.004.197L3 13.586V2.414L11.536 14.01z"/>
+        </svg>
+
+        <!-- Time Display -->
+        <div class="time-display" id="time-display"></div>
     </div>
-  </div>
 </footer>
 
-<!-- Add the script to update time and search function -->
 <script>
-  // Function to update time
-  function updateTime() {
-    const currentTimeElement = document.getElementById('current-time');
-    const now = new Date();
-    const options = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
-    const timeString = now.toLocaleTimeString([], options);
-    currentTimeElement.textContent = timeString;
-  }
-
-  // Update time every second
-  setInterval(updateTime, 1000);
-
-  // Function to search content within the page
-  function searchContent() {
-    const input = document.getElementById('search-bar').value.toLowerCase();
-    const allContent = document.body.innerText.toLowerCase();
-    
-    if (allContent.includes(input)) {
-      alert("Match Found: " + input);
-    } else {
-      console.log("No match found");
+    // Function to update time dynamically based on user's local time
+    function updateTime() {
+        const timeDisplay = document.getElementById("time-display");
+        const now = new Date();
+        const timeString = now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+        timeDisplay.textContent = timeString;
     }
-  }
+
+    setInterval(updateTime, 1000); // Update time every second
+    updateTime(); // Call initially to display the current time immediately
 </script>
