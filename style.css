@@ -17,6 +17,7 @@ body {
     max-width: 145%;
     margin: 0 auto;
     width: 100%;
+    position: fixed;
     box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
 
