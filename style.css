@@ -382,13 +382,12 @@ footer {
     gap: 7px;
 }
 
-/* Time Display */
 .time-display {
     color: white;
-    font-size: 10px;
+    font-size: 16px;
     font-weight: bold;
-    margin-right: 120px; /* Add spacing from other icons */
-    display: fixed;
+    margin-left: 10px; /* Add spacing from other icons */
+    display: inline-block;
 }
 
 /* System Icon Styling */
