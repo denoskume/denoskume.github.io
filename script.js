@@ -1,3 +1,4 @@
+/*
 // Open and close side navigation for mobile
 function openNav() {
     document.getElementById("sideNav").style.width = "150px"; // Adjusted width to 150px for mobile view
@@ -74,3 +75,4 @@ window.onscroll = function () {
     }
 };
 
+*/
