@@ -1,0 +1,57 @@
+<!-- footer.html -->
+<footer style="background-color: #007bff; color: white; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; width: 100%;">
+    <!-- Left Section: Social Media and Website -->
+    <div class="footer-left">
+        <a href="https://www.linkedin.com/in/denos-kume" target="_blank" style="color: white; text-decoration: none; margin-right: 10px;">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://github.com/denoskume" target="_blank" style="color: white; text-decoration: none; margin-right: 10px;">
+            <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="https://twitter.com/your-twitter" target="_blank" style="color: white; text-decoration: none; margin-right: 10px;">
+            <i class="fab fa-twitter"></i> Twitter
+        </a>
+        <a href="https://www.instagram.com/k.denoskume" target="_blank" style="color: white; text-decoration: none; margin-right: 10px;">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://denoskume.github.io" target="_blank" style="color: white; text-decoration: none;">
+            <i class="fas fa-globe"></i> Website
+        </a>
+    </div>
+
+    <!-- Middle Section: Search Icon and Other Features (like in Taskbar) -->
+    <div class="footer-middle">
+        <i class="bi bi-search" style="font-size: 1.5em; color: white; margin-right: 15px;"></i>
+        <i class="bi bi-wifi" style="font-size: 1.5em; color: white; margin-right: 15px;"></i>
+        <i class="bi bi-cloud" style="font-size: 1.5em; color: white; margin-right: 15px;"></i>
+        <i class="bi bi-volume-up-fill" style="font-size: 1.5em; color: white; margin-right: 15px;"></i>
+    </div>
+
+    <!-- Right Section: Auto-updated Local Time and Date -->
+    <div class="footer-right" style="display: flex; align-items: center;">
+        <span id="local-time" style="margin-right: 10px;"></span> <!-- Placeholder for local time -->
+        <span id="local-date"></span> <!-- Placeholder for local date -->
+    </div>
+</footer>
+
+<!-- JavaScript to Update Time and Date -->
+<script>
+    // Function to update the time and date
+    function updateTime() {
+        const now = new Date();
+        const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+        const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+        
+        // Update the time in 'HH:MM:SS' format
+        document.getElementById('local-time').textContent = now.toLocaleTimeString([], timeOptions);
+
+        // Update the date in 'Month DD, YYYY' format
+        document.getElementById('local-date').textContent = now.toLocaleDateString([], dateOptions);
+    }
+
+    // Initial call to display the time/date when the page loads
+    updateTime();
+
+    // Update the time every second
+    setInterval(updateTime, 1000);
+</script>
