@@ -74,38 +74,3 @@ window.onscroll = function () {
     }
 };
 
-
-
-//FOOTER SCRIPT BEGIN
-
-<script>
-        function updateTime() {
-            const timeElement = document.getElementById('time');
-            const dateElement = document.getElementById('date');
-            
-            const now = new Date();
-
-            // Update Time
-            const hours = String(now.getHours()).padStart(2, '0');
-            const minutes = String(now.getMinutes()).padStart(2, '0');
-            const seconds = String(now.getSeconds()).padStart(2, '0');
-            const currentTime = `${hours}:${minutes}:${seconds}`;
-            timeElement.textContent = currentTime;
-
-            // Update Date
-            const day = String(now.getDate()).padStart(2, '0');
-            const month = String(now.getMonth() + 1).padStart(2, '0'); // Months are 0-based
-            const year = now.getFullYear();
-            const currentDate = `${day}/${month}/${year}`;
-            dateElement.textContent = currentDate;
-        }
-
-        setInterval(updateTime, 1000);  // Update every second
-        updateTime();  // Initial call to display the time and date immediately
-    </script>
-
-
-
-
-//END FOOTER SCRIPT 
-
