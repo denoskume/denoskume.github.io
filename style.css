@@ -313,21 +313,10 @@ nav ul li:hover .dropdown-content {
     text-decoration: underline;
 }
 
+
 /* BEGIN FOOTER SECTION */
 
-
-   
-        /* BEGIN FOOTER SECTION */
-
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        footer {
+  footer {
             background-color: #545655; /* Adjust background color if needed */
             color: white;
             display: flex;
@@ -410,9 +399,9 @@ nav ul li:hover .dropdown-content {
             margin-left: 10px;
             object-fit: cover; /* Ensure the image fits within the circle */
         }
-
-
+           
 /* END FOOTER SECTION */
+
 
 
 /* Custom Button Styling */
