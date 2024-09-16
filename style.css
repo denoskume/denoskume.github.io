@@ -139,8 +139,8 @@ nav ul li a::after {
     left: 0;
     bottom: 0;
     width: 0;
-    height: 2px; /* Height of the underline   */
-    background-color: orange; /* Underline color */
+    height: 4px; /* Height of the underline   */
+    background-color: #f72306; /* Underline color */
     transition: width 0.3s; /* Smooth transition for the underline */
 }
 
