@@ -8,12 +8,7 @@
         <a href="https://www.instagram.com/k.denoskume" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://denoskume.github.io" target="_blank"><i class="fas fa-globe"></i></a
                                                                                                   
-         <a href="https://www.linkedin.com/in/denos-kume" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/denoskume" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://twitter.com/your-twitter" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.instagram.com/k.denoskume" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://denoskume.github.io" target="_blank"><i class="fas fa-globe"></i></a>                                                                                                
-    
+        <span class="time" id="time"></span>
     </div>
 
     <!-- Middle: Search Bar -->
@@ -26,3 +21,19 @@
         <input type="text" placeholder="Search ">
         <img src="id_photo.jpg" alt="Profile Picture" class="profile-pic-footer"> <!-- Include your profile picture -->
     </div>
+</footer>
+
+<script>
+        function updateTime() {
+            const timeElement = document.getElementById('time');
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const currentTime = `${hours}:${minutes}:${seconds}`;
+            timeElement.textContent = currentTime;
+        }
+
+        setInterval(updateTime, 1000);  // Update every second
+        updateTime();  // Initial call to display the time immediately
+    </script>
