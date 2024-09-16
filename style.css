@@ -20,25 +20,6 @@ body {
     box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
 
-/* Banner Section */
-.banner {
-    background-image: url('bannerbg.png');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 60px 40px;
-    display: flex;
-    align-items: center;
-    height: 60px;
-    width: 100%;
-    position: fixed; /* Makes the banner fixed */
-    top: 0; /* Fixed at the top */
-    z-index: 1000; /* Ensures the banner stays on top of everything */
-    box-sizing: border-box;
-    margin: 0; /* Removes any margin around the banner */
-}
-
-
 /* Header Section */
 header {
     background-color: #007bff;
@@ -148,6 +129,25 @@ nav ul li .dropdown-content a:hover {
 nav ul li:hover .dropdown-content {
     display: block;
 }
+
+/* Banner Section */
+.banner {
+    background-image: url('bannerbg.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 60px 40px;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    position: fixed; /* Makes the banner fixed */
+    top: 0; /* Fixed at the top */
+    z-index: 1000; /* Ensures the banner stays on top of everything */
+    box-sizing: border-box;
+    margin: 0; /* Removes any margin around the banner */
+}
+
 
 .banner::before {
     content: '';
