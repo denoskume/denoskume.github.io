@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    top: 130px;
     background-color: #f4f4f4;
     color: #333;
     overflow-x: hidden; /* Prevents horizontal scrolling */
@@ -26,7 +27,7 @@ header {
     color: white;
     position: relative;
     width: 100%;
-    top: 85px;
+    top: 95px;
     z-index: 1000;
     height: 50px;
     padding: 10px 0;
