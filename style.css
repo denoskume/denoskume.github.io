@@ -319,7 +319,7 @@ nav ul li:hover .dropdown-content {
 }
 
 /* BEGIN FOOTER SECTION */
-footer {    padding-top: 360px;   
+footer {    
             background-color: #545655; /* Adjust background color if needed */
             color: white;
             display: flex;
@@ -330,7 +330,7 @@ footer {    padding-top: 360px;
             height: 41px;
             box-sizing: border-box;
             bottom: 0;
-            position: fixed;
+            margin-top: 110px;
         }
 
         /* Social Media Icons Styling */
