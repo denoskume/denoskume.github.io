@@ -1,17 +1,43 @@
 
-/********************************************************************************************************
-/* General Styling */
- html, body {
-    font-family: Arial, sans-serif;
+/*******************************************************************************************************
+/* Ensure the body does not scroll */
+html, body {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
     height: 100%;
-    
-   
+    overflow: hidden; /* Prevent entire page from scrolling */
 }
 
+/* Scrollable Content Section */
+.full-width-content {
+    position: fixed;
+    top: 180px; /* Height of the banner + header */
+    bottom: 60px; /* Height of the footer */
+    left: 0;
+    right: 0;
+    overflow-y: auto; /* Enable vertical scrolling for the content section */
+    padding: 20px;
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+}
+
+/* Header Section (fixed) */
+header {
+    position: fixed;
+    top: 120px; /* Adjust according to the height of the banner */
+    width: 100%;
+    height: 50px;
+    z-index: 999;
+}
+
+/* Footer Section (fixed) */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 999;
+}
 /* Container Styling */
 .container {
     display: flex;
@@ -70,23 +96,6 @@
     margin-left: 2px;
 }
 
-/* Header Section */
-header {
-    background-color: #007bff;
-    color: white;
-    position: fixed; /* Makes the header fixed at the top */
-    width: 100%;
-    top: 100px; /* Adjusts header to appear just below the banner */
-    z-index: 999; /* Ensures the header is below the banner */
-    height: 46px;
-    padding: 10px 0;
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    justify-content: space-between; /* Ensures space between logo and navigation */
-}
-
-
 /* Padding to prevent content from being hidden behind the fixed elements */
 body {
     padding-top: 180px; 
@@ -94,15 +103,12 @@ body {
     overflow-y: hidden; /* Prevent entire page from scrolling */
     
 }
-
-
 /* Logo Styling */
 .logo-link {
     text-decoration: none;
     display: flex;
     align-items: center;
 }
-
 .logo {
     height: 50px;
     max-width: 100px;
@@ -112,11 +118,9 @@ body {
 .logo-link {
     margin-right: auto;
 }
-
 .logo-link:hover {
     opacity: 0.8; /* Add hover effect for the logo */
 }
-
 /* Navigation Menu (for desktop) */
 nav ul {
     list-style: none;
@@ -264,18 +268,6 @@ nav ul li:hover .dropdown-content {
     box-sizing: border-box;
 }
 
-/* Content Section Full Width */
-.full-width-content {
-    top: 180px; /* Height of the banner + header */
-    bottom: 60px; /* Height of the footer */
-    left: 0;
-    right: 0;
-    overflow: hidden; /* Prevent entire page from scrolling */
-    overflow-y: auto; /* Enable vertical scrolling for the content section */
-    padding: 20px;
-    box-sizing: border-box; /* Ensure padding is included in width */       
-}
-
 /* Training Section */
 .training-section {
     display: grid;
@@ -325,21 +317,6 @@ nav ul li:hover .dropdown-content {
 }
 
 /* BEGIN FOOTER SECTION */
-footer {    
-            background-color: #545655; /* Adjust background color if needed */
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 5px 10px; 
-            width: 100%;
-            height: 41px;
-            box-sizing: border-box;
-            bottom: 0;
-            z-index: 999;
-            margin-top: 110px;
-            position: fixed;
-        }
 
         /* Social Media Icons Styling */
         .social-icons {
