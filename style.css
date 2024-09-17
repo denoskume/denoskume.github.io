@@ -260,7 +260,7 @@ nav ul li:hover .dropdown-content {
     bottom: 100px; /* Height of the footer */
     left: 0;
     right: 0;
-    overflow-y: auto; /* Enable scrolling only for the content */
+    overflow: auto; /* Enable scrolling only for the content */
     padding: 20px;
     background-color: #f4f4f4;
     box-sizing: border-box;
