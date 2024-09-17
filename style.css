@@ -88,7 +88,7 @@ header {
 /* Padding to prevent content from being hidden behind the fixed elements */
 body {
     padding-top: 180px; /* Height of the banner + header */
-    padding-bottom: 80px
+   
 }
 
 
@@ -328,6 +328,7 @@ footer {
             height: 40px;
             box-sizing: border-box;
             bottom: 0;
+            top: 80px;
            
         }
 
