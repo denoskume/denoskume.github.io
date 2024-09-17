@@ -265,6 +265,8 @@ nav ul li:hover .dropdown-content {
     width: 100%; /* Full width for content */
     padding: 20px;
     box-sizing: border-box; /* Ensure padding is included in width */
+    overflow-y: auto; /* Enables vertical scrolling for the content */
+    
 }
 
 /* Training Section */
