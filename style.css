@@ -91,6 +91,7 @@ header {
 body {
     padding-top: 180px; 
     padding-bottom: 60px;
+    overflow-y: hidden; /* Prevent entire page from scrolling */
     
 }
 
