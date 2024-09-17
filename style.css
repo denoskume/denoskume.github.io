@@ -1,14 +1,14 @@
 
 /********************************************************************************************************
 /* General Styling */
- body {
+ html, body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
     height: 100%;
-    overflow: hidden; /* Prevent entire page from scrolling */
+    
    
 }
 
@@ -270,6 +270,7 @@ nav ul li:hover .dropdown-content {
     bottom: 60px; /* Height of the footer */
     left: 0;
     right: 0;
+    overflow: hidden; /* Prevent entire page from scrolling */
     overflow-y: auto; /* Enable vertical scrolling for the content section */
     padding: 20px;
     box-sizing: border-box; /* Ensure padding is included in width */       
