@@ -256,8 +256,8 @@ nav ul li:hover .dropdown-content {
 /* Scrollable Content Section */
 .full-width-content {
     position: fixed;
-    top: 180px; /* Total height of header + banner */
-    bottom: 100px; /* Height of the footer */
+    top: 280px; /* Total height of header + banner */
+    bottom: 200px; /* Height of the footer */
     left: 0;
     right: 0;
     overflow: auto; /* Enable scrolling only for the content */
