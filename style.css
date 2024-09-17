@@ -31,7 +31,7 @@ body {
     padding: 60px 40px;
     display: flex;
     align-items: center;
-    height: 50px;
+    height: 46px;
     width: 100%;
     position: fixed; /* Makes the banner fixed */
     top: 0; /* Fixed at the top */
@@ -87,7 +87,9 @@ header {
 
 /* Padding to prevent content from being hidden behind the fixed elements */
 body {
-    padding-top: 180px; /* Height of the banner + header */
+    padding-top: 180px;  
+    padding-bottom: 80px;
+    overflow-y: auto; /* Enables vertical scrolling for the content */
 }
 
 
@@ -265,7 +267,7 @@ nav ul li:hover .dropdown-content {
     width: 100%; /* Full width for content */
     padding: 20px;
     box-sizing: border-box; /* Ensure padding is included in width */
-    overflow-y: auto; /* Enables vertical scrolling for the content */
+   
     
 }
 
