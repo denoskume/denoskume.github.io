@@ -354,28 +354,23 @@ footer {
             margin-right: auto;
         }
         
-        /* Time and Date Styling */
-        .time-container {
-            margin-right: 420px;
-            text-align: right;
-        }
+      .time, .date {
+    font-size: 16px; /* Adjust this based on your requirement */
+    color: white;
+    font-weight: bold;
+    margin: 0; /* Remove unnecessary margins */
+    padding: 0; /* Remove any padding issues */
+}
+.time-container {
+    text-align: center; /* Ensures proper alignment */
+}
+.time {
+    display: block;
+}
+.date {
+    display: block; /* Makes sure it appears below the time */
+}
 
-        .time {
-            margin-top: 1px;
-            font-size: 20px; /* Adjust font size */
-            font-weight: bold;
-            color: white; /* Set the color to white */
-            border-radius: 10px;
-            
-        }
-
-        .date {
-            font-size: 20px;
-            color: white;
-            border-radius: 10px;
-            margin-bottom: 1px;
-            display: block; /* Ensures date is displayed below the time */
-        }
 
         .search-bar svg {
             margin-right: 10px;
