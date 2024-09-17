@@ -1,11 +1,13 @@
+
+/********************************************************************************************************
 /* General Styling */
-html, body {
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
-    overflow: hidden; /* Prevents entire body from scrolling */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
 /* Container Styling */
@@ -14,7 +16,7 @@ html, body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    max-width: 100%; /* Adjusted max-width */
+    max-width: 145%;
     margin: 0 auto;
     width: 100%;
     box-sizing: border-box; /* Ensure padding doesn't affect width */
@@ -35,7 +37,7 @@ html, body {
     top: 0; /* Fixed at the top */
     z-index: 1000; /* Ensures the banner stays on top of everything */
     box-sizing: border-box;
-    margin: 0;
+    margin: 0; /* Removes any margin around the banner */
 }
 
 .banner::before {
@@ -70,22 +72,24 @@ html, body {
 header {
     background-color: #007bff;
     color: white;
-    position: fixed;
+    position: fixed; /* Makes the header fixed at the top */
     width: 100%;
     top: 120px; /* Adjusts header to appear just below the banner */
-    z-index: 999;
+    z-index: 999; /* Ensures the header is below the banner */
     height: 50px;
     padding: 10px 0;
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    justify-content: space-between;
+    justify-content: space-between; /* Ensures space between logo and navigation */
 }
+
 
 /* Padding to prevent content from being hidden behind the fixed elements */
 body {
     padding-top: 180px; /* Height of the banner + header */
 }
+
 
 /* Logo Styling */
 .logo-link {
@@ -99,12 +103,13 @@ body {
     max-width: 100px;
 }
 
+/* Align the logo to the left */
 .logo-link {
     margin-right: auto;
 }
 
 .logo-link:hover {
-    opacity: 0.8;
+    opacity: 0.8; /* Add hover effect for the logo */
 }
 
 /* Navigation Menu (for desktop) */
@@ -122,11 +127,12 @@ nav ul li {
 }
 
 nav ul li a {
+    position: relative;
     color: white;
-    text-decoration: none;
+    text-decoration: none; /* Remove the default underline */
     padding: 10px;
     font-weight: bold;
-    white-space: nowrap;
+    white-space: nowrap; /* Prevents text from wrapping */
 }
 
 nav ul li a::after {
@@ -135,13 +141,13 @@ nav ul li a::after {
     left: 0;
     bottom: 0;
     width: 0;
-    height: 2px;
-    background-color: #fc060d;
-    transition: width 0.3s;
+    height: 2px; /* Height of the underline   */
+    background-color: #fc060d; /* Underline color */
+    transition: width 0.3s; /* Smooth transition for the underline */
 }
 
 nav ul li a:hover::after {
-    width: 100%;
+    width: 100%; /* On hover, extend underline to full width */
 }
 
 /* Home Icon Styling */
@@ -253,17 +259,12 @@ nav ul li:hover .dropdown-content {
     box-sizing: border-box;
 }
 
-/* Scrollable Content Section */
+/* Content Section Full Width */
 .full-width-content {
-    position: fixed;
-    top: 280px; /* Total height of header + banner */
-    bottom: 200px; /* Height of the footer */
-    left: 0;
-    right: 0;
-    overflow: auto; /* Enable scrolling only for the content */
+    margin-top: 110px; /* Adds space equivalent to banner and header height */
+    width: 100%; /* Full width for content */
     padding: 20px;
-    background-color: #f4f4f4;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensure padding is included in width */
 }
 
 /* Training Section */
@@ -316,87 +317,87 @@ nav ul li:hover .dropdown-content {
 
 /* BEGIN FOOTER SECTION */
 footer {
-    background-color: #545655;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    width: 100%;
-    height: 60px;
-    position: fixed;
-    bottom: 0;
-    box-sizing: border-box;
-}
+            background-color: #545655; /* Adjust background color if needed */
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            width: 100%;
+            height: 150px;
+            box-sizing: border-box;
+            bottom: 0;
+        }
 
-/* Social Media Icons Styling */
-.social-icons {
-    display: flex;
-    gap: 10px;
-}
+        /* Social Media Icons Styling */
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
 
-.social-icons a {
-    color: white;
-    font-size: 28px;
-    text-decoration: none;
-}
+        .social-icons a {
+            color: white;
+            font-size: 28px;
+            text-decoration: none;
+        }
 
-.social-icons a:hover {
-    color: #007bff;
-}
+        .social-icons a:hover {
+            color: #007bff; /* Change color on hover */
+        }
 
-/* Search Bar Styling */
-.search-bar {
-    display: flex;
-    align-items: center;
-    background-color: #f0f0f0;
-    border-radius: 20px;
-    padding: 5px 8px;
-    margin-left: 45px;
-    margin-right: auto;
-}
-
-.search-bar svg {
-    margin-right: 10px;
-    color: green;
-}
-
-.search-bar input[type="text"] {
-    border: none;
-    outline: none;
-    background: none;
-    width: 145px;
-    font-size: 12px;
-}
-
-.search-bar .profile-pic-footer {
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    margin-left: 10px;
-    object-fit: cover;
-}
-
-/* Time and Date Styling */
-.time, .date {
-    font-size: 16px;
+        /* Search Bar Styling */
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #f0f0f0; /* Background color for search */
+            border-radius: 20px;
+            padding: 5px 8px;
+            margin-left: 45px;
+            margin-right: auto;
+        }
+        
+      .time, .date {
+    font-size: 16px; /* Adjust this based on your requirement */
     color: white;
     font-weight: bold;
-    margin: 0;
-    padding: 0;
+    margin: 0; /* Remove unnecessary margins */
+    padding: 0; /* Remove any padding issues */
 }
-
 .time-container {
-    text-align: center;
+    text-align: center; /* Ensures proper alignment */
 }
-
 .time {
     display: block;
 }
-
 .date {
-    display: block;
+    display: block; /* Makes sure it appears below the time */
 }
+
+
+        .search-bar svg {
+            margin-right: 10px;
+            color: green; /* Color of search icon */
+        }
+
+        .search-bar input[type="text"] {
+            border: none;
+            outline: none;
+            background: none;
+            width: 145px;
+            font-size: 12px;
+        }
+
+        .search-bar .profile-pic-footer {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            margin-left: 10px;
+            object-fit: cover; /* Ensure the image fits within the circle */
+        }
+      
+/* END FOOTER SECTION */
+
+
 
 /* Custom Button Styling */
 .button {
