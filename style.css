@@ -8,7 +8,6 @@ html, body {
     background-color: #f4f4f4;
     color: #333;
     height: 100%;
-    width: 100%;
     overflow: hidden; /* Prevent entire page from scrolling */
    
 }
@@ -266,16 +265,13 @@ nav ul li:hover .dropdown-content {
 
 /* Content Section Full Width */
 .full-width-content {
-    position: fixed;
     top: 180px; /* Height of the banner + header */
     bottom: 60px; /* Height of the footer */
     left: 0;
     right: 0;
     overflow-y: auto; /* Enable vertical scrolling for the content section */
     padding: 20px;
-    box-sizing: border-box; /* Ensure padding is included in width */
-   
-    
+    box-sizing: border-box; /* Ensure padding is included in width */       
 }
 
 /* Training Section */
