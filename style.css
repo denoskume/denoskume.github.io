@@ -28,10 +28,10 @@ body {
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 60px 40px;
+    padding: 50px 30px;
     display: flex;
     align-items: center;
-    height: 46px;
+    height: 40px;
     width: 100%;
     position: fixed; /* Makes the banner fixed */
     top: 0; /* Fixed at the top */
