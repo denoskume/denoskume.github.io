@@ -87,9 +87,9 @@ header {
 
 /* Padding to prevent content from being hidden behind the fixed elements */
 body {
-    padding-top: 180px;  
-    padding-bottom: 80px;
-    overflow-y: auto; /* Enables vertical scrolling for the content */
+    padding-top: 210px;  
+    
+    
 }
 
 
@@ -326,7 +326,7 @@ footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 20px;
+            padding-top: 50px 
             width: 100%;
             height: 150px;
             box-sizing: border-box;
