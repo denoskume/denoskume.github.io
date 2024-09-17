@@ -264,7 +264,7 @@ nav ul li:hover .dropdown-content {
 /* Content Section Full Width */
 .full-width-content {
     margin-top: 110px; /* Adds space equivalent to banner and header height */
-    margin-bottom: 110px; /* Adds space equivalent to footer height */
+    margin-bottom: 510px; /* Adds space equivalent to footer height */
     width: 100%; /* Full width for content */
     padding: 20px;
     box-sizing: border-box; /* Ensure padding is included in width */
