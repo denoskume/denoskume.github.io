@@ -1,5 +1,5 @@
 /* General Styling */
-body {
+html, body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -257,7 +257,7 @@ nav ul li:hover .dropdown-content {
 .full-width-content {
     position: fixed;
     top: 180px; /* Total height of header + banner */
-    bottom: 60px; /* Height of the footer */
+    bottom: 100px; /* Height of the footer */
     left: 0;
     right: 0;
     overflow-y: auto; /* Enable scrolling only for the content */
