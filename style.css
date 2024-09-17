@@ -74,7 +74,7 @@ header {
     color: white;
     position: fixed; /* Makes the header fixed at the top */
     width: 100%;
-    top: 120px; /* Adjusts header to appear just below the banner */
+    top: 110px; /* Adjusts header to appear just below the banner */
     z-index: 999; /* Ensures the header is below the banner */
     height: 50px;
     padding: 10px 0;
