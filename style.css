@@ -87,8 +87,7 @@ header {
 
 /* Padding to prevent content from being hidden behind the fixed elements */
 body {
-    padding-top: 180px;  
-    
+    padding-top: 180px;      
     
 }
 
@@ -320,19 +319,17 @@ nav ul li:hover .dropdown-content {
 }
 
 /* BEGIN FOOTER SECTION */
-footer {
-         
+footer {    padding-top: 180px;   
             background-color: #545655; /* Adjust background color if needed */
             color: white;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 10px; 
+            padding: 5px 10px; 
             width: 100%;
             height: 48px;
             box-sizing: border-box;
             bottom: 0;
-            margin-top: 110px;
             position: fixed;
         }
 
