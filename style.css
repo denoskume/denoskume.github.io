@@ -8,6 +8,7 @@ html, body {
     background-color: #f4f4f4;
     color: #333;
     height: 100%;
+    width: 100%;
     overflow: hidden; /* Prevent entire page from scrolling */
    
 }
