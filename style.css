@@ -256,6 +256,30 @@ nav ul li:hover .dropdown-content {
     transform: scale(1.05);
 }
 
+.training-card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.training-card .course-count {
+    color: #7c3aed;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.training-card .view-path {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.training-card .view-path:hover {
+    text-decoration: underline;
+}
+
 /* Custom Button Styling */
 .button, .btn-primary, .btn-secondary {
     padding: 10px 20px;
@@ -323,6 +347,54 @@ footer {
     color: #007bff;
 }
 
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    padding: 5px 8px;
+    margin-left: 45px;
+    margin-right: auto;
+}
+
+.search-bar svg {
+    margin-right: 10px;
+    color: green; /* Color of search icon */
+}
+
+.search-bar input[type="text"] {
+    border: none;
+    outline: none;
+    background: none;
+    width: 145px;
+    font-size: 14px;
+}
+
+.search-bar .profile-pic-footer {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    margin-left: 10px;
+    object-fit: cover; /* Ensure the image fits within the circle */
+}
+
+/* Time Display in Button */
+.time-button {
+    background-color: white;
+    color: #545655;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 8px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: default;
+    margin-right: 15px;
+    margin-left: auto;
+    align-items: center;
+    height: 22px;
+    width: 10%;
+}
+
 /* Responsive Layout */
 @media (max-width: 1024px) {
     .training-section {
@@ -345,6 +417,10 @@ footer {
 
     .sidenav {
         display: block;
+    }
+
+    .sidenav a {
+        font-size: 18px;
     }
 }
 
