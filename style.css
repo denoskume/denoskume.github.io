@@ -64,12 +64,12 @@ body {
     margin-right: 15px;
     margin-left: 2px;
 }
-
+/************************************HEADER SECTION START ****************************************/
 /* Header Section */
 header {
     background-color: #007bff;
     color: white;
-    position: fixed; /* Makes the header fixed at the top */
+    /*position: fixed; /* Makes the header fixed at the top */
     width: 100%;
     top: 120px; /* Adjusts header to appear just below the banner */
     z-index: 999; /* Ensures the header is below the banner */
