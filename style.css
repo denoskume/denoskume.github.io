@@ -11,7 +11,7 @@ body {
 }
 /* Container Styling */
 .container {
-    display: flex;
+    /*display: flex;*/
     justify-content: space-between;
     align-items: center;
     max-width: 1200px; /* Limit the container width */
