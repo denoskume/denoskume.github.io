@@ -472,8 +472,36 @@ footer {
 
 /*********************************HOME PAGE STYLE****************************************************************
 
+/* Main Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* 12-column grid for flexibility */
+    grid-template-rows: auto; /* Rows will automatically adjust based on content */
+    gap: 20px; /* Space between grid items */
+    padding: 20px;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+#header {
+    grid-column: 1 / span 12; /* Full width */
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+}
+
 /* Home Section (Welcome Section) */
 #home {
+    grid-column: 1 / span 12; /* Full width */
     background: linear-gradient(rgba(0, 123, 255, 0.85), rgba(0, 123, 255, 0.85)), url('background.jpg') no-repeat center center/cover;
     color: white;
     padding: 100px 20px;
@@ -482,15 +510,14 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    box-sizing: border-box;
+    border-radius: 10px;
 }
 
 #home h1 {
-    font-size: 3.5rem; /* Adjust font size */
-    font-weight: 700; /* Bold */
+    font-size: 3.5rem;
+    font-weight: 700;
     margin-bottom: 10px;
-    letter-spacing: 2px; /* Slight spacing */
+    letter-spacing: 2px;
 }
 
 #home h2 {
@@ -538,9 +565,11 @@ footer {
 
 /* Intro Section */
 #intro {
-    padding: 60px 0;
+    grid-column: 1 / span 12; /* Full width */
     background-color: #f8f9fa;
+    padding: 60px 20px;
     text-align: center;
+    border-radius: 10px;
 }
 
 #intro .intro-content p {
@@ -553,15 +582,18 @@ footer {
 
 /* Highlights Section */
 .highlights {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
     gap: 30px;
+    margin-top: 40px;
 }
 
 .highlight {
-    flex: 1 1 30%;
+    background-color: white;
+    padding: 20px;
     text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .highlight i {
@@ -585,10 +617,12 @@ footer {
 
 /* Services Section */
 #services {
-    padding: 80px 20px;
+    grid-column: 1 / span 12; /* Full width */
     background-color: #007bff;
     color: white;
+    padding: 80px 20px;
     text-align: center;
+    border-radius: 10px;
 }
 
 #services h2 {
@@ -598,15 +632,18 @@ footer {
 }
 
 .services-grid {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
     gap: 30px;
 }
 
 .service {
-    flex: 1 1 30%;
+    background-color: white;
+    padding: 20px;
+    color: #007bff;
     text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .service i {
@@ -623,16 +660,18 @@ footer {
 
 .service p {
     font-size: 1rem;
-    color: white;
-    max-width: 600px;
+    color: #333;
+    max-width: 300px;
     margin: 0 auto;
 }
 
 /* Call to Action Section */
 #cta {
+    grid-column: 1 / span 12; /* Full width */
+    background-color: #f8f9fa;
     padding: 60px 20px;
     text-align: center;
-    background-color: #f8f9fa;
+    border-radius: 10px;
 }
 
 #cta h2 {
@@ -646,19 +685,25 @@ footer {
     margin-bottom: 40px;
 }
 
-#cta .btn {
+#cta .btn-primary {
     padding: 12px 30px;
     font-size: 1.1rem;
     border-radius: 30px;
     transition: background-color 0.3s ease;
 }
 
-#cta .btn-primary {
-    background-color: #007bff;
-}
-
 #cta .btn-primary:hover {
     background-color: #0056b3;
+}
+
+/* Footer Section */
+#footer {
+    grid-column: 1 / span 12; /* Full width */
+    background-color: #545655;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
 }
 
 /* Responsive Design */
@@ -672,11 +717,12 @@ footer {
     }
 
     .highlights, .services-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
         gap: 20px;
     }
 
     .highlight, .service {
-        flex: 1 1 45%;
+        margin-bottom: 20px;
     }
 }
 
@@ -689,12 +735,14 @@ footer {
         font-size: 1.4rem;
     }
 
-    .highlight, .service {
-        flex: 1 1 100%;
-        margin-bottom: 20px;
+    .highlights, .services-grid {
+        grid-template-columns: 1fr; /* Stack items on smaller screens */
+        gap: 20px;
     }
     
     .btn-primary, .btn-secondary {
         width: 100%; /* Full width buttons on mobile */
     }
 }
+
+
