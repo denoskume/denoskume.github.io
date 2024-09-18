@@ -479,7 +479,7 @@ footer {
     grid-template-rows: auto; /* Rows will automatically adjust based on content */
     gap: 20px; /* Space between grid items */
     padding: 20px;
-    max-width: 1140px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
