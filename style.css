@@ -90,7 +90,7 @@ header {
 /* Padding to prevent content from being hidden behind the fixed elements */
 body {
     padding-top: 200px; /* Height of the banner + header */
-    padding-bottom: 200px;
+    
 }
 
 
@@ -330,7 +330,7 @@ footer {
             height: 200px;
             box-sizing: border-box;
             bottom: 0;
-            top: 80px;
+            top: 180px;
            
         }
 
