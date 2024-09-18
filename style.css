@@ -380,14 +380,17 @@ footer {
             object-fit: cover; /* Ensure the image fits within the circle */
         } 
 
-        /* Time Display */
-        .time-display {
-            margin: 10px;
-            color: white;
-            font-size: 16px;
+         /* Time Display in Button */
+        .time-button {
+            background-color: white;
+            color: #545655;
+            border: none;
+            border-radius: 10px;
+            padding: 3px 8px;
+            font-size: 15px;
             font-weight: bold;
+            cursor: default;
         }
-
             
       
 /* END FOOTER SECTION */
