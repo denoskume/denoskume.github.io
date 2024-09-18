@@ -359,24 +359,6 @@ footer {
             margin-right: auto;
         }
         
-      .time, .date {
-    font-size: 16px; /* Adjust this based on your requirement */
-    color: white;
-    font-weight: bold;
-    margin: 0; /* Remove unnecessary margins */
-    padding: 0; /* Remove any padding issues */
-}
-.time-container {
-    text-align: center; /* Ensures proper alignment */
-}
-.time {
-    display: block;
-}
-.date {
-    display: block; /* Makes sure it appears below the time */
-}
-
-
         .search-bar svg {
             margin-right: 10px;
             color: green; /* Color of search icon */
@@ -396,7 +378,16 @@ footer {
             border-radius: 50%;
             margin-left: 10px;
             object-fit: cover; /* Ensure the image fits within the circle */
+        } 
+
+        /* Time Display */
+        .time-display {
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
         }
+
+            
       
 /* END FOOTER SECTION */
 
