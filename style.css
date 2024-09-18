@@ -1,4 +1,4 @@
-/********************************************************************************************************
+/****************************************GENERAL STYLING START **************************************************/
 /* General Styling */
 body {
     font-family: 'Montserrat', sans-serif; /* Modern font */
@@ -17,7 +17,8 @@ body {
     padding: 0 15px; /* Add padding on both sides */
     box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
-
+/*******************************************GENERAL STYL END*************************************************/
+/*****************BANNER SECTION START********************************/
 /* Banner Section */
 .banner {
     background-image: url('bannerbg.png');
@@ -63,6 +64,7 @@ body {
     margin-right: 15px;
     margin-left: 2px;
 }
+/*******************END OF BANNER SECTION****************************/
 /*****************************************HEADER SECTION START*********************************************/
 /* Header Section */
 header {
