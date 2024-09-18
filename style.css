@@ -2,7 +2,6 @@
 /********************************************************************************************************
 /* General Styling */
 body {
-   /* font-family: Arial, sans-serif; */
     font-family: 'Montserrat', sans-serif; /* Modern font */
     margin: 0;
     padding: 0;
@@ -16,9 +15,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /*padding: 10px 20px; */
     padding: 0 15px; /* Add padding on both sides */
-    /*max-width: 145%;*/
     max-width: 1200px  /* Limit the container width */
     margin: 0 auto;  /* Center the container */
     width: 100%;
