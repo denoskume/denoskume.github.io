@@ -382,15 +382,16 @@ footer {
 
          /* Time Display in Button */
         .time-button {
+            display: flex;
             background-color: white;
             color: #545655;
-            border: none;
-            border-radius: 15px;
-            padding: 3px 8px;
-            font-size: 45px;
+            border-radius: 20px;
+            padding: 5px 8px;
+            font-size: 15px;
             font-weight: bold;
             cursor: default;
-            margin-right: 20px;
+            margin-right: 45px;
+            width: 30%;
         }
             
       
