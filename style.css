@@ -7,18 +7,66 @@ body {
     background-color: #f4f4f4;
     color: #333;
     overflow-x: hidden; /* Prevents horizontal scrolling */
-    padding-top: 230px; /* Accounts for header and banner height */
+    padding-top: 200px; /* Accounts for header and banner height */
 }
+
 /* Container Styling */
 .container {
-    justify-content: space-between;
-    align-items: center;
     max-width: 1200px; /* Limit the container width */
     margin: 0 auto;  /* Center the container */
     padding: 0 15px; /* Add padding on both sides */
     box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
 /*******************************************GENERAL STYL END*************************************************/
+/*****************BANNER SECTION START********************************/
+/* Banner Section */
+.banner {
+    background-image: url('bannerbg.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 60px 40px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    position: fixed; /* Makes the banner fixed */
+    top: 0; /* Fixed at the top */
+    z-index: 1000; /* Ensures the banner stays on top of everything */
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.banner-content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    text-align: left;
+}
+
+.profile-pic {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-right: 15px;
+    margin-left: 2px;
+}
+/*******************END OF BANNER SECTION****************************/
+/*****************************************HEADER SECTION START*********************************************/
+
 /* Banner Section */
 .banner {
     background-image: url('bannerbg.png');
@@ -64,19 +112,19 @@ body {
     margin-right: 15px;
     margin-left: 2px;
 }
-/************************************HEADER SECTION START ****************************************/
+
 /* Header Section */
 header {
     background-color: #007bff;
     color: white;
-    position: fixed;  /* Makes the header fixed at the top */
+    position: fixed; /* Makes the header fixed at the top */
     width: 100%;
     top: 120px; /* Adjusts header to appear just below the banner */
     z-index: 999; /* Ensures the header is below the banner */
-    height: 60px;
-    padding: 5px 10px;
+    height: 50px;
+    padding: 10px 0;
     display: flex;
-    justify-content: center;
+    align-items: center;
     box-sizing: border-box;
     justify-content: space-between; /* Ensures space between logo and navigation */
 }
@@ -93,7 +141,7 @@ body {
 .logo-link {
     text-decoration: none;
     display: flex;
-    align-items: left;
+    align-items: center;
 }
 
 .logo {
@@ -313,108 +361,85 @@ nav ul li:hover .dropdown-content {
     text-decoration: underline;
 }
 
-/* BEGIN FOOTER SECTION */
+/*********************************HEADER SECTION END ************************************************/
+
+/********************FOOTER START**********************************/
+/* Footer Section */
 footer {
-            background-color: #545655; /* Adjust background color if needed */
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            width: 100%;
-            height: 60px;
-            box-sizing: border-box;
-            bottom: 0;
-            top: 180px;
-           
-        }
-
-        /* Social Media Icons Styling */
-        .social-icons {
-            display: flex;
-            gap: 10px;
-        }
-
-        .social-icons a {
-            color: white;
-            font-size: 28px;
-            text-decoration: none;
-        }
-
-        .social-icons a:hover {
-            color: #007bff; /* Change color on hover */
-        }
-
-        /* Search Bar Styling */
-        .search-bar {
-            display: flex;
-            align-items: center;
-            background-color: #f0f0f0; /* Background color for search */
-            border-radius: 20px;
-            padding: 5px 8px;
-            margin-left: 45px;
-            margin-right: auto;
-        }
-        
-        .search-bar svg {
-            margin-right: 10px;
-            color: green; /* Color of search icon */
-        }
-
-        .search-bar input[type="text"] {
-            border: none;
-            outline: none;
-            background: none;
-            width: 145px;
-            font-size: 14px;
-        }
-
-        .search-bar .profile-pic-footer {
-            width: 22px;
-            height: 22px;
-            border-radius: 50%;
-            margin-left: 10px;
-            object-fit: cover; /* Ensure the image fits within the circle */
-        } 
-
-         /* Time Display in Button */
-        .time-button {
-            background-color: white;
-            color: #f0f0f0;
-            border: none;
-            border-radius: 20px;
-            padding: 5px 8px;
-            font-size: 24px;
-            font-weight: bold;
-            cursor: default;
-            margin-right: 15px;
-            margin-left: auto;
-            align-items: center;
-            height: 22px;
-            width: 10%;
-        }
-            
-      
-/* END FOOTER SECTION */
-
-
-
-/* Custom Button Styling */
-.button {
-    background-color: #007bff;
+    background-color: #545655;
     color: white;
-    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    width: 100%;
+    height: 60px;
+    box-sizing: border-box;
 }
 
-.button:hover {
-    background-color: #0056b3;
+.social-icons {
+    display: flex;
+    gap: 10px;
 }
 
+.social-icons a {
+    color: white;
+    font-size: 28px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    padding: 5px 8px;
+    margin-left: 45px;
+    margin-right: auto;
+}
+
+.search-bar svg {
+    margin-right: 10px;
+    color: green; /* Color of search icon */
+}
+
+.search-bar input[type="text"] {
+    border: none;
+    outline: none;
+    background: none;
+    width: 145px;
+    font-size: 14px;
+}
+
+.search-bar .profile-pic-footer {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    margin-left: 10px;
+    object-fit: cover; /* Ensure the image fits within the circle */
+}
+
+/* Time Display in Button */
+.time-button {
+    background-color: white;
+    color: #545655;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 8px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: default;
+    margin-right: 15px;
+    margin-left: auto;
+    align-items: center;
+    height: 22px;
+    width: 10%;
+}
+/********************** END FOOTER ******************************/
 /* Responsive Layout */
 @media (max-width: 1024px) {
     .training-section {
@@ -448,141 +473,33 @@ footer {
     .training-section {
         grid-template-columns: 1fr;
     }
-}
 
-@media (min-width: 769px) {
-    nav ul {
-        display: flex;
-    }
-
-    .hamburger {
-        display: none;
-    }
-
-    .sidenav {
-        display: none;
+    .btn-primary, .btn-secondary, .button {
+        width: 100%; /* Full width buttons on mobile */
     }
 }
 
-/*********************************HOME PAGE STYLE****************************************************************
+/********************************* HOME PAGE SPECIFIC CSS ********************************************/
 
 /* Main Grid Layout */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr); /* 12-column grid for flexibility */
-    grid-template-rows: auto; /* Rows will automatically adjust based on content */
+    grid-template-rows: auto;
     gap: 20px; /* Space between grid items */
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Header Section */
-#header {
-    grid-column: 1 / span 12; /* Full width */
-    background-color: #007bff;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-}
-
-#header h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin: 0;
-}
-
-/* Home Section (Welcome Section) */
-#home {
-    grid-column: 1 / span 12; /* Full width */
-    background: linear-gradient(rgba(0, 123, 255, 0.85), rgba(0, 123, 255, 0.85)), url('background.jpg') no-repeat center center/cover;
-    color: white;
-    padding: 100px 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-}
-
-#home h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
-}
-
-#home h2 {
-    font-size: 1.8rem;
-    font-weight: 400;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-}
-
-#home p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    max-width: 800px;
-}
-
-/* Buttons Styling */
-.btn-primary, .btn-secondary {
-    padding: 12px 30px;
-    font-size: 1.1rem;
-    border-radius: 30px;
-    margin: 15px;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-}
-
-.btn-primary {
-    background-color: #28a745;
-    border: none;
-    color: white;
-}
-
-.btn-primary:hover {
-    background-color: #218838;
-}
-
-.btn-secondary {
-    background-color: #ffc107;
-    border: none;
-    color: #333;
-}
-
-.btn-secondary:hover {
-    background-color: #e0a800;
-}
-
-/* Intro Section */
-#intro {
-    grid-column: 1 / span 12; /* Full width */
-    background-color: #f8f9fa;
-    padding: 60px 20px;
-    text-align: center;
-    border-radius: 10px;
-}
-
-#intro .intro-content p {
-    font-size: 1.3rem;
-    margin-bottom: 40px;
-    max-width: 800px;
-    margin: 0 auto;
-    color: #555;
-}
-
-/* Highlights Section */
-.highlights {
+/* Highlights and Services Section: Shared Grid */
+.three-column-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns */
     gap: 30px;
-    margin-top: 40px;
 }
 
-.highlight {
+.highlight, .service {
     background-color: white;
     padding: 20px;
     text-align: center;
@@ -590,78 +507,21 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.highlight i {
+.highlight i, .service i {
     font-size: 3.5rem;
     color: #007bff;
     margin-bottom: 15px;
 }
 
-.highlight h3 {
+.highlight h3, .service h3 {
     font-size: 1.4rem;
     font-weight: 600;
     margin-bottom: 10px;
-}
-
-.highlight p {
-    font-size: 1rem;
-    color: #555;
-    max-width: 300px;
-    margin: 0 auto;
-}
-
-/* Services Section */
-#services {
-    grid-column: 1 / span 12; /* Full width */
-    background-color: #007bff;
-    color: white;
-    padding: 80px 20px;
-    text-align: center;
-    border-radius: 10px;
-}
-
-#services h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    font-weight: 700;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    gap: 30px;
-}
-
-.service {
-    background-color: white;
-    padding: 20px;
-    color: #007bff;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.service i {
-    font-size: 3.5rem;
-    color: #28a745;
-    margin-bottom: 20px;
-}
-
-.service h3 {
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.service p {
-    font-size: 1rem;
-    color: #333;
-    max-width: 300px;
-    margin: 0 auto;
 }
 
 /* Call to Action Section */
 #cta {
-    grid-column: 1 / span 12; /* Full width */
+    grid-column: 1 / span 12;
     background-color: #f8f9fa;
     padding: 60px 20px;
     text-align: center;
@@ -689,54 +549,3 @@ footer {
 #cta .btn-primary:hover {
     background-color: #0056b3;
 }
-
-/* Footer Section */
-#footer {
-    grid-column: 1 / span 12; /* Full width */
-    background-color: #545655;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-    #home h1 {
-        font-size: 3rem;
-    }
-
-    #home h2 {
-        font-size: 1.6rem;
-    }
-
-    .highlights, .services-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
-        gap: 20px;
-    }
-
-    .highlight, .service {
-        margin-bottom: 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    #home h1 {
-        font-size: 2.5rem;
-    }
-
-    #home h2 {
-        font-size: 1.4rem;
-    }
-
-    .highlights, .services-grid {
-        grid-template-columns: 1fr; /* Stack items on smaller screens */
-        gap: 20px;
-    }
-    
-    .btn-primary, .btn-secondary {
-        width: 100%; /* Full width buttons on mobile */
-    }
-}
-
-
