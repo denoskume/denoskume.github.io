@@ -1,5 +1,6 @@
 
 /********************************************************************************************************
+/****************************************GENERAL STYLING START **************************************************/
 /* General Styling */
 body {
     font-family: 'Montserrat', sans-serif; /* Modern font */
@@ -11,21 +12,14 @@ body {
     padding-top: 200px; /* Accounts for header and banner height */
 }
 
-
-
 /* Container Styling */
 .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /*padding: 10px 20px; */
-    padding: 0 15px; /* Add padding on both sides */
-    /*max-width: 145%;*/
-    max-width: 1200px  /* Limit the container width */
+    max-width: 1200px; /* Limit the container width */
     margin: 0 auto;  /* Center the container */
-    width: 100%;
+    padding: 0 15px; /* Add padding on both sides */
     box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
+/*******************************************GENERAL STYL END*************************************************/
 
 /* Banner Section */
 .banner {
