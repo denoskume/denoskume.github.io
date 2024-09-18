@@ -2,6 +2,7 @@
 /********************************************************************************************************
 /* General Styling */
 body {
+    display: grid;
     font-family: 'Montserrat', sans-serif; /* Modern font */
     margin: 0;
     padding: 0;
