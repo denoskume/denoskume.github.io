@@ -11,7 +11,7 @@ body {
 }
 /* Container Styling */
 .container {
-    display: block;
+    display: grid;
     justify-content: space-between;
     align-items: center;
     max-width: 1200px; /* Limit the container width */
