@@ -9,17 +9,17 @@ body {
     overflow-x: hidden; /* Prevents horizontal scrolling */
     padding-top: 200px; /* Accounts for header and banner height */
 }
-
 /* Container Styling */
 .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     max-width: 1200px; /* Limit the container width */
     margin: 0 auto;  /* Center the container */
     padding: 0 15px; /* Add padding on both sides */
     box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
-
 /*******************************************GENERAL STYL END*************************************************/
-
 /* Banner Section */
 .banner {
     background-image: url('bannerbg.png');
