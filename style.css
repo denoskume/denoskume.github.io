@@ -76,7 +76,7 @@ header {
     height: 60px;
     padding: 5px 10px;
     display: flex;
-    align-items: center;
+    justify-content: center;
     box-sizing: border-box;
     justify-content: space-between; /* Ensures space between logo and navigation */
 }
