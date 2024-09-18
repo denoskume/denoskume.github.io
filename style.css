@@ -63,21 +63,21 @@ body {
     margin-right: 15px;
     margin-left: 2px;
 }
-
+/*****************************************HEADER SECTION START*********************************************/
 /* Header Section */
 header {
     background-color: #007bff;
     color: white;
-    position: fixed; /* Makes the header fixed at the top */
+    position: fixed; /* Keeps the header fixed at the top */
     width: 100%;
     top: 120px; /* Adjusts header to appear just below the banner */
     z-index: 999;
-    height: 50px;
-    padding: 10px 0;
+    height: 60px; /* Increased height for better alignment */
     display: flex;
-    align-items: center;
-    box-sizing: border-box;
+    align-items: center; /* Vertically centers content */
     justify-content: space-between; /* Ensures space between logo and navigation */
+    padding: 0 20px; /* Adjust padding for space around content */
+    box-sizing: border-box;
 }
 
 /* Logo Styling */
@@ -85,12 +85,13 @@ header {
     text-decoration: none;
     display: flex;
     align-items: center;
-    margin-right: auto;
+    margin-left: 0; /* Align logo to the left */
 }
 
 .logo {
     height: 50px;
     max-width: 100px;
+    object-fit: contain; /* Ensures the logo fits well within the container */
 }
 
 .logo-link:hover {
@@ -98,11 +99,17 @@ header {
 }
 
 /* Navigation Menu (for desktop) */
+nav {
+    margin-right: auto; /* Ensure the navigation starts after the logo */
+    flex-grow: 1;
+}
+
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: center; /* Horizontally center the navigation */
     gap: 20px;
     flex-wrap: wrap;
 }
@@ -135,6 +142,7 @@ nav ul li a:hover::after {
     width: 100%; /* On hover, extend underline to full width */
 }
 
+/*********************************HEADER SECTION END ************************************************/
 /* Dropdown Menu Styling */
 nav ul li .dropdown-content {
     display: none;
