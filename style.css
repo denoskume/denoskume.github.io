@@ -74,12 +74,13 @@ header {
     width: 100%;
     top: 120px; /* Adjusts header to appear just below the banner */
     z-index: 999;
-    height: 60px; /* Increased height for better alignment */
+    height: 50px; /* Increased height for better alignment */
+    padding: 10px 0; /* Adjust padding for space around content */
     display: flex;
     align-items: center; /* Vertically centers content */
-    justify-content: space-between; /* Ensures space between logo and navigation */
-    padding: 0 20px; /* Adjust padding for space around content */
     box-sizing: border-box;
+    justify-content: space-between; /* Ensures space between logo and navigation */
+   
 }
 
 /* Logo Styling */
@@ -101,11 +102,6 @@ header {
 }
 
 /* Navigation Menu (for desktop) */
-nav {
-    margin-right: auto; /* Ensure the navigation starts after the logo */
-    flex-grow: 1;
-}
-
 nav ul {
     list-style: none;
     margin: 0;
@@ -143,6 +139,16 @@ nav ul li a::after {
 nav ul li a:hover::after {
     width: 100%; /* On hover, extend underline to full width */
 }
+
+/************ NEWLY ADDED***************/
+/* Home Icon Styling */
+nav ul li a i.bi-house-fill {
+    font-size: 1.5em;
+    color: white;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+/***********END NEWLY ADDED*******************/
 
 /*********************************HEADER SECTION END ************************************************/
 /* Dropdown Menu Styling */
@@ -205,6 +211,16 @@ nav ul li:hover .dropdown-content {
 .sidenav a:hover {
     background-color: #0056b3;
 }
+
+/*******NEW ADD*****************/
+ .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 36px;
+    cursor: pointer;
+}
+/***********END NEW************/
 
 /* Hero Section */
 .hero {
@@ -328,7 +344,7 @@ nav ul li:hover .dropdown-content {
 .btn-secondary:hover {
     background-color: #e0a800;
 }
-
+/********************FOOTER START**********************************/
 /* Footer Section */
 footer {
     background-color: #545655;
@@ -404,7 +420,7 @@ footer {
     height: 22px;
     width: 10%;
 }
-
+/********************** END FOOTER ******************************/
 /* Responsive Layout */
 @media (max-width: 1024px) {
     .training-section {
