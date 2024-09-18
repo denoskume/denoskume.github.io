@@ -369,7 +369,7 @@ footer {
             outline: none;
             background: none;
             width: 145px;
-            font-size: 12px;
+            font-size: 14px;
         }
 
         .search-bar .profile-pic-footer {
@@ -383,14 +383,16 @@ footer {
          /* Time Display in Button */
         .time-button {
             background-color: #f0f0f0;
-            color: #545655;
+            color: black;
             border: none;
             border-radius: 20px;
             padding: 5px 8px;
-            font-size: 15px;
+            font-size: 18px;
             font-weight: bold;
             cursor: default;
             margin-right: 15px;
+            margin-left: auto;
+            align-items: center;
             height: 22px;
             width: 20%;
         }
