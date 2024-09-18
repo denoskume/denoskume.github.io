@@ -74,7 +74,7 @@ header {
     width: 100%;
     top: 120px; /* Adjusts header to appear just below the banner */
     z-index: 999;
-    height: 50px; /* Increased height for better alignment */
+    height: 70px; /* Increased height for better alignment */
     padding: 10px 0; /* Adjust padding for space around content */
     display: flex;
     align-items: center; /* Vertically centers content */
