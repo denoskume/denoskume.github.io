@@ -74,7 +74,7 @@ header {
     top: 120px; /* Adjusts header to appear just below the banner */
     z-index: 1000; /* Ensures the header is below the banner */
     height: 50px;
-    padding: 10px 0;
+    padding: 5px 10px;
     display: flex;
     align-items: center;
     box-sizing: border-box;
