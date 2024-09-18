@@ -20,35 +20,24 @@
             <img src="id_photo.jpg" alt="Profile Picture" class="profile-pic-footer"> <!-- Include your profile picture -->
         </div>
         
-         <!-- Right Side: Time and Date Display -->
-             <div class="time-container">
-                 <span class="time" id="time"></span>
-                 <span class="date" id="date"></span>
-             </div>
+        <!-- Right Side: Time Display -->
+        <div class="time-display" id="time-display"></div>
+
+
+        
     </footer>
 
 <script>
+       
+        // Function to update time dynamically based on user's local time
         function updateTime() {
-            const timeElement = document.getElementById('time');
-            const dateElement = document.getElementById('date');
-            
+            const timeDisplay = document.getElementById("time-display");
             const now = new Date();
-
-            // Update Time
-            const hours = String(now.getHours()).padStart(2, '0');
-            const minutes = String(now.getMinutes()).padStart(2, '0');
-            const seconds = String(now.getSeconds()).padStart(2, '0');
-            const currentTime = `${hours}:${minutes}:${seconds}`;
-            timeElement.textContent = currentTime;
-
-            // Update Date
-            const day = String(now.getDate()).padStart(2, '0');
-            const month = String(now.getMonth() + 1).padStart(2, '0'); // Months are 0-based
-            const year = now.getFullYear();
-            const currentDate = `${day}/${month}/${year}`;
-            dateElement.textContent = currentDate;
+            const timeString = now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+            timeDisplay.textContent = timeString;
         }
 
-        setInterval(updateTime, 1000);  // Update every second
-        updateTime();  // Initial call to display the time and date immediately
-    </script>
+        setInterval(updateTime, 1000);  // Update time every second
+        updateTime();  // Initial call to display the current time immediately
+
+</script>
