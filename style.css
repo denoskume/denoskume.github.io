@@ -19,7 +19,7 @@ body {
     /*padding: 10px 20px; */
     padding: 0 15px; /* Add padding on both sides */
     /*max-width: 145%;*/
-    max-width: 1140px  /* Limit the container width */
+    max-width: 1200px  /* Limit the container width */
     margin: 0 auto;  /* Center the container */
     width: 100%;
     box-sizing: border-box; /* Ensure padding doesn't affect width */
