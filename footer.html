@@ -30,13 +30,14 @@
     </footer>
 
 <script>
-       
-        // Function to update time dynamically based on user's local time
+       /* modification effectue ***************************************************************************************/
+       // Function to update date and time dynamically based on user's local time
         function updateTime() {
             const timeDisplay = document.getElementById("time-display");
             const now = new Date();
-            const timeString = now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
-            timeDisplay.textContent = timeString;
+            const dateString = now.toLocaleDateString();
+            const timeString = now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit', second: '2-digit'});
+            timeDisplay.textContent = `${dateString} ${timeString}`;
         }
 
         setInterval(updateTime, 1000);  // Update time every second
