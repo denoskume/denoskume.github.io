@@ -15,9 +15,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    max-width: 145%;
-    margin: 0 auto;
+    /*padding: 10px 20px; */
+    padding: 0 15px; /* Add padding on both sides */
+    /*max-width: 145%;*/
+    max-width: 1200px  /* Limit the container width */
+    margin: 0 auto;  /* Center the container */
     width: 100%;
     box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
@@ -468,129 +470,98 @@ footer {
 }
 
 /*********************************HOME PAGE STYLE****************************************************************
-/* Home Section (Welcome Section) */
+
+/* Home Section Fix */
 #home {
     background: linear-gradient(rgba(0, 123, 255, 0.8), rgba(0, 123, 255, 0.8)), url('background.jpg') no-repeat center center/cover;
     color: white;
-    padding: 100px 0;
+    padding: 60px 0; /* Adjusted padding */
     text-align: center;
+    max-width: 100%; /* Ensure the background doesn't overflow */
+    box-sizing: border-box;
 }
 
 #home h1 {
-    font-size: 4rem;
-    font-weight: bold;
-    margin-bottom: 20px;
+    font-size: 3rem; /* Adjust font size */
+    margin-bottom: 10px;
 }
 
 #home h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-#home p {
-    font-size: 1.2rem;
-}
-
-/* Highlight Section Specific to Home */
-#intro {
-    padding: 50px 0;
-    background-color: #fff;
-    text-align: center;
-}
-
-#intro .intro-content p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-.highlights {
-    display: flex;
-    justify-content: space-around;
-}
-
-.highlight {
-    max-width: 30%;
-    text-align: center;
-}
-
-.highlight i {
-    font-size: 3rem;
-    color: #007bff;
+    font-size: 1.8rem; /* Slightly reduce size */
     margin-bottom: 15px;
 }
 
-/* Services Section Specific */
+/* Highlights Section Fix */
+#intro .highlights {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    margin-top: 20px;
+}
+
+#intro .highlight {
+    flex: 1 1 30%; /* Ensure each item takes up only 30% of the container */
+    margin: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Services Section */
 #services {
     padding: 50px 0;
     background-color: #007bff;
     color: white;
-}
-
-#services h2 {
-    font-size: 2.5rem;
     text-align: center;
-    margin-bottom: 30px;
 }
 
-.services-grid {
+#services .services-grid {
     display: flex;
     justify-content: space-around;
-    text-align: center;
+    flex-wrap: wrap; /* Enable wrapping */
+    margin: 0 auto;
 }
 
-.service {
-    max-width: 30%;
+#services .service {
+    flex: 1 1 30%; /* Ensure services take only 30% of container */
+    margin: 15px;
 }
 
-.service i {
-    font-size: 3rem;
-    color: #28a745;
-    margin-bottom: 15px;
-}
-
-/* Call to Action Section */
+/* CTA Section */
 #cta {
-    padding: 50px 0;
+    padding: 50px 20px;
     text-align: center;
     background-color: #f8f9fa;
 }
 
-#cta h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+/* Buttons Fix */
+.btn {
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    border-radius: 20px;
+    text-transform: uppercase;
 }
 
-#cta p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    #home h1 {
+        font-size: 2.5rem;
+    }
+    
+    #intro .highlight, #services .service {
+        flex: 1 1 45%; /* Allow more width on smaller screens */
+    }
 }
 
-/* Button Styles Specific to Home */
-.btn-primary, .btn-secondary {
-    padding: 10px 30px;
-    font-size: 1.2rem;
-    border-radius: 25px;
-    margin: 10px;
-    transition: all 0.3s ease;
+@media (max-width: 768px) {
+    #home h1 {
+        font-size: 2rem;
+    }
+    
+    #intro .highlight, #services .service {
+        flex: 1 1 100%; /* Full width on mobile */
+    }
+    
+    .btn {
+        width: 100%; /* Full width buttons on mobile */
+    }
 }
-
-.btn-primary {
-    background-color: #28a745;
-    border: none;
-}
-
-.btn-primary:hover {
-    background-color: #218838;
-}
-
-.btn-secondary {
-    background-color: #ffc107;
-    border: none;
-}
-
-.btn-secondary:hover {
-    background-color: #e0a800;
-}
-
-
-
