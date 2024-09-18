@@ -384,13 +384,15 @@ footer {
         .time-button {
             background-color: #f0f0f0;
             color: #545655;
+            border: none;
             border-radius: 20px;
             padding: 5px 8px;
             font-size: 15px;
             font-weight: bold;
             cursor: default;
-            margin-right: 45px;
-            width: 30%;
+            margin-right: 15px;
+            height: 22px;
+            width: 20%;
         }
             
       
