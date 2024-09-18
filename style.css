@@ -74,8 +74,8 @@ header {
     top: 120px; /* Adjusts header to appear just below the banner */
     z-index: 999; /* Ensures the header is below the banner */
     height: 60px;
-    padding: 8px 10px;
-    display: block;
+    padding: 5px 10px;
+    display: flex;
     align-items: center;
     box-sizing: border-box;
     justify-content: space-between; /* Ensures space between logo and navigation */
@@ -93,7 +93,7 @@ body {
 .logo-link {
     text-decoration: none;
     display: flex;
-    align-items: left;
+    align-items: center;
 }
 
 .logo {
