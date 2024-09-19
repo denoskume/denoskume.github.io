@@ -84,7 +84,7 @@ header {
     z-index: 1000;
     height: 60px; /* Reduced header height */
     justify-content: space-between;
-    padding: 0 20px; /* Adjust the padding */
+    padding: 5px 20px; /* Adjust the padding */
     box-sizing: border-box;
 
    /* 
