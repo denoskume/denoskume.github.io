@@ -613,3 +613,151 @@ footer {
 }
 
 /*************END HOME-STYLE SECTION **************/
+
+/***************************************** PROJECTS SECTION START *******************************************/
+
+
+/********************************************/
+/* Project Grid and Card Styles */
+/********************************************/
+
+/* Main Projects Section */
+.projects-container, .featured-container, .data-analytics-container, .ai-embedded-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.projects-container h1, .featured-container h2, .data-analytics-container h2, .ai-embedded-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.projects-container h2, .cta-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+.projects-container p, .cta-container p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Grid Layout for Projects */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two projects per row */
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.project-card {
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-thumbnail {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #007bff;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 15px;
+}
+
+.project-card p {
+    font-size: 1rem;
+    margin: 0 15px 20px 15px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.project-card a.btn {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 0 15px 20px 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.project-card a.btn:hover {
+    background-color: #0056b3;
+}
+
+/*******************************************/
+/* Responsive Design for Project Grid */
+/*******************************************/
+
+/* On medium screens, display 1 project per row */
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 20px;
+    }
+
+    .project-card {
+        margin: 0 auto;
+    }
+}
+
+/*******************************************/
+/* Call to Action Section */
+/*******************************************/
+
+.cta-container {
+    background-color: #007bff;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.cta-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.cta-container p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-container .btn {
+    background-color: #ffc107;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    color: #333;
+    border-radius: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.cta-container .btn:hover {
+    background-color: #e0a800;
+}
+
+
+/******************* END PROJECTS SECTION  ********************/
+
+
