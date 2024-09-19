@@ -7,7 +7,7 @@
     background-color: #f4f4f4;
     color: #333;
     overflow-x: hidden; /* Prevents horizontal scrolling */
-    padding-top: 200px; /* Accounts for header and banner height */
+    padding-top: 300px; /* Accounts for header and banner height */
 }
 
 /* Container Styling */
