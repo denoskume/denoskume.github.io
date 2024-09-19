@@ -506,7 +506,7 @@ footer {
     grid-column: 1 / span 12; /* Full width */
     background: linear-gradient(rgba(0, 123, 255, 0.85), rgba(0, 123, 255, 0.85)), url('background.jpg') no-repeat center center/cover;
     color: white;
-    padding: 100px 20px;
+    padding: 100px 40px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -747,4 +747,4 @@ footer {
     }
 }
 
-/*************END HOME STYLE SECTION **************/
+/*************END HOME-STYLE SECTION **************/
