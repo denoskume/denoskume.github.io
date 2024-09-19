@@ -27,7 +27,7 @@ body {
     box-sizing: border-box; /* Ensure padding doesn't affect width */ 
     */
 }
-/************************************END GENERAL STUYLE************************************************/
+/****************END GENERAL STUYLE****************/
 
 /***************************************BEGIN BANNER STYLE ***************************************/
 /* Banner Section */
@@ -75,7 +75,7 @@ body {
     margin-right: 15px;
     margin-left: 2px;
 }
-/*********************END BANNER STYLE ************************/
+/*****************END BANNER STYLE *****************/
 
 /****************************** BEGIN HEADER STYLE SECTION ******************************************/
 
@@ -168,7 +168,8 @@ nav ul li a:hover::after {
     width: 100%; /* On hover, extend underline to full width */
 }
 
-/****************END HEADER STULE SECTION *************************
+/****************END HEADER STULE SECTION ****************/
+
 /* Home Icon Styling */
 nav ul li a i.bi-house-fill {
     font-size: 1.5em;
