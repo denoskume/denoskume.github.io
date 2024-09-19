@@ -18,7 +18,7 @@ body {
     padding: 0 15px; /* Add padding on both sides */
     box-sizing: border-box; /* Ensure padding doesn't affect width */
     /* test case1 */
-    display: flex;
+    
 
 }
 /****************END GENERAL STUYLE****************/
