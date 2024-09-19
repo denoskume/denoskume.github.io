@@ -74,34 +74,18 @@ body {
 
 /* Header Section */
 header {
+    background-color: #545655;
     display: flex;
-    align-items: center;
-    background-color: #007bff;
+    /*align-items: center; */
     color: white;
     position: fixed;
     width: 100%;
     top: 120px; /* Adjust this as needed */
     z-index: 1000;
-    height: 60px; /* Reduced header height */
+    height: 80px; /* Reduced header height */
     justify-content: space-between;
     padding: 5px 20px; /* Adjust the padding */
     box-sizing: border-box;
-
-   /* 
-    display: flex;
-    background-color: #007bff;
-    color: white;
-    position: fixed;
-    width: 100%;
-    top: 120px;
-    z-index: 1000;
-    height: 90px;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    margin: 0;
-    box-sizing: border-box;
-    */
 }
 
 /* Container */
