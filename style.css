@@ -1,7 +1,7 @@
 /*****************************************GENERAL STYLE ************************************************/
 /* General Styling */
 body {
-    display: grid;
+    
     font-family: 'Montserrat', sans-serif; /* Modern font */
     margin: 0;
     padding: 0;
@@ -13,7 +13,7 @@ body {
 
 /* Container Styling */
 .container {
-    display: flex;
+   
     max-width: 1200px  /* Limit the container width */
     margin: 0 auto;  /* Center the container */
     padding: 0 15px; /* Add padding on both sides */
