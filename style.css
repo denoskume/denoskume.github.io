@@ -479,7 +479,7 @@ footer {
 
 /* Main Grid Layout */
 .grid-container {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(12, 1fr); /* 12-column grid for flexibility */
     grid-template-rows: auto; /* Rows will automatically adjust based on content */
     gap: 20px; /* Space between grid items */
