@@ -426,7 +426,7 @@ footer {
     align-items: center;
     background-color: #f0f0f0;
     border-radius: 20px;
-    padding: 5px 10px;
+    padding: 4px 8px;
     margin-left: 45px;
     margin-right: auto;
 }
@@ -454,30 +454,16 @@ footer {
 
 /* Time Display in Button */
 .time-button {
-    background-color: white;
-    color: #333;
+    background-color:  #545655;
+    color: white;
     border: none;
     border-radius: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 5px 10px;
+    font-size: 18px;
     font-weight: bold;
     text-align: center;
     margin-right: 20px;
-    /*
-    background-color: white;
-    color: #545655;
-    border: none;
-    border-radius: 20px;
-    padding: 5px 8px;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: default;
-    margin-right: 15px;
-    margin-left: auto;
-    align-items: center;
-    height: 22px;
-    width: 10%;
-    */ 
+    
 }
 
 /********************** END FOOTER ******************************/
