@@ -75,6 +75,9 @@ body {
     margin-right: 15px;
     margin-left: 2px;
 }
+/*********************END BANNER STYLE ************************/
+
+/****************************** BEGIN HEADER STYLE SECTION ******************************************/
 
 /* Header Section */
 header {
@@ -83,42 +86,46 @@ header {
     position: fixed; /* Makes the header fixed at the top */
     width: 100%;
     top: 120px; /* Adjusts header to appear just below the banner */
-    z-index: 999; /* Ensures the header is below the banner */
-    height: 50px;
-    padding: 10px 0;
+    z-index: 999;
+    height: 60px; /* Adjust height for alignment */
     display: flex;
-    align-items: center;
+    align-items: center; /* Centers content vertically */
+    justify-content: space-between; /* Logo to the left, nav centered */
+    padding: 0 20px; /* Adjust padding for proper spacing */
     box-sizing: border-box;
-    justify-content: space-between; /* Ensures space between logo and navigation */
 }
-    
+
 /* Logo Styling */
 .logo-link {
     text-decoration: none;
     display: flex;
     align-items: center;
+    margin-right: 20px; /* Provides space between logo and navigation */
 }
 
 .logo {
     height: 50px;
     max-width: 100px;
-}
-
-/* Align the logo to the left */
-.logo-link {
-    margin-right: auto;
+    object-fit: contain; /* Ensures the logo fits well within the container */
 }
 
 .logo-link:hover {
     opacity: 0.8; /* Add hover effect for the logo */
 }
-/****************************************END BANNER STYLE **************************************/
-/* Navigation Menu (for desktop) */
+
+/* Navigation Menu */
+nav {
+    display: flex;
+    justify-content: center; /* Centers the navigation menu */
+    flex-grow: 1; /* Allows the nav to take up remaining space after the logo */
+}
+
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: center; /* Ensure menu items are centered horizontally */
     gap: 20px;
     flex-wrap: wrap;
 }
@@ -134,6 +141,16 @@ nav ul li a {
     padding: 10px;
     font-weight: bold;
     white-space: nowrap; /* Prevents text from wrapping */
+    display: flex;
+    align-items: center; /* Ensures icon and text are vertically aligned */
+}
+
+/* Home Icon Styling */
+nav ul li a i.bi-house-fill {
+    font-size: 1.5em;
+    color: white;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
 nav ul li a::after {
@@ -142,15 +159,16 @@ nav ul li a::after {
     left: 0;
     bottom: 0;
     width: 0;
-    height: 2px; /* Height of the underline   */
+    height: 2px; /* Height of the underline */
     background-color: #fc060d; /* Underline color */
-    transition: width 0.3s; /* Smooth transition for the underline */
+    transition: width 0.3s;
 }
 
 nav ul li a:hover::after {
     width: 100%; /* On hover, extend underline to full width */
 }
 
+/****************END HEADER STULE SECTION *************************
 /* Home Icon Styling */
 nav ul li a i.bi-house-fill {
     font-size: 1.5em;
