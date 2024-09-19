@@ -69,6 +69,7 @@
 
 /* Header Section */
 header {
+    display: flex;
     background-color: #007bff;
     color: white;
     position: fixed;
