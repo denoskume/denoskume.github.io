@@ -9,18 +9,23 @@ body {
     background-color: #f4f4f4;
     color: #333;
     overflow-x: hidden; /* Prevents horizontal scrolling */
+    padding-top: 200px; /* Accounts for header and banner height */
 }
 
 /* Container Styling */
 .container {
+    max-width: 1200px  /* Limit the container width */
+    margin: 0 auto;  /* Center the container */
+    padding: 0 15px; /* Add padding on both sides */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    
+   /* 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 15px; /* Add padding on both sides */
-    max-width: 1200px  /* Limit the container width */
-    margin: 0 auto;  /* Center the container */
     width: 100%;
-    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */ 
+    */
 }
 
 /* Banner Section */
@@ -84,15 +89,7 @@ header {
     box-sizing: border-box;
     justify-content: space-between; /* Ensures space between logo and navigation */
 }
-
-
-/* Padding to prevent content from being hidden behind the fixed elements */
-body {
-    padding-top: 200px; /* Height of the banner + header */
     
-}
-
-
 /* Logo Styling */
 .logo-link {
     text-decoration: none;
