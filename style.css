@@ -85,7 +85,7 @@ header {
 
 /* Container */
 .container {
-    display: flex;
+  
     align-items: center;
     justify-content: space-between; /* Ensure space between logo and nav */
     width: 100%;
