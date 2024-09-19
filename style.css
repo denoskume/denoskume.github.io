@@ -1,1 +1,460 @@
+/****************************************GENERAL STYLING START **************************************************/
+/* General Styling */
+ body {
+    font-family: 'Montserrat', sans-serif; /* Modern font */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    padding-top: 300px; /* Accounts for header and banner height */
+}
+
+/* Container Styling */
+.container {
+    max-width: 1200px; /* Limit the container width */
+    margin: 0 auto;  /* Center the container */
+    padding: 0 15px; /* Add padding on both sides */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+/*******************************************GENERAL STYLE END*************************************************/
+
+/*****************BANNER SECTION START********************************/
+/* Banner Section */
+.banner {
+    background-image: url('bannerbg.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 60px 40px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    position: fixed; /* Makes the banner fixed */
+    top: 0; /* Fixed at the top */
+    z-index: 1000; /* Ensures the banner stays on top of everything */
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.banner-content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    text-align: left;
+}
+
+.profile-pic {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-right: 15px;
+    margin-left: 2px;
+}
+/*******************END OF BANNER SECTION******************/
+
+/*****************************************HEADER SECTION START*********************************************/
+
+/* Header Section */
+header {
+    display: flex;
+    background-color: #007bff;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 120px;
+    z-index: 1000;
+    height: 90px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Container */
+.container {
+    align-items: center;
+    justify-content: space-between; /* Ensure space between logo and nav */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Logo Styling */
+.logo-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    max-width: 100px;
+    object-fit: contain; /* Ensures the logo fits well within the container */
+}
+
+.logo-link:hover {
+    opacity: 0.8;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+nav ul li a:hover {
+    color: #ffc107; /* Highlight on hover */
+}
+
+/* Home Icon Styling */
+nav ul li a i.bi-house-fill {
+    font-size: 1.5em;
+    color: white;
+    margin-right: 10px;
+}
+
+/* Dropdown Menu Styling */
+nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    top: 100%;
+    left: 0;
+    min-width: 120px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+nav ul li .dropdown-content a {
+    color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+nav ul li .dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #007bff;
+}
+
+nav ul li:hover .dropdown-content {
+    display: block; /* Show the dropdown on hover */
+}
+
+/* Hamburger Menu (for mobile) */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Show Hamburger menu in mobile view */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger on mobile */
+    }
+    
+    nav ul {
+        display: none; /* Hide the full menu on mobile */
+    }
+    
+    /* When the menu is opened, show the nav items */
+    .open-nav nav ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #007bff;
+    }
+
+    nav ul li {
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+}
+
+/********************FOOTER START**********************************/
+/* Footer Section */
+footer {
+    background-color: #545655;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    height: 60px;
+    box-sizing: border-box;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 28px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    padding: 5px 8px;
+    margin-left: 45px;
+    margin-right: auto;
+}
+
+.search-bar svg {
+    margin-right: 10px;
+    color: green; /* Color of search icon */
+}
+
+.search-bar input[type="text"] {
+    border: none;
+    outline: none;
+    background: none;
+    width: 145px;
+    font-size: 14px;
+}
+
+.search-bar .profile-pic-footer {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    margin-left: 10px;
+    object-fit: cover; /* Ensure the image fits within the circle */
+}
+
+/* Time Display in Button */
+.time-button {
+    background-color: white;
+    color: #545655;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 8px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: default;
+    margin-right: 15px;
+    margin-left: auto;
+    align-items: center;
+    height: 22px;
+    width: 10%;
+}
+/********************** END FOOTER ******************************/
+
+/*********************************HOME PAGE STYLE****************************************
+
+/* Main Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* 12-column grid for flexibility */
+    grid-template-rows: auto; /* Rows will automatically adjust based on content */
+    gap: 20px; /* Space between grid items */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+#header {
+    grid-column: 1 / span 12; /* Full width */
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Home Section (Welcome Section) */
+#home {
+    grid-column: 1 / span 12; /* Full width */
+    background: linear-gradient(rgba(0, 123, 255, 0.85), rgba(0, 123, 255, 0.85)), url('background.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 100px 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#home h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+#home h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+#home p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 800px;
+}
+
+/* Buttons Styling */
+.btn-primary, .btn-secondary {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    margin: 15px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.btn-primary {
+    background-color: #28a745;
+    border: none;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+}
+
+.btn-secondary {
+    background-color: #ffc107;
+    border: none;
+    color: #333;
+}
+
+.btn-secondary:hover {
+    background-color: #e0a800;
+}
+
+/* Highlights Section */
+.highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.highlight {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.highlight i {
+    font-size: 3.5rem;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.highlight h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.highlight p {
+    font-size: 1rem;
+    color: #555;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    #home h1 {
+        font-size: 3rem;
+    }
+
+    #home h2 {
+        font-size: 1.6rem;
+    }
+
+    .highlights {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+        gap: 20px;
+    }
+
+    .highlight {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    #home h1 {
+        font-size: 2.5rem;
+    }
+
+    #home h2 {
+        font-size: 1.4rem;
+    }
+
+    .highlights {
+        grid-template-columns: 1fr; /* Stack items on smaller screens */
+        gap: 20px;
+    }
+    
+    .btn-primary, .btn-secondary {
+        width: 100%; /* Full width buttons on mobile */
+    }
+}
 
