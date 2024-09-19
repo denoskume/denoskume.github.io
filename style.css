@@ -85,7 +85,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px; /* Adjust header height */
+    height: 60px; /* Adjust header height */
     padding: 0 20px; /* Adjust the padding */
     width: 100%;
     box-sizing: border-box;
