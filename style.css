@@ -1,6 +1,6 @@
 /****************************************GENERAL STYLING START **************************************************/
 /* General Styling */
- body {
+body {
     font-family: 'Montserrat', sans-serif; /* Modern font */
     margin: 0;
     padding: 0;
@@ -17,7 +17,8 @@
     padding: 0 15px; /* Add padding on both sides */
     box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
-/*******************************************GENERAL STYLE END*************************************************/
+
+/*******************************************GENERAL STYL END*************************************************/
 
 /*****************BANNER SECTION START********************************/
 /* Banner Section */
@@ -65,6 +66,7 @@
     margin-right: 15px;
     margin-left: 2px;
 }
+
 /*******************END OF BANNER SECTION******************/
 
 /*****************************************HEADER SECTION START*********************************************/
@@ -87,7 +89,8 @@ header {
 }
 
 /* Container */
-.container {
+.container-header {
+    display: flex;
     align-items: center;
     justify-content: space-between; /* Ensure space between logo and nav */
     width: 100%;
@@ -213,6 +216,178 @@ nav ul li:hover .dropdown-content {
     }
 }
 
+.sidenav a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    background-color: #0056b3;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #007bff;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.hero-text h1 {
+    color: white;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text p {
+    color: white;
+    font-size: 1.1em;
+    margin-top: 10px;
+    max-width: 800px;
+    box-sizing: border-box;
+}
+
+/* Content Section Full Width */
+.full-width-content {
+    margin-top: 110px; /* Adds space equivalent to banner and header height */
+    width: 100%; /* Full width for content */
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+/* Training Section */
+.training-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 30px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.training-card {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-sizing: border-box;
+}
+
+.training-card:hover {
+    transform: scale(1.05);
+}
+
+.training-card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.training-card .course-count {
+    color: #7c3aed;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.training-card .view-path {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.training-card .view-path:hover {
+    text-decoration: underline;
+}
+
+/* Custom Button Styling */
+.button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Layout */
+@media (max-width: 1024px) {
+    .training-section {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .training-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .sidenav {
+        display: block;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .training-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 769px) {
+    nav ul {
+        display: flex;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .sidenav {
+        display: none;
+    }
+}
+
+/*********************************HEADER SECTION END ************************************************/
+
 /********************FOOTER START**********************************/
 /* Footer Section */
 footer {
@@ -289,6 +464,7 @@ footer {
     height: 22px;
     width: 10%;
 }
+
 /********************** END FOOTER ******************************/
 
 /*********************************HOME PAGE STYLE****************************************
@@ -384,6 +560,23 @@ footer {
     background-color: #e0a800;
 }
 
+/* Intro Section */
+#intro {
+    grid-column: 1 / span 12; /* Full width */
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#intro .intro-content p {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #555;
+}
+
 /* Highlights Section */
 .highlights {
     display: grid;
@@ -419,6 +612,97 @@ footer {
     margin: 0 auto;
 }
 
+/* Services Section */
+#services {
+    grid-column: 1 / span 12; /* Full width */
+    background-color: #007bff;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 30px;
+}
+
+.service {
+    background-color: white;
+    padding: 20px;
+    color: #007bff;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service i {
+    font-size: 3.5rem;
+    color: #28a745;
+    margin-bottom: 20px;
+}
+
+.service h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.service p {
+    font-size: 1rem;
+    color: #333;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+/* Call to Action Section */
+#cta {
+    grid-column: 1 / span 12; /* Full width */
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#cta h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+#cta p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+#cta .btn-primary {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+#cta .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Section */
+#footer {
+    grid-column: 1 / span 12; /* Full width */
+    background-color: #545655;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     #home h1 {
@@ -429,12 +713,12 @@ footer {
         font-size: 1.6rem;
     }
 
-    .highlights {
+    .highlights, .services-grid {
         grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
         gap: 20px;
     }
 
-    .highlight {
+    .highlight, .service {
         margin-bottom: 20px;
     }
 }
@@ -448,7 +732,7 @@ footer {
         font-size: 1.4rem;
     }
 
-    .highlights {
+    .highlights, .services-grid {
         grid-template-columns: 1fr; /* Stack items on smaller screens */
         gap: 20px;
     }
@@ -458,3 +742,4 @@ footer {
     }
 }
 
+/*************END HOME-STYLE SECTION **************/
