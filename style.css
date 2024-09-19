@@ -226,65 +226,6 @@ nav ul li:hover .dropdown-content {
 
 /****************END HEADER STULE SECTION ****************/
 
-/* Home Icon Styling */
-nav ul li a i.bi-house-fill {
-    font-size: 1.5em;
-    color: white;
-    margin-right: 10px;
-    vertical-align: middle;
-}
-
-/* Dropdown Menu Styling */
-nav ul li .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 120px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    top: 100%;
-    left: 0;
-    border-radius: 5px;
-    padding: 10px 0;
-}
-
-nav ul li .dropdown-content a {
-    color: #333;
-    padding: 10px;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-nav ul li .dropdown-content a i {
-    font-size: 24px;
-}
-
-nav ul li .dropdown-content a:hover {
-    background-color: #f1f1f1;
-    color: #007bff;
-}
-
-/* Show the dropdown on hover */
-nav ul li:hover .dropdown-content {
-    display: block;
-}
-
-/* Side Navigation Menu (for mobile) */
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    background-color: #007bff;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    box-sizing: border-box;
-}
 
 .sidenav a {
     padding: 10px 15px;
