@@ -85,7 +85,7 @@ header {
     color: white;
     position: fixed;
     width: 100%;
-    top: 0;
+    top: 120px;
     z-index: 999;
     height: 60px;
     display: flex;
