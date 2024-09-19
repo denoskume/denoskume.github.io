@@ -1,5 +1,5 @@
 
-/********************************************************************************************************
+/*****************************************GENERAL STYLE ************************************************/
 /* General Styling */
 body {
     display: grid;
@@ -27,7 +27,9 @@ body {
     box-sizing: border-box; /* Ensure padding doesn't affect width */ 
     */
 }
+/************************************END GENERAL STUYLE************************************************/
 
+/***************************************BEGIN BANNER STYLE ***************************************/
 /* Banner Section */
 .banner {
     background-image: url('bannerbg.png');
@@ -110,7 +112,7 @@ header {
 .logo-link:hover {
     opacity: 0.8; /* Add hover effect for the logo */
 }
-
+/****************************************END BANNER STYLE **************************************/
 /* Navigation Menu (for desktop) */
 nav ul {
     list-style: none;
@@ -314,7 +316,7 @@ nav ul li:hover .dropdown-content {
     text-decoration: underline;
 }
 
-/* BEGIN FOOTER SECTION */
+/*********************************** BEGIN FOOTER SECTION **************************************/
 footer {
             background-color: #545655; /* Adjust background color if needed */
             color: white;
@@ -396,9 +398,7 @@ footer {
         }
             
       
-/* END FOOTER SECTION */
-
-
+/************************************* END FOOTER SECTION ******************************************/
 
 /* Custom Button Styling */
 .button {
@@ -740,4 +740,4 @@ footer {
     }
 }
 
-
+/**************************************END HOME STYLE SECTION ***************************************/
