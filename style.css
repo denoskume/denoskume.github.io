@@ -13,7 +13,12 @@ body {
 
 /* Container Styling */
 
-    
+  .container {
+   
+    max-width: 1200px  /* Limit the container width */
+    margin: 0 auto;  /* Center the container */
+    padding: 0 15px; /* Add padding on both sides */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */  
 }
 /****************END GENERAL STUYLE****************/
 
