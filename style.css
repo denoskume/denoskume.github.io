@@ -2,6 +2,7 @@
 /*****************************************GENERAL STYLE ************************************************/
 /* General Styling */
 body {
+    display: flex;
     font-family: 'Montserrat', sans-serif; /* Modern font */
     margin: 0;
     padding: 0;
