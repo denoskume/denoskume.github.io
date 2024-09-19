@@ -69,7 +69,7 @@
 
 /* Header Section */
 header {
-   
+    display: flex;
     background-color: #007bff;
     color: white;
     position: fixed;
@@ -79,8 +79,8 @@ header {
     height: 90px;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
-    /*padding: 0 20px; */
+    padding: 0 20px;
+    margin: 0;
     box-sizing: border-box;
 }
 
