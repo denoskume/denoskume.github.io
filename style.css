@@ -83,16 +83,27 @@ body {
 header {
     background-color: #007bff;
     color: white;
-    position: fixed; /* Makes the header fixed at the top */
+    position: fixed;
     width: 100%;
-    top: 120px; /* Adjusts header to appear just below the banner */
+    top: 0;
     z-index: 999;
-    height: 60px; /* Adjust height for alignment */
+    height: 60px;
     display: flex;
-    align-items: center; /* Centers content vertically */
-    justify-content: space-between; /* Logo to the left, nav centered */
-    padding: 0 20px; /* Adjust padding for proper spacing */
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
     box-sizing: border-box;
+}
+
+/* Container */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensure space between logo and nav */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
 }
 
 /* Logo Styling */
@@ -100,7 +111,6 @@ header {
     text-decoration: none;
     display: flex;
     align-items: center;
-    margin-right: 20px; /* Provides space between logo and navigation */
 }
 
 .logo {
@@ -110,24 +120,17 @@ header {
 }
 
 .logo-link:hover {
-    opacity: 0.8; /* Add hover effect for the logo */
+    opacity: 0.8;
 }
 
 /* Navigation Menu */
-nav {
-    display: flex;
-    justify-content: center; /* Centers the navigation menu */
-    flex-grow: 1; /* Allows the nav to take up remaining space after the logo */
-}
-
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Ensure menu items are centered horizontally */
+    align-items: center;
     gap: 20px;
-    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -135,14 +138,15 @@ nav ul li {
 }
 
 nav ul li a {
-    position: relative;
     color: white;
-    text-decoration: none; /* Remove the default underline */
+    text-decoration: none;
     padding: 10px;
     font-weight: bold;
-    white-space: nowrap; /* Prevents text from wrapping */
-    display: flex;
-    align-items: center; /* Ensures icon and text are vertically aligned */
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+nav ul li a:hover {
+    color: #ffc107; /* Highlight on hover */
 }
 
 /* Home Icon Styling */
@@ -150,23 +154,75 @@ nav ul li a i.bi-house-fill {
     font-size: 1.5em;
     color: white;
     margin-right: 10px;
-    vertical-align: middle;
 }
 
-nav ul li a::after {
-    content: '';
+/* Dropdown Menu Styling */
+nav ul li .dropdown-content {
+    display: none;
     position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    top: 100%;
     left: 0;
-    bottom: 0;
-    width: 0;
-    height: 2px; /* Height of the underline */
-    background-color: #fc060d; /* Underline color */
-    transition: width 0.3s;
+    min-width: 120px;
+    border-radius: 5px;
+    z-index: 1;
 }
 
-nav ul li a:hover::after {
-    width: 100%; /* On hover, extend underline to full width */
+nav ul li .dropdown-content a {
+    color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
+
+nav ul li .dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #007bff;
+}
+
+nav ul li:hover .dropdown-content {
+    display: block; /* Show the dropdown on hover */
+}
+
+/* Hamburger Menu (for mobile) */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Show Hamburger menu in mobile view */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger on mobile */
+    }
+    
+    nav ul {
+        display: none; /* Hide the full menu on mobile */
+    }
+    
+    /* When the menu is opened, show the nav items */
+    .open-nav nav ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #007bff;
+    }
+
+    nav ul li {
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+}
+
 
 /****************END HEADER STULE SECTION ****************/
 
