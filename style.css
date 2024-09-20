@@ -733,6 +733,80 @@ footer {
 
 /*************END PROJECTS PAGE STYLE **************/
 
+/*******************TRAINING PAGE STYLING START*****************/
+
+/* Main Section */
+.training-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid with minimum width for each card */
+    gap: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the grid */
+    box-sizing: border-box;
+    justify-items: center;
+}
+
+/* Individual Training Cards */
+.training-card {
+    background-color: white;
+    border: 2px solid #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.training-card:hover {
+    transform: scale(1.05); /* Subtle scaling on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
+
+/* Headings inside Training Cards */
+.training-card h1, .training-card h2 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.training-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Path Link Styling */
+.training-card .view-path {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.training-card .view-path:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .training-card {
+        max-width: 100%; /* Make the cards stack vertically on smaller screens */
+    }
+
+    .training-section {
+        padding: 20px;
+    }
+}
+
+/***************** END TRAINING STYLING ***********************/
 
 
 
