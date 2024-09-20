@@ -112,7 +112,7 @@ header {
 .logo {
     margin-left: -40px;
     margin-right: 0px;
-    height: 55px;
+    height: 58px;
     max-width: 100px;
     object-fit: contain; /* Ensures the logo fits well within the container */
 }
@@ -198,7 +198,7 @@ header {
 
 /* Language Selector */
 .language-selector {
-    margin-right: -70px;
+    margin-right: -65px;
     margin-left: 5px;
     padding-left: 10px;
 }
