@@ -139,7 +139,7 @@ header {
     color: white;
     text-decoration: none;
     padding: 10px;
-    font-size: 18px; /*** rien avant */
+    font-size: 18px; 
     font-weight: bold;
     white-space: nowrap;  /* Prevents text wrapping */
 }
@@ -173,11 +173,12 @@ header {
 
 .nav-menu ul li .dropdown-content a {
     color: #333;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    font-size: 28px;
 }
 
 .nav-menu ul li .dropdown-content a:hover {
