@@ -105,14 +105,13 @@ const searchData = [
 function showSuggestions(value) {
     const suggestionsBox = document.getElementById('search-suggestions');
     suggestionsBox.innerHTML = ''; // Clear previous suggestions
-    if (value.length === 0) {
-        suggestionsBox.style.display = 'none'; // Hide suggestions when input is empty
-        return;
-    }
 
-    const results = searchData.filter(item =>
-        item.keywords.some(keyword => keyword.toLowerCase().includes(value.toLowerCase()))
-    );
+    // Show all suggestions when no input, otherwise filter
+    const results = value.length === 0 
+        ? searchData 
+        : searchData.filter(item =>
+            item.keywords.some(keyword => keyword.toLowerCase().includes(value.toLowerCase()))
+        );
 
     if (results.length > 0) {
         results.forEach(result => {
@@ -121,6 +120,7 @@ function showSuggestions(value) {
             suggestionDiv.onclick = function () {
                 loadContent(result.page); // Load the corresponding page dynamically
                 suggestionsBox.style.display = 'none'; // Hide suggestions once a result is clicked
+                clearSearchInput(); // Clear the search input after a selection is made
             };
             suggestionsBox.appendChild(suggestionDiv);
         });
@@ -130,24 +130,33 @@ function showSuggestions(value) {
     }
 }
 
+// Function to clear search input
+function clearSearchInput() {
+    const searchInput = document.querySelector('.search-bar input');
+    if (searchInput) {
+        searchInput.value = ''; // Clear the input
+    }
+}
+
 // Function to show suggestions popup on click
 const searchInput = document.querySelector('.search-bar input');
 if (searchInput) {
     searchInput.addEventListener('click', function () {
-        showSuggestions(this.value); // Trigger showing suggestions on click
+        showSuggestions(''); // Trigger showing suggestions immediately when clicked
     });
     searchInput.addEventListener('input', function () {
         showSuggestions(this.value); // Show suggestions as the user types
     });
 }
 
-// Close suggestions popup when clicking outside
+// Close suggestions popup and clear search input when clicking outside
 document.addEventListener('click', function (event) {
     const suggestionsBox = document.getElementById('search-suggestions');
     const searchBar = document.querySelector('.search-bar input');
     if (suggestionsBox && searchBar) {
         if (!searchBar.contains(event.target) && !suggestionsBox.contains(event.target)) {
             suggestionsBox.style.display = 'none'; // Hide the suggestions if clicked outside
+            clearSearchInput(); // Clear the search input when clicking outside
         }
     }
 });
