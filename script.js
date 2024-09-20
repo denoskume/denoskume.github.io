@@ -138,11 +138,11 @@ function clearSearchInput() {
     }
 }
 
-// Function to show suggestions popup on click
+// Function to show suggestions popup on click or focus
 const searchInput = document.querySelector('.search-bar input');
 if (searchInput) {
-    searchInput.addEventListener('click', function () {
-        showSuggestions(''); // Trigger showing suggestions immediately when clicked
+    searchInput.addEventListener('focus', function () {
+        showSuggestions(''); // Trigger showing suggestions on focus/click
     });
     searchInput.addEventListener('input', function () {
         showSuggestions(this.value); // Show suggestions as the user types
