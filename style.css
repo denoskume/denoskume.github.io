@@ -337,30 +337,50 @@ footer {
     margin-right: 20px;
 }
 
-/* Search Suggestions Dropdown */
-.search-suggestions {
-    position: absolute;
-    top: 35px; /* Place just below the search bar */
-    left: 0;
-    width: 100%;
+/* Search Suggestions Popup */
+.search-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the popup */
+    width: 300px;
     background-color: white;
+    border-radius: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    max-height: 200px;
-    overflow-y: auto;
-    display: none; /* Hidden by default */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     z-index: 1001;
+    display: none; /* Hidden by default */
+    padding: 15px;
 }
 
-.search-suggestions div {
+.search-popup.active {
+    display: block; /* Show when active */
+}
+
+.search-popup h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #333;
+}
+
+.search-popup div {
     padding: 10px;
     cursor: pointer;
     font-size: 14px;
     color: #333;
 }
 
-.search-suggestions div:hover {
+.search-popup div:hover {
     background-color: #f1f1f1;
+}
+
+.search-popup .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
 }
 
 /********************** END FOOTER ******************************/
