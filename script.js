@@ -130,10 +130,24 @@ function showSuggestions(value) {
     }
 }
 
-// Add event listener for the search input
+// Function to show suggestions popup on click
 const searchInput = document.querySelector('.search-bar input');
 if (searchInput) {
+    searchInput.addEventListener('click', function () {
+        showSuggestions(this.value); // Trigger showing suggestions on click
+    });
     searchInput.addEventListener('input', function () {
-        showSuggestions(this.value);
+        showSuggestions(this.value); // Show suggestions as the user types
     });
 }
+
+// Close suggestions popup when clicking outside
+document.addEventListener('click', function (event) {
+    const suggestionsBox = document.getElementById('search-suggestions');
+    const searchBar = document.querySelector('.search-bar input');
+    if (suggestionsBox && searchBar) {
+        if (!searchBar.contains(event.target) && !suggestionsBox.contains(event.target)) {
+            suggestionsBox.style.display = 'none'; // Hide the suggestions if clicked outside
+        }
+    }
+});
