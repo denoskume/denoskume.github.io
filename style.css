@@ -842,7 +842,130 @@ footer {
     }
 }
 
-/***************** END TRAINING STYLING ***********************/
+/***************** END TRAINING STYLING *****************/
+
+/********************************* 3D CV STYLING START *********************************/
+
+/* Main CV Container */
+.cv-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    perspective: 1000px;
+    background-color: #f8f9fa;
+}
+
+.cv-card {
+    width: 800px;
+    background-color: #fff;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: transform 0.6s ease;
+}
+
+.cv-card:hover {
+    transform: rotateY(10deg); /* Add a subtle 3D effect */
+}
+
+/* Profile Information */
+.profile-info {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-photo img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.profile-info h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.profile-info p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Sections */
+h2 {
+    font-size: 1.8rem;
+    color: #333;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.skill-item {
+    text-align: center;
+}
+
+.skill-item i {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.skill-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.skill-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Achievements & Certifications */
+.certifications ul {
+    padding-left: 20px;
+}
+
+.certifications li {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Languages and Hobbies */
+.languages ul, .hobbies ul {
+    padding-left: 20px;
+}
+
+.languages li, .hobbies li {
+    font-size: 1rem;
+    color: #555;
+}
+
+/************** 3D CV STYLING END **************/
+
 
 
 
