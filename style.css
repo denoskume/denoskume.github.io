@@ -844,37 +844,46 @@ footer {
 
 /***************** END TRAINING STYLING *****************/
 
-/********************************* 3D CV STYLING START *********************************/
+/******************* ABOUT PAGE STYLE START *******************/
 
-/* Main CV Container */
+/* 3D CV Container */
 .cv-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 40px;
     min-height: 100vh;
-    perspective: 1000px;
-    background-color: #f8f9fa;
+    background-color: #f4f4f4;
 }
 
+/* CV Card Style */
 .cv-card {
-    width: 800px;
-    background-color: #fff;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    width: 80%;
+    max-width: 1000px;
     padding: 30px;
-    border-radius: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    perspective: 1000px;
+    transition: transform 0.6s ease-in-out;
     transform-style: preserve-3d;
-    transform: rotateY(0deg);
-    transition: transform 0.6s ease;
+    animation: rotateCard 4s infinite alternate;
 }
 
-.cv-card:hover {
-    transform: rotateY(10deg); /* Add a subtle 3D effect */
+/* Rotate the card to give a 3D effect */
+@keyframes rotateCard {
+    0% {
+        transform: rotateY(0);
+    }
+    100% {
+        transform: rotateY(10deg);
+    }
 }
 
 /* Profile Information */
 .profile-info {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .profile-photo img {
@@ -882,61 +891,88 @@ footer {
     width: 150px;
     height: 150px;
     object-fit: cover;
-    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.profile-info h1 {
+h1 {
     font-size: 2.5rem;
-    font-weight: bold;
+    margin-top: 15px;
+}
+
+p {
+    font-size: 1.2rem;
     color: #333;
 }
 
-.profile-info p {
-    font-size: 1.2rem;
-    color: #666;
+/* Personal Details */
+.personal-details ul {
+    list-style: none;
+    padding: 0;
 }
 
-/* Sections */
+.personal-details ul li {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.personal-details ul li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.personal-details ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Education, Experience, Skills, Certifications, and Other Sections */
 h2 {
     font-size: 1.8rem;
-    color: #333;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.education, .experience, .skills, .certifications, .languages, .hobbies {
+    margin-top: 20px;
+}
+
+.education-details, .experience-details {
+    margin-bottom: 15px;
 }
 
 ul {
     list-style-type: none;
-    padding-left: 0;
+    padding: 0;
 }
 
-li {
-    font-size: 1rem;
-    color: #555;
+ul li {
     margin-bottom: 10px;
 }
 
-/* Skills Grid */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+/* Skill Set Section */
+.skill-set {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .skill-item {
+    flex: 0 0 48%;
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-.skill-item i {
-    font-size: 2rem;
-    color: #007bff;
-    margin-bottom: 10px;
-}
-
 .skill-item h4 {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-    color: #333;
+    font-size: 1.4rem;
+    margin-top: 10px;
 }
 
 .skill-item p {
@@ -944,28 +980,49 @@ li {
     color: #555;
 }
 
-/* Achievements & Certifications */
-.certifications ul {
-    padding-left: 20px;
+/* Logos in Skills Section */
+.skill-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
 }
 
-.certifications li {
-    font-size: 1rem;
-    color: #555;
+/* Company Logos in Experience Section */
+.company-logo {
+    width: 60px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
-/* Languages and Hobbies */
-.languages ul, .hobbies ul {
-    padding-left: 20px;
+.edu-logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
-.languages li, .hobbies li {
-    font-size: 1rem;
-    color: #555;
+/* Certification Logos */
+.cert-logo {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
 }
 
-/************** 3D CV STYLING END **************/
+/* Icon Styling */
+h2 i, h4 i {
+    color: #007bff;
+    margin-right: 10px;
+}
 
+.certifications ul li {
+    display: flex;
+    align-items: center;
+}
 
+/* Hover Effect for Card */
+.cv-card:hover {
+    transform: rotateY(0);
+}
 
-
+/******************* ABOUT PAGE STYLE END *******************/
