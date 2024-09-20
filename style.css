@@ -111,7 +111,7 @@ header {
 
 .logo {
     margin-left: 0;
-    margin-right: 95px;
+    margin-right: 105px;
     height: 55px;
     max-width: 100px;
     object-fit: contain; /* Ensures the logo fits well within the container */
@@ -151,7 +151,7 @@ header {
 .nav-menu ul li a i.bi-house-fill {
     font-size: 1.5em;
     color: white;
-    margin-right: 30px;
+    margin-right: 10px;
 }
 .nav-menu ul li a i.bi-house-fill:hover {
     color: #ffc107; /* Highlight on hover */
