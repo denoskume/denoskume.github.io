@@ -31,7 +31,7 @@ body {
     padding: 60px 40px;
     display: flex;
     align-items: center;
-    height: 50px;
+    height: 45px;
     width: 100%;
     position: fixed; /* Makes the banner fixed */
     top: 0; /* Fixed at the top */
