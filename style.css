@@ -128,7 +128,7 @@ header {
     padding: 0;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 2px;
 }
 
 .nav-menu ul li {
@@ -151,7 +151,7 @@ header {
 .nav-menu ul li a i.bi-house-fill {
     font-size: 1.5em;
     color: white;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 .nav-menu ul li a i.bi-house-fill:hover {
     color: #ffc107; /* Highlight on hover */
@@ -198,8 +198,8 @@ header {
 
 /* Language Selector */
 .language-selector {
-    margin-left: auto;
-    padding-left: 20px;
+    margin-left: 5px;
+    padding-left: 10px;
 }
 
 .language-selector select {
