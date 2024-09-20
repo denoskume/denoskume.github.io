@@ -89,7 +89,6 @@ header {
     padding: 0 20px; /* Adjust the padding */
     width: 100%;
     box-sizing: border-box;
-    
 }
 
 /* Container */
@@ -191,12 +190,29 @@ header {
     cursor: pointer;
 }
 
+/* Language Selector */
+.language-selector {
+    margin-left: auto;
+    padding-left: 20px;
+}
+
+.language-selector select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    color: #333;
+    cursor: pointer;
+    font-size: 14px;
+    outline: none;
+}
+
 /* Show Hamburger menu in mobile view */
 @media (max-width: 768px) {
     .hamburger {
         display: block; /* Show hamburger on mobile */
     }
-    
+
     .nav-menu ul {
         display: none; /* Hide the full menu on mobile */
     }
@@ -216,6 +232,17 @@ header {
         text-align: center;
         width: 100%;
         padding: 10px 0;
+    }
+
+    /* Make language selector full width in mobile */
+    .language-selector {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+
+    .language-selector select {
+        width: 100px;
     }
 }
 
@@ -256,7 +283,7 @@ header {
     }
 }
 
-/*********************************HEADER SECTION END ************************************************/
+/************HEADER SECTION END ****************/
 
 /********************FOOTER START**********************************/
 /* Footer Section */
