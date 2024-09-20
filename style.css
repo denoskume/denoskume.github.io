@@ -337,20 +337,22 @@ footer {
     margin-right: 20px;
 }
 
-/* Search Suggestions Popup */
+/* Search Suggestions Popup Above Footer */
 .search-popup {
     position: fixed;
-    top: 50%;
+    bottom: 55px; /* Position the popup above the footer */
     left: 50%;
-    transform: translate(-50%, -50%); /* Center the popup */
-    width: 300px;
+    transform: translateX(-50%); /* Center the popup horizontally */
+    width: 400px;
     background-color: white;
     border-radius: 10px;
     border: 1px solid #ccc;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     z-index: 1001;
     display: none; /* Hidden by default */
-    padding: 15px;
+    padding: 10px 15px;
+    max-height: 300px;
+    overflow-y: auto; /* Add scroll if content exceeds height */
 }
 
 .search-popup.active {
@@ -359,13 +361,13 @@ footer {
 
 .search-popup h3 {
     margin-top: 0;
-    font-size: 1.2rem;
-    text-align: center;
+    font-size: 1.1rem;
+    text-align: left;
     color: #333;
 }
 
 .search-popup div {
-    padding: 10px;
+    padding: 8px;
     cursor: pointer;
     font-size: 14px;
     color: #333;
@@ -375,6 +377,7 @@ footer {
     background-color: #f1f1f1;
 }
 
+/* Close Button in the Popup */
 .search-popup .close-btn {
     position: absolute;
     top: 10px;
@@ -384,6 +387,7 @@ footer {
 }
 
 /********************** END FOOTER ******************************/
+
 
 /*********************************HOME PAGE STYLE****************************************
 
