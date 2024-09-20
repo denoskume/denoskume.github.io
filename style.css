@@ -139,6 +139,7 @@ header {
     color: white;
     text-decoration: none;
     padding: 10px;
+    font-size: 18px; /*** rien avant */
     font-weight: bold;
     white-space: nowrap;  /* Prevents text wrapping */
 }
