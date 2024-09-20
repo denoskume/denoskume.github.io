@@ -110,7 +110,7 @@ header {
 }
 
 .logo {
-    margin-left: -45px;
+    margin-left: -40px;
     margin-right: 0px;
     height: 55px;
     max-width: 100px;
@@ -151,7 +151,7 @@ header {
 .nav-menu ul li a i.bi-house-fill {
     font-size: 1.5em;
     color: white;
-    margin-right: 5px;
+    margin-right: 2px;
 }
 .nav-menu ul li a i.bi-house-fill:hover {
     color: #ffc107; /* Highlight on hover */
@@ -198,6 +198,7 @@ header {
 
 /* Language Selector */
 .language-selector {
+    margin-right: -80px;
     margin-left: 5px;
     padding-left: 10px;
 }
