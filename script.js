@@ -90,3 +90,50 @@ if (hamburger) {
         event.stopPropagation(); // Prevents clicks on the hamburger from closing the sideNav
     });
 }
+
+// Search data for suggestions
+const searchData = [
+    { title: "UEFA Champions League Dashboard", page: "uefa", keywords: ["football", "UEFA", "dashboard", "analysis", "champions"] },
+    { title: "Netflix Data Analysis", page: "netflix", keywords: ["Netflix", "data analysis", "SQL", "Python"] },
+    { title: "IoT Embedded Systems", page: "iot", keywords: ["IoT", "embedded systems", "devices", "data collection"] },
+    { title: "AI-Powered Fraud Detection", page: "fraud", keywords: ["fraud detection", "AI", "machine learning"] },
+    { title: "Supply Chain Management Dashboard", page: "supply-chain", keywords: ["supply chain", "Power BI", "inventory", "dashboard"] },
+    { title: "AI-Based Predictive Maintenance", page: "predictive-maintenance", keywords: ["AI", "predictive maintenance", "machine learning"] }
+];
+
+// Function to show search suggestions
+function showSuggestions(value) {
+    const suggestionsBox = document.getElementById('search-suggestions');
+    suggestionsBox.innerHTML = ''; // Clear previous suggestions
+    if (value.length === 0) {
+        suggestionsBox.style.display = 'none'; // Hide suggestions when input is empty
+        return;
+    }
+
+    const results = searchData.filter(item =>
+        item.keywords.some(keyword => keyword.toLowerCase().includes(value.toLowerCase()))
+    );
+
+    if (results.length > 0) {
+        results.forEach(result => {
+            const suggestionDiv = document.createElement('div');
+            suggestionDiv.innerHTML = `<strong>${result.title}</strong>`;
+            suggestionDiv.onclick = function () {
+                loadContent(result.page); // Load the corresponding page dynamically
+                suggestionsBox.style.display = 'none'; // Hide suggestions once a result is clicked
+            };
+            suggestionsBox.appendChild(suggestionDiv);
+        });
+        suggestionsBox.style.display = 'block'; // Show the suggestions
+    } else {
+        suggestionsBox.style.display = 'none'; // Hide suggestions if no matches
+    }
+}
+
+// Add event listener for the search input
+const searchInput = document.querySelector('.search-bar input');
+if (searchInput) {
+    searchInput.addEventListener('input', function () {
+        showSuggestions(this.value);
+    });
+}
