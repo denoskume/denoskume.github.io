@@ -106,9 +106,9 @@ function showSuggestions(value) {
     const suggestionsBox = document.getElementById('search-suggestions');
     suggestionsBox.innerHTML = ''; // Clear previous suggestions
 
-    // Show all suggestions when no input, otherwise filter
+    // Show all suggestions when input is empty, or filter based on input
     const results = value.length === 0 
-        ? searchData 
+        ? searchData // Show all suggestions if no input
         : searchData.filter(item =>
             item.keywords.some(keyword => keyword.toLowerCase().includes(value.toLowerCase()))
         );
@@ -138,14 +138,14 @@ function clearSearchInput() {
     }
 }
 
-// Function to show suggestions popup on click or focus
+// Function to show suggestions popup on focus (whether or not there is input)
 const searchInput = document.querySelector('.search-bar input');
 if (searchInput) {
     searchInput.addEventListener('focus', function () {
-        showSuggestions(''); // Trigger showing suggestions on focus/click
+        showSuggestions(''); // Show all suggestions on focus/click
     });
     searchInput.addEventListener('input', function () {
-        showSuggestions(this.value); // Show suggestions as the user types
+        showSuggestions(this.value); // Show filtered suggestions as the user types
     });
 }
 
