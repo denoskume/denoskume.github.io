@@ -111,7 +111,7 @@ header {
 
 .logo {
     margin-left: 0;
-    margin-right: 25px;
+    margin-right: 45px;
     height: 55px;
     max-width: 100px;
     object-fit: contain; /* Ensures the logo fits well within the container */
