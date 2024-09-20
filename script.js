@@ -160,3 +160,62 @@ document.addEventListener('click', function (event) {
         }
     }
 });
+
+// Language Selector Data
+const languageData = {
+    en: {
+        home: "Home",
+        about: "About Me",
+        education: "Education",
+        experience: "Experience",
+        training: "Training",
+        certification: "Certification",
+        projects: "Projects",
+        contact: "Contact",
+    },
+    fr: {
+        home: "Accueil",
+        about: "À propos de moi",
+        education: "Éducation",
+        experience: "Expérience",
+        training: "Formation",
+        certification: "Certification",
+        projects: "Projets",
+        contact: "Contact",
+    },
+    es: {
+        home: "Inicio",
+        about: "Sobre mí",
+        education: "Educación",
+        experience: "Experiencia",
+        training: "Formación",
+        certification: "Certificación",
+        projects: "Proyectos",
+        contact: "Contacto",
+    }
+};
+
+// Function to update the page language dynamically
+function setLanguage(language) {
+    const langElements = document.querySelectorAll("[data-lang-key]");
+    langElements.forEach(element => {
+        const key = element.getAttribute("data-lang-key");
+        if (languageData[language][key]) {
+            element.textContent = languageData[language][key];
+        }
+    });
+}
+
+// Event Listener for language selection
+const languageSelector = document.getElementById("language-selector");
+if (languageSelector) {
+    languageSelector.addEventListener("change", function() {
+        const selectedLang = this.value;
+        setLanguage(selectedLang); // Update the page content based on the selected language
+    });
+}
+
+// Set default language to English
+window.addEventListener('load', function() {
+    setLanguage('en'); // Set English as the default language on page load
+});
