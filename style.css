@@ -889,14 +889,6 @@ footer {
     margin-bottom: 30px;
 }
 
-.profile-photo img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-}
-
 /* Page Numbers */
 .page-number {
     position: absolute;
@@ -904,80 +896,6 @@ footer {
     right: 20px;
     font-size: 0.9rem;
     color: #666;
-}
-
-/* Flexbox for Personal Information, Education, etc. */
-.cv-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-}
-
-/* Section Styling */
-h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-h3 {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-}
-
-.personal-details ul, .education-details ul, .experience-details ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.personal-details li, .education-details li, .experience-details li {
-    margin-bottom: 10px;
-}
-
-.personal-details a, .education-details a, .experience-details a {
-    color: #007bff;
-}
-
-.personal-details a:hover, .education-details a:hover, .experience-details a:hover {
-    text-decoration: underline;
-}
-
-/* Aligning Skills in Two Columns */
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.skill-item {
-    width: 48%; /* Two columns */
-    background-color: #f8f9fa;
-    padding: 15px;
-    text-align: center;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.skill-item h4 {
-    margin: 10px 0;
-    font-size: 1.2rem;
-}
-
-.skill-item i {
-    font-size: 2rem;
-    color: #007bff;
-    margin-bottom: 10px;
-}
-
-/* Certifications, Languages, and Hobbies in lists */
-.certifications ul, .languages ul, .hobbies ul {
-    padding-left: 0;
-}
-
-.certifications li, .languages li, .hobbies li {
-    margin: 10px 0;
-    font-size: 1.1rem;
 }
 
 /* Prev and Next Arrows */
