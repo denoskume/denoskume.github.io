@@ -20,6 +20,15 @@ function loadContent(page) {
         const content = document.getElementById("content");
         if (content) {
             content.innerHTML = this.responseText;
+
+            // Initialize the book effect when loading a page with the book
+            if (document.getElementById("book")) {
+                $("#book").turn({
+                    width: 800,
+                    height: 600,
+                    autoCenter: true
+                });
+            }
         }
     };
     xhttp.open("GET", `${page}.html`, true); // Load the corresponding HTML file dynamically
