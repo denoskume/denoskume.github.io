@@ -845,46 +845,67 @@ footer {
 
 /***************** END TRAINING STYLING *****************/
 
-/****************************** BOOK LAYOUT STYLING START ******************************/
+/****************************** ABOUT PAGE STYLING START ******************************/
 
-/* Book Container */
-.book-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+/* Container for the Book */
+.book {
     width: 100%;
-    height: 100vh;
-    padding: 30px;
-    gap: 30px;
+    height: 600px;
+    margin: 20px auto;
+    position: relative;
+    perspective: 1500px; /* Enables 3D perspective */
+    transition: all 0.5s ease;
 }
 
-/* Left and Right Pages */
-.book-page {
+/* Pages Styling */
+.page {
+    width: 50%; /* Left and right pages will take half the screen */
+    height: 100%;
+    float: left;
+    padding: 40px;
     background-color: #fff;
-    width: 50%;
-    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.6s ease;
+}
+
+/* Hover Effect for Book */
+.page:hover {
+    transform: rotateY(-10deg);
+}
+
+/* Flex container for CV sections */
+.cv-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* 3D Card Effect */
+.cv-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    overflow-y: auto;
-    height: 100%;
-    transition: transform 0.3s ease;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
 }
 
-/* Add 3D-like shadows and separation */
-.left-page {
-    transform-origin: left;
-    box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.2);
+/* When hovering over the card, slightly rotate it for a 3D effect */
+.cv-card:hover {
+    transform: rotateY(10deg) rotateX(5deg);
 }
 
-.right-page {
-    transform-origin: right;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Profile Info Styling */
+/* Profile Information */
 .profile-info {
     text-align: center;
-    margin-bottom: 20px;
 }
 
 .profile-photo img {
@@ -895,23 +916,124 @@ footer {
     margin-bottom: 15px;
 }
 
-/* Skill Set Styling */
+.profile-info h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    color: #777;
+    font-size: 1.2rem;
+}
+
+/* Personal Details Styling */
+.personal-details ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.personal-details li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.personal-details i {
+    margin-right: 10px;
+    color: #007bff; /* Icon color */
+}
+
+.personal-details a {
+    color: #007bff;
+}
+
+.personal-details a:hover {
+    text-decoration: underline;
+}
+
+/* Education, Experience, Skills Sections */
+h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.education, .experience, .skills, .certifications, .languages, .hobbies {
+    margin-bottom: 30px;
+}
+
+.education-details, .experience-details, .skill-set {
+    padding-left: 20px;
+    border-left: 3px solid #007bff;
+}
+
+.education-details p, .experience-details p {
+    margin: 5px 0;
+    color: #555;
+}
+
+ul {
+    padding-left: 20px;
+    list-style-type: disc;
+    color: #555;
+}
+
+/* Skills Section */
 .skill-set {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-/* Personal Info List */
-.personal-details ul,
-.skills ul {
+.skill-item {
+    width: 48%;
+    background-color: #f8f9fa;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill-item h4 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.skill-item i {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* Certifications */
+.certifications ul, .languages ul, .hobbies ul {
     padding-left: 0;
-    list-style-type: none;
 }
 
-/* 3D Hover Effect */
-.cv-card:hover {
-    transform: rotateY(10deg);
+.certifications li, .languages li, .hobbies li {
+    margin: 10px 0;
+    font-size: 1.1rem;
 }
 
-/****************************** BOOK LAYOUT STYLING END ******************************/
+/* Language Flags */
+.languages ul li {
+    display: flex;
+    align-items: center;
+}
+
+.languages img {
+    width: 25px;
+    height: 18px;
+    margin-right: 10px;
+}
+
+/****************************** ABOUT PAGE STYLING END ******************************/
