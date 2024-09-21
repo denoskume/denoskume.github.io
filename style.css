@@ -17,7 +17,7 @@ body {
     margin: 0 auto;  /* Center the container */
     padding: 0 15px; /* Add padding on both sides */
     box-sizing: border-box; /* Ensure padding doesn't affect width */
-    margin-top: 200px;
+    
 }
 
 /*******************************************GENERAL STYL END*************************************************/
@@ -849,7 +849,7 @@ footer {
 
 /* CV Container */
 .cv-container {
-    top: 140px;
+    margin-top: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
