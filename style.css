@@ -845,20 +845,18 @@ footer {
 }
 
 /***************** END TRAINING STYLING *****************/
-/****************************** ABOUT PAGE BOOK LAYOUT ******************************/
-/* Book Container */
-.book-container {
-    position: relative;
-    width: 80%;
-    margin: 0 auto;
-    height: 600px; /* Full height */
-    perspective: 1500px; /* 3D perspective for page turning */
-}
 
-/* Turn.js - Book styling */
-#book {
-    width: 100%;
-    height: 100%;
+
+/****************************** ABOUT PAGE BOOK LAYOUT ******************************/
+
+/* Book Container */
+.book {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height */
+    margin: 0 auto;
+    perspective: 1500px; /* 3D perspective for page turning */
 }
 
 /* Pages styling */
@@ -866,63 +864,13 @@ footer {
     width: 50%;
     height: 100%;
     background-color: white;
+    border: 1px solid #ccc;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     padding: 20px;
     overflow: hidden;
     position: relative;
     transition: transform 0.6s ease-in-out;
 }
-
-/* Left and Right Pages */
-.page-left {
-    background: #fafafa;
-}
-
-.page-right {
-    background: #f0f0f0;
-}
-
-/* Profile Information on top left page */
-.profile-info {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-/* Page Numbers */
-.page-number {
-    position: absolute;
-    bottom: 10px;
-    right: 20px;
-    font-size: 0.9rem;
-    color: #666;
-}
-
-/* Prev and Next Arrows */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    font-size: 3em;
-    transform: translateY(-50%);
-    z-index: 1000;
-    color: #007bff;
-    user-select: none;
-}
-
-.prev:hover, .next:hover {
-    color: #0056b3; /* Darken the blue color on hover */
-}
-
-.prev {
-    left: -50px;
-}
-
-.next {
-    right: -50px;
-}
-
-
-
 
 /* Left and Right Pages */
 .page-left {
