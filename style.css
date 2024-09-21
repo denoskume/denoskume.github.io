@@ -956,13 +956,12 @@ ul {
 
 /* Skills Section */
 .skill-set {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
 .skill-item {
-    width: 48%;
     background-color: #f8f9fa;
     padding: 15px;
     text-align: center;
