@@ -845,33 +845,43 @@ footer {
 
 /***************** END TRAINING STYLING *****************/
 
-/****************************** ABOUT PAGE STYLING START ******************************/
+/****************************** BOOK LAYOUT STYLING START ******************************/
 
-/* CV Container */
-.cv-container {
+/* Book Container */
+.book-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100%;
-    perspective: 1000px; /* Enables 3D effect */
-}
-
-.cv-card {
-    background-color: #fff;
+    align-items: flex-start;
+    width: 100%;
+    height: 100vh;
     padding: 30px;
-    width: 900px;
-    max-width: 100%;
+    gap: 30px;
+}
+
+/* Left and Right Pages */
+.book-page {
+    background-color: #fff;
+    width: 50%;
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    height: 100%;
+    transition: transform 0.3s ease;
 }
 
-.cv-card:hover {
-    transform: rotateY(10deg) rotateX(10deg);
+/* Add 3D-like shadows and separation */
+.left-page {
+    transform-origin: left;
+    box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Profile Information */
+.right-page {
+    transform-origin: right;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile Info Styling */
 .profile-info {
     text-align: center;
     margin-bottom: 20px;
@@ -885,131 +895,23 @@ footer {
     margin-bottom: 15px;
 }
 
-.profile-info h1 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 5px;
-}
-
-.profile-info p {
-    color: #777;
-    font-size: 1.2rem;
-}
-
-/* Personal Information */
-.personal-details ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.personal-details li {
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-}
-
-.personal-details i {
-    margin-right: 10px;
-    color: #007bff; /* Icon color */
-}
-
-.personal-details a {
-    color: #007bff;
-}
-
-.personal-details a:hover {
-    text-decoration: underline;
-}
-
-/* Education, Experience, Skills Sections */
-h2 {
-    font-size: 1.8rem;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-h3 {
-    font-size: 1.4rem;
-    color: #555;
-    margin-bottom: 10px;
-}
-
-.education, .experience, .skills, .certifications, .languages, .hobbies {
-    margin-bottom: 30px;
-}
-
-.education-details, .experience-details, .skill-set {
-    padding-left: 20px;
-    border-left: 3px solid #007bff;
-}
-
-.education-details p, .experience-details p {
-    margin: 5px 0;
-    color: #555;
-}
-
-ul {
-    padding-left: 20px;
-    list-style-type: disc;
-    color: #555;
-}
-
-/* Skills Section */
+/* Skill Set Styling */
 .skill-set {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.skill-item {
-    background-color: #f8f9fa;
-    padding: 15px;
-    text-align: center;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.skill-item h4 {
-    margin: 10px 0;
-    font-size: 1.2rem;
-}
-
-.skill-item i {
-    font-size: 2rem;
-    color: #007bff;
-    margin-bottom: 10px;
-}
-
-.certifications ul, .languages ul, .hobbies ul {
-    padding-left: 0;
-}
-
-.certifications li, .languages li, .hobbies li {
-    margin: 10px 0;
-    font-size: 1.1rem;
-}
-
-/* Language Flags */
-.languages ul li {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.languages img {
-    width: 25px;
-    height: 18px;
-    margin-right: 10px;
+/* Personal Info List */
+.personal-details ul,
+.skills ul {
+    padding-left: 0;
+    list-style-type: none;
 }
 
 /* 3D Hover Effect */
-.cv-card {
-    transition: transform 0.5s ease;
-    transform-style: preserve-3d;
-}
-
 .cv-card:hover {
-    transform: rotateY(10deg) rotateX(10deg);
+    transform: rotateY(10deg);
 }
 
-/****************************** ABOUT PAGE STYLING END ******************************/
+/****************************** BOOK LAYOUT STYLING END ******************************/
