@@ -228,3 +228,23 @@ if (languageSelector) {
 window.addEventListener('load', function() {
     setLanguage('en'); // Set English as the default language on page load
 });
+
+
+$(document).ready(function() {
+    // Initialize the book with turn.js
+    $("#book").turn({
+        width: 800,   // Adjust width as needed
+        height: 600,  // Adjust height as needed
+        autoCenter: true
+    });
+
+    // Turn page when clicking on left or right arrow
+    $('.prev').click(function() {
+        $('#book').turn('previous');
+    });
+
+    $('.next').click(function() {
+        $('#book').turn('next');
+    });
+});
+
