@@ -849,42 +849,63 @@ footer {
 /****************************** ABOUT PAGE BOOK LAYOUT ******************************/
 
 /* Book Container */
-.book {
+.book-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh; /* Full height */
-    margin: 0 auto;
     perspective: 1500px; /* 3D perspective for page turning */
+    width: 100%;
+    position: relative;
+    margin-top: 40px;
 }
 
-/* Pages styling */
+.book {
+    width: 80%; /* Adjust the book width */
+    height: 600px; /* Fixed height for the book */
+    display: flex;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+/* Page Layout */
 .page {
-    width: 50%;
+    width: 50%; /* 50% of the book width */
     height: 100%;
     background-color: white;
+    padding: 30px;
     border: 1px solid #ccc;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
     overflow: hidden;
-    position: relative;
-    transition: transform 0.6s ease-in-out;
 }
 
-/* Left and Right Pages */
 .page-left {
-    border-right: none;
+    left: 0;
+    border-right: 1px solid #ddd;
     transform-origin: right;
     background: #fafafa;
 }
 
 .page-right {
-    border-left: none;
+    right: 0;
+    border-left: 1px solid #ddd;
     transform-origin: left;
     background: #f0f0f0;
 }
 
-/* Profile Information on top left page */
+/* Hover 3D Effect */
+.book:hover .page-left {
+    transform: rotateY(-5deg);
+}
+
+.book:hover .page-right {
+    transform: rotateY(5deg);
+}
+
+/* Profile Information */
 .profile-info {
     text-align: center;
     margin-bottom: 30px;
@@ -898,34 +919,31 @@ footer {
     margin-bottom: 15px;
 }
 
-/* Book Animation */
-.book:hover .page-left {
-    transform: rotateY(-5deg);
-}
-
-.book:hover .page-right {
-    transform: rotateY(5deg);
-}
-
-/* Flexbox for Personal Information, Education, etc. */
-.cv-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-}
-
-/* Section Styling */
-h2 {
-    font-size: 1.5rem;
+.profile-info h1 {
+    font-size: 2rem;
+    color: #333;
     margin-bottom: 10px;
 }
 
-h3 {
+.profile-info p {
     font-size: 1.2rem;
-    margin-bottom: 5px;
+    color: #555;
 }
 
+/* Section Headers */
+h2 {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.3rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Content Lists */
 .personal-details ul, .education-details ul, .experience-details ul {
     list-style-type: none;
     padding: 0;
@@ -933,6 +951,8 @@ h3 {
 
 .personal-details li, .education-details li, .experience-details li {
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .personal-details a, .education-details a, .experience-details a {
@@ -941,6 +961,10 @@ h3 {
 
 .personal-details a:hover, .education-details a:hover, .experience-details a:hover {
     text-decoration: underline;
+}
+
+.personal-details i, .education-details i, .experience-details i {
+    margin-right: 10px;
 }
 
 /* Aligning Skills in Two Columns */
@@ -979,6 +1003,35 @@ h3 {
 .certifications li, .languages li, .hobbies li {
     margin: 10px 0;
     font-size: 1.1rem;
+}
+
+/* Page Turn Arrows */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    color: #007bff;
+    padding: 10px;
+}
+
+.prev {
+    left: -40px;
+}
+
+.next {
+    right: -40px;
+}
+
+/* Book Animation */
+@keyframes bookTurn {
+    from {
+        transform: rotateY(0);
+    }
+    to {
+        transform: rotateY(180deg);
+    }
 }
 
 /****************************** ABOUT PAGE BOOK LAYOUT END ******************************/
