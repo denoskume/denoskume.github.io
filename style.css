@@ -849,7 +849,8 @@ footer {
 /****************************** ABOUT PAGE BOOK LAYOUT ******************************/
 
 /* Book Container */
-.book {
+.book-container {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -860,11 +861,11 @@ footer {
 
 /* Pages styling */
 .page {
-    width: 50%;
-    height: 100%;
+    width: 400px;
+    height: 500px;
     background-color: white;
     border: 1px solid #ccc;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     overflow: hidden;
     position: relative;
@@ -884,6 +885,15 @@ footer {
     background: #f0f0f0;
 }
 
+/* Book Hover Animation */
+.book:hover .page-left {
+    transform: rotateY(-5deg);
+}
+
+.book:hover .page-right {
+    transform: rotateY(5deg);
+}
+
 /* Profile Information on top left page */
 .profile-info {
     text-align: center;
@@ -896,15 +906,6 @@ footer {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 15px;
-}
-
-/* Book Animation */
-.book:hover .page-left {
-    transform: rotateY(-5deg);
-}
-
-.book:hover .page-right {
-    transform: rotateY(5deg);
 }
 
 /* Flexbox for Personal Information, Education, etc. */
@@ -981,6 +982,7 @@ h3 {
     font-size: 1.1rem;
 }
 
+/* Pagination Arrow Styling */
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -1022,6 +1024,13 @@ h3 {
     line-height: 1.5;
 }
 
+/* Book Animation */
+.book:hover .page-left {
+    transform: rotateY(-5deg);
+}
 
+.book:hover .page-right {
+    transform: rotateY(5deg);
+}
 
 /****************************** ABOUT PAGE BOOK LAYOUT END ******************************/
