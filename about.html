@@ -1,7 +1,7 @@
-<!-- 3D CV Book Display -->
-<div class="book">
-    <!-- Page 1: Profile Info -->
-    <div class="page">
+<!-- Book Container -->
+<section class="book">
+    <!-- Left Page -->
+    <div class="page page-left">
         <div class="profile-info">
             <div class="profile-photo">
                 <img src="id_photo.jpg" alt="Denos Kume">
@@ -14,45 +14,43 @@
         <div class="personal-details">
             <h2>Personal Information</h2>
             <ul>
-                <li><i class="fas fa-envelope"></i> <strong>Email:</strong> denoskume@dedooles.com</li>
-                <li><i class="fas fa-phone-alt"></i> <strong>Phone:</strong> (+91) 810 5687 851</li>
-                <li><i class="bi bi-geo-alt"></i> <strong>Location:</strong> Bengaluru, India</li>
-                <li><i class="fas fa-globe"></i> <strong>Website:</strong> <a href="https://denoskume.github.io" target="_blank">denoskume.github.io</a></li>
-                <li><i class="fab fa-linkedin"></i> <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/denos-kume" target="_blank">linkedin.com/in/denos-kume</a></li>
-                <li><i class="fab fa-github"></i> <strong>GitHub:</strong> <a href="https://github.com/denoskume" target="_blank">github.com/denoskume</a></li>
+                <li><i class="fas fa-envelope"></i> Email: <a href="mailto:denoskume@dedooles.com">denoskume@dedooles.com</a></li>
+                <li><i class="fas fa-phone-alt"></i> Phone: (+91) 810 5687 851</li>
+                <li><i class="bi bi-geo-alt"></i> Location: Bengalore - 560077, India</li>
+                <li><i class="fas fa-globe"></i> Website: <a href="https://denoskume.github.io" target="_blank">denoskume.github.io</a></li>
+                <li><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://linkedin.com/in/denos-kume" target="_blank">linkedin.com/in/denos-kume</a></li>
+                <li><i class="fab fa-github"></i> GitHub: <a href="https://github.com/denoskume" target="_blank">github.com/denoskume</a></li>
             </ul>
         </div>
-    </div>
 
-    <!-- Page 2: Education -->
-    <div class="page">
+        <!-- Education -->
         <div class="education">
             <h2>Education</h2>
             <div class="education-details">
                 <h3><i class="fas fa-university"></i> BSc in Computer Science & Electronics</h3>
-                <p>Kristu Jayanti College | Graduated: 2024 | <a href="https://www.kristujayanti.edu.in/" target="_blank">kristujayanti.edu.in</a></p>
+                <p>Kristu Jayanti College | Graduated: 2024</p>
+                <a href="https://www.kristujayanti.edu.in/" target="_blank">kristujayanti.edu.in</a>
             </div>
         </div>
     </div>
 
-    <!-- Page 3: Experience -->
-    <div class="page">
+    <!-- Right Page -->
+    <div class="page page-right">
+        <!-- Experience -->
         <div class="experience">
             <h2>Experience</h2>
             <div class="experience-details">
                 <h3><i class="fas fa-briefcase"></i> Junior Data Analyst Intern</h3>
-                <p>Unified Mentor | September 2024 - Present | <a href="https://unifiedmentor.podia.com/" target="_blank">unifiedmentor.podia.com</a></p>
+                <p>Unified Mentor | September 2024 - Present</p>
                 <ul>
                     <li><i class="bx bx-analyse"></i> Analyzed business datasets using Python and SQL.</li>
-                    <li><i class="bx bx-bar-chart-alt"></i> Developed dashboards with Power BI for data-driven decisions.</li>
+                    <li><i class="bx bx-bar-chart-alt"></i> Developed dashboards with Power BI.</li>
                     <li><i class="fas fa-brain"></i> Collaborated with the AI team on predictive models.</li>
                 </ul>
             </div>
         </div>
-    </div>
 
-    <!-- Page 4: Skills -->
-    <div class="page">
+        <!-- Skills Section -->
         <div class="skills">
             <h2>Skills</h2>
             <div class="skill-set">
@@ -66,30 +64,7 @@
                     <h4>Embedded Systems</h4>
                     <p>IoT Development, Device Optimization, Data Collection, Performance Tuning</p>
                 </div>
-                <div class="skill-item">
-                    <i class="fas fa-robot"></i>
-                    <h4>AI & Machine Learning</h4>
-                    <p>Predictive Modeling, AI-Powered Solutions, Fraud Detection, Maintenance Analytics</p>
-                </div>
-                <div class="skill-item">
-                    <i class="devicon-python-plain colored"></i> <i class="devicon-javascript-plain colored"></i> <i class="devicon-sqlalchemy-plain colored"></i> <i class="devicon-cplusplus-plain colored"></i>
-                    <h4>Programming</h4>
-                    <p>Python, SQL, JavaScript, C++</p>
-                </div>
             </div>
         </div>
     </div>
-
-    <!-- Add more pages for Certifications, Languages, and Hobbies -->
-</div>
-
-<!-- Initialize Turn.js -->
-<script>
-    $(document).ready(function() {
-        $(".book").turn({
-            width: '100%',
-            height: 600,
-            autoCenter: true
-        });
-    });
-</script>
+</section>
