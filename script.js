@@ -230,14 +230,16 @@ window.addEventListener('load', function() {
     setLanguage('en'); // Set English as the default language on page load
 });
 
-// Initialize the book with turn.js when the document is ready
+// Book script
 $(document).ready(function() {
-    // Initialize the book with turn.js
+    // Initialize the book with turn.js for two-page layout
     $("#book").turn({
-        width: 800,   // Adjust width as needed
-        height: 600,  // Adjust height as needed
-        autoCenter: true,
-        display: 'double'  // Ensure it displays two pages at once
+        width: 800,   // Adjust width for two pages
+        height: 600,  // Adjust height for the book
+        autoCenter: true, 
+        display: 'double',  // Enable double-page display
+        elevation: 50,      // Optional: give a slight elevation to page turning effect
+        gradients: true     // Optional: use gradients for smoother turning effect
     });
 
     // Turn page when clicking on left or right arrow
