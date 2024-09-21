@@ -848,18 +848,13 @@ footer {
 /****************************** ABOUT PAGE BOOK LAYOUT ******************************/
 
 /* Book Container */
-.book-container {
-    position: relative;
-    width: 80%;
+.book {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height */
     margin: 0 auto;
-    height: 600px; /* Full height */
     perspective: 1500px; /* 3D perspective for page turning */
-}
-
-/* Turn.js - Book styling */
-#book {
-    width: 100%;
-    height: 100%;
 }
 
 /* Pages styling */
@@ -867,6 +862,7 @@ footer {
     width: 50%;
     height: 100%;
     background-color: white;
+    border: 1px solid #ccc;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     padding: 20px;
     overflow: hidden;
@@ -876,10 +872,14 @@ footer {
 
 /* Left and Right Pages */
 .page-left {
+    border-right: none;
+    transform-origin: right;
     background: #fafafa;
 }
 
 .page-right {
+    border-left: none;
+    transform-origin: left;
     background: #f0f0f0;
 }
 
@@ -889,38 +889,95 @@ footer {
     margin-bottom: 30px;
 }
 
-/* Page Numbers */
-.page-number {
-    position: absolute;
-    bottom: 10px;
-    right: 20px;
-    font-size: 0.9rem;
-    color: #666;
+.profile-photo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
 }
 
-/* Prev and Next Arrows */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    font-size: 3em;
-    transform: translateY(-50%);
-    z-index: 1000;
+/* Book Animation */
+.book:hover .page-left {
+    transform: rotateY(-5deg);
+}
+
+.book:hover .page-right {
+    transform: rotateY(5deg);
+}
+
+/* Flexbox for Personal Information, Education, etc. */
+.cv-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* Section Styling */
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.personal-details ul, .education-details ul, .experience-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.personal-details li, .education-details li, .experience-details li {
+    margin-bottom: 10px;
+}
+
+.personal-details a, .education-details a, .experience-details a {
     color: #007bff;
-    user-select: none;
 }
 
-.prev:hover, .next:hover {
-    color: #0056b3; /* Darken the blue color on hover */
+.personal-details a:hover, .education-details a:hover, .experience-details a:hover {
+    text-decoration: underline;
 }
 
-.prev {
-    left: -50px;
+/* Aligning Skills in Two Columns */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.next {
-    right: -50px;
+.skill-item {
+    width: 48%; /* Two columns */
+    background-color: #f8f9fa;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill-item h4 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.skill-item i {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* Certifications, Languages, and Hobbies in lists */
+.certifications ul, .languages ul, .hobbies ul {
+    padding-left: 0;
+}
+
+.certifications li, .languages li, .hobbies li {
+    margin: 10px 0;
+    font-size: 1.1rem;
 }
 
 /****************************** ABOUT PAGE BOOK LAYOUT END ******************************/
-
