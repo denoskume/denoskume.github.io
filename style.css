@@ -849,11 +849,10 @@ footer {
 
 /* CV Container */
 .cv-container {
-    margin-top: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     perspective: 1000px; /* Enables 3D effect */
 }
 
