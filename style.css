@@ -848,7 +848,7 @@ footer {
 /****************************** ABOUT PAGE BOOK LAYOUT ******************************/
 
 /* Book Container */
-.book {
+.book-container {
     display: flex;
     justify-content: center;
     align-items: center;
