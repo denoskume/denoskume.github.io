@@ -844,40 +844,30 @@ footer {
 
 /***************** END TRAINING STYLING *****************/
 
-/******************* ABOUT PAGE STYLE START *******************/
+/****************************** ABOUT PAGE STYLING START ******************************/
 
-/* 3D CV Container */
+/* CV Container */
 .cv-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px;
-    min-height: 100vh;
-    background-color: #f4f4f4;
+    height: 100vh;
+    perspective: 1000px; /* Enables 3D effect */
 }
 
-/* CV Card Style */
 .cv-card {
-    background-color: white;
-    width: 80%;
-    max-width: 1000px;
+    background-color: #fff;
     padding: 30px;
+    width: 700px;
+    max-width: 90%;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    perspective: 1000px;
-    transition: transform 0.6s ease-in-out;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.6s;
     transform-style: preserve-3d;
-    animation: rotateCard 4s infinite alternate;
 }
 
-/* Rotate the card to give a 3D effect */
-@keyframes rotateCard {
-    0% {
-        transform: rotateY(0);
-    }
-    100% {
-        transform: rotateY(10deg);
-    }
+.cv-card:hover {
+    transform: rotateY(10deg) rotateX(10deg);
 }
 
 /* Profile Information */
@@ -887,73 +877,83 @@ footer {
 }
 
 .profile-photo img {
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
     object-fit: cover;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-h1 {
-    font-size: 2.5rem;
-    margin-top: 15px;
-}
-
-p {
-    font-size: 1.2rem;
-    color: #333;
-}
-
-/* Personal Details */
-.personal-details ul {
-    list-style: none;
-    padding: 0;
-}
-
-.personal-details ul li {
-    font-size: 1rem;
-    margin: 5px 0;
-}
-
-.personal-details ul li a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.personal-details ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Education, Experience, Skills, Certifications, and Other Sections */
-h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    color: #007bff;
-}
-
-h3 {
-    font-size: 1.5rem;
-    margin-bottom: 5px;
-}
-
-.education, .experience, .skills, .certifications, .languages, .hobbies {
-    margin-top: 20px;
-}
-
-.education-details, .experience-details {
     margin-bottom: 15px;
 }
 
-ul {
+.profile-info h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.profile-info p {
+    color: #777;
+    font-size: 1.2rem;
+}
+
+/* Personal Information */
+.personal-details ul {
     list-style-type: none;
     padding: 0;
 }
 
-ul li {
+.personal-details li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.personal-details i {
+    margin-right: 10px;
+    color: #007bff; /* Icon color */
+}
+
+.personal-details a {
+    color: #007bff;
+}
+
+.personal-details a:hover {
+    text-decoration: underline;
+}
+
+/* Education, Experience, Skills Sections */
+h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: #555;
     margin-bottom: 10px;
 }
 
-/* Skill Set Section */
+.education, .experience, .skills, .certifications, .languages, .hobbies {
+    margin-bottom: 30px;
+}
+
+.education-details, .experience-details, .skill-set {
+    padding-left: 20px;
+    border-left: 3px solid #007bff;
+}
+
+.education-details p, .experience-details p {
+    margin: 5px 0;
+    color: #555;
+}
+
+ul {
+    padding-left: 20px;
+    list-style-type: disc;
+    color: #555;
+}
+
+/* Skills Section */
 .skill-set {
     display: flex;
     justify-content: space-between;
@@ -961,68 +961,55 @@ ul li {
 }
 
 .skill-item {
-    flex: 0 0 48%;
+    width: 48%;
     background-color: #f8f9fa;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
     text-align: center;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .skill-item h4 {
-    font-size: 1.4rem;
-    margin-top: 10px;
+    margin: 10px 0;
+    font-size: 1.2rem;
 }
 
-.skill-item p {
-    font-size: 1rem;
-    color: #555;
-}
-
-/* Logos in Skills Section */
-.skill-logo {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-}
-
-/* Company Logos in Experience Section */
-.company-logo {
-    width: 60px;
-    height: auto;
-    margin-right: 10px;
-    vertical-align: middle;
-}
-
-.edu-logo {
-    width: 50px;
-    height: auto;
-    margin-right: 10px;
-    vertical-align: middle;
-}
-
-/* Certification Logos */
-.cert-logo {
-    width: 40px;
-    height: auto;
-    margin-right: 10px;
-}
-
-/* Icon Styling */
-h2 i, h4 i {
+.skill-item i {
+    font-size: 2rem;
     color: #007bff;
-    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
-.certifications ul li {
+.certifications ul, .languages ul, .hobbies ul {
+    padding-left: 0;
+}
+
+.certifications li, .languages li, .hobbies li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+/* Language Flags */
+.languages ul li {
     display: flex;
     align-items: center;
 }
 
-/* Hover Effect for Card */
-.cv-card:hover {
-    transform: rotateY(0);
+.languages img {
+    width: 25px;
+    height: 18px;
+    margin-right: 10px;
 }
 
-/******************* ABOUT PAGE STYLE END *******************/
+/* 3D Hover Effect */
+.cv-card {
+    transition: transform 0.5s ease;
+    transform-style: preserve-3d;
+}
+
+.cv-card:hover {
+    transform: rotateY(10deg) rotateX(10deg);
+}
+
+/****************************** ABOUT PAGE STYLING END ******************************/
