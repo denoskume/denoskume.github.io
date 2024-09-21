@@ -24,9 +24,10 @@ function loadContent(page) {
             // Initialize the book effect when loading a page with the book
             if (document.getElementById("book")) {
                 $("#book").turn({
-                    width: 800,
-                    height: 600,
-                    autoCenter: true
+                    width: 800,   // Adjust width as needed for two pages
+                    height: 600,  // Adjust height as needed
+                    autoCenter: true,
+                    display: 'double' // Ensure it displays two pages at once
                 });
             }
         }
@@ -229,13 +230,14 @@ window.addEventListener('load', function() {
     setLanguage('en'); // Set English as the default language on page load
 });
 
-
+// Initialize the book with turn.js when the document is ready
 $(document).ready(function() {
     // Initialize the book with turn.js
     $("#book").turn({
         width: 800,   // Adjust width as needed
         height: 600,  // Adjust height as needed
-        autoCenter: true
+        autoCenter: true,
+        display: 'double'  // Ensure it displays two pages at once
     });
 
     // Turn page when clicking on left or right arrow
@@ -247,4 +249,3 @@ $(document).ready(function() {
         $('#book').turn('next');
     });
 });
-
