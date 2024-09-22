@@ -228,3 +228,48 @@ if (languageSelector) {
 window.addEventListener('load', function() {
     setLanguage('en'); // Set English as the default language on page load
 });
+
+// CERTIFICATES SECTION    
+
+document.getElementById('certificateForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Retrieve form data
+    const title = document.getElementById('certificate-title').value;
+    const provider = document.getElementById('certificate-provider').value;
+    const issueDate = document.getElementById('certificate-date').value;
+    const credentialID = document.getElementById('credential-id').value;
+    const certificateLink = document.getElementById('certificate-link').value;
+    const certificateImage = document.getElementById('certificate-image').files[0];
+
+    // Create a new certificate item
+    const certificateItem = document.createElement('div');
+    certificateItem.classList.add('certificate-item');
+
+    // Add certificate details
+    certificateItem.innerHTML = `
+        <h3>${title}</h3>
+        <p><strong>Provider:</strong> ${provider}</p>
+        <p><strong>Issued:</strong> ${issueDate}</p>
+        <p><strong>Credential ID:</strong> ${credentialID}</p>
+        <a href="${certificateLink}" target="_blank" class="view-credential">Show credential</a>
+    `;
+
+    // Handle image upload if available
+    if (certificateImage) {
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            const imgElement = document.createElement('img');
+            imgElement.src = event.target.result;
+            certificateItem.appendChild(imgElement);
+        };
+        reader.readAsDataURL(certificateImage);
+    }
+
+    // Append certificate to the list
+    document.getElementById('certificate-list').appendChild(certificateItem);
+
+    // Clear the form after submission
+    document.getElementById('certificateForm').reset();
+});
+
