@@ -983,3 +983,70 @@ h3 {
 }
 
 /****************************** ABOUT PAGE BOOK LAYOUT END ******************************/
+
+/************************ CERTIFICATES PAGE STYLE STARTS******************************/
+
+<!-- Styles -->
+<style>
+    .certificate-container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+    }
+
+    .certificate-item {
+        background: #f9f9f9;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+
+    .certificate-item h3 {
+        font-size: 1.4rem;
+        margin-bottom: 8px;
+    }
+
+    .certificate-item p {
+        margin: 5px 0;
+    }
+
+    .certificate-item img {
+        max-width: 200px;
+        height: auto;
+        display: block;
+        margin-top: 10px;
+    }
+
+    .view-credential {
+        background-color: #007bff;
+        color: #fff;
+        padding: 8px 12px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .view-credential:hover {
+        background-color: #0056b3;
+    }
+</style>
+/******************** END CERTIFICATES PAGE STYLE ****************************/
