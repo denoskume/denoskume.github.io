@@ -231,22 +231,45 @@ window.addEventListener('load', function() {
 
 // CERTIFICATES SECTION    
 
-document.getElementById('certificateForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
+    loadCertificates();
 
-    // Retrieve form data
-    const title = document.getElementById('certificate-title').value;
-    const provider = document.getElementById('certificate-provider').value;
-    const issueDate = document.getElementById('certificate-date').value;
-    const credentialID = document.getElementById('credential-id').value;
-    const certificateLink = document.getElementById('certificate-link').value;
-    const certificateImage = document.getElementById('certificate-image').files[0];
+    // Handle form submission
+    document.getElementById('certificateForm').addEventListener('submit', function(event) {
+        event.preventDefault();
 
-    // Create a new certificate item
+        // Retrieve form data
+        const title = document.getElementById('certificate-title').value;
+        const provider = document.getElementById('certificate-provider').value;
+        const issueDate = document.getElementById('certificate-date').value;
+        const credentialID = document.getElementById('credential-id').value;
+        const certificateLink = document.getElementById('certificate-link').value;
+        const certificateImage = document.getElementById('certificate-image').files[0];
+
+        // Handle image upload and store it as Base64
+        if (certificateImage) {
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const imageBase64 = event.target.result;
+                addCertificate(title, provider, issueDate, credentialID, certificateLink, imageBase64);
+                saveCertificate(title, provider, issueDate, credentialID, certificateLink, imageBase64);
+            };
+            reader.readAsDataURL(certificateImage);
+        } else {
+            addCertificate(title, provider, issueDate, credentialID, certificateLink, null);
+            saveCertificate(title, provider, issueDate, credentialID, certificateLink, null);
+        }
+
+        // Reset the form
+        document.getElementById('certificateForm').reset();
+    });
+});
+
+// Function to add certificate to the page
+function addCertificate(title, provider, issueDate, credentialID, certificateLink, imageBase64) {
     const certificateItem = document.createElement('div');
     certificateItem.classList.add('certificate-item');
 
-    // Add certificate details
     certificateItem.innerHTML = `
         <h3>${title}</h3>
         <p><strong>Provider:</strong> ${provider}</p>
@@ -255,21 +278,38 @@ document.getElementById('certificateForm').addEventListener('submit', function(e
         <a href="${certificateLink}" target="_blank" class="view-credential">Show credential</a>
     `;
 
-    // Handle image upload if available
-    if (certificateImage) {
-        const reader = new FileReader();
-        reader.onload = function(event) {
-            const imgElement = document.createElement('img');
-            imgElement.src = event.target.result;
-            certificateItem.appendChild(imgElement);
-        };
-        reader.readAsDataURL(certificateImage);
+    // Display the image if provided
+    if (imageBase64) {
+        const imgElement = document.createElement('img');
+        imgElement.src = imageBase64;
+        certificateItem.appendChild(imgElement);
     }
 
-    // Append certificate to the list
+    // Append to the certificate list
     document.getElementById('certificate-list').appendChild(certificateItem);
+}
 
-    // Clear the form after submission
-    document.getElementById('certificateForm').reset();
-});
+// Function to save certificate to local storage
+function saveCertificate(title, provider, issueDate, credentialID, certificateLink, imageBase64) {
+    const certificate = {
+        title: title,
+        provider: provider,
+        issueDate: issueDate,
+        credentialID: credentialID,
+        certificateLink: certificateLink,
+        imageBase64: imageBase64
+    };
 
+    let certificates = JSON.parse(localStorage.getItem('certificates')) || [];
+    certificates.push(certificate);
+    localStorage.setItem('certificates', JSON.stringify(certificates));
+}
+
+// Function to load certificates from local storage
+function loadCertificates() {
+    const certificates = JSON.parse(localStorage.getItem('certificates')) || [];
+
+    certificates.forEach(cert => {
+        addCertificate(cert.title, cert.provider, cert.issueDate, cert.credentialID, cert.certificateLink, cert.imageBase64);
+    });
+}
