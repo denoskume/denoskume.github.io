@@ -986,8 +986,7 @@ h3 {
 
 /************************ CERTIFICATES PAGE STYLE STARTS******************************/
 
-<!-- Styles -->
-<style>
+
     .certificate-container {
         width: 80%;
         margin: 0 auto;
@@ -1048,5 +1047,5 @@ h3 {
     .view-credential:hover {
         background-color: #0056b3;
     }
-</style>
+
 /******************** END CERTIFICATES PAGE STYLE ****************************/
