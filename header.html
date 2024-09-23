@@ -16,15 +16,15 @@
             <nav class="nav-menu">
                 <ul>
                     <li><a href="#" onclick="loadContent('home')"><i class="bi bi-house-fill"></i></a></li>
-                    <li><a href="#" onclick="loadContent('about')" data-lang-key="about">About Me</a></li>
-                    <li><a href="#" onclick="loadContent('education')" data-lang-key="education">Education</a></li>
-                    <li><a href="#" onclick="loadContent('experience')" data-lang-key="experience">Experience</a></li>
-                    <li><a href="#" onclick="loadContent('training')" data-lang-key="training">Training</a></li>
-                    <li><a href="#" onclick="loadContent('certification')" data-lang-key="certification">Certification</a></li>
-                    <li><a href="#" onclick="loadContent('projects')" data-lang-key="projects">Projects</a></li>
-                    <li><a href="#" onclick="loadContent('contact')" data-lang-key="contact">Contact</a></li>
+                    <li><a href="#" onclick="loadContent('about')" data-lang-key-index="about">About Me</a></li>
+                    <li><a href="#" onclick="loadContent('education')" data-lang-key-index="education">Education</a></li>
+                    <li><a href="#" onclick="loadContent('experience')" data-lang-key-index="experience">Experience</a></li>
+                    <li><a href="#" onclick="loadContent('training')" data-lang-key-index="training">Training</a></li>
+                    <li><a href="#" onclick="loadContent('certification')" data-lang-key-index="certification">Certification</a></li>
+                    <li><a href="#" onclick="loadContent('projects')" data-lang-key-index="projects">Projects</a></li>
+                    <li><a href="#" onclick="loadContent('contact')" data-lang-key-index="contact">Contact</a></li>
                     <li class="dropdown">
-                        <a href="#" data-lang-key="social_media">Social Media &#9662;</a>
+                        <a href="#" data-lang-key-index="social_media">Social Media &#9662;</a>
                         <div class="dropdown-content">
                             <a href="https://www.linkedin.com/in/denos-kume" target="_blank"><i class="fab fa-linkedin"></i></a>
                             <a href="https://github.com/denoskume" target="_blank"><i class="fab fa-github"></i></a>
@@ -37,14 +37,13 @@
 
             <!-- Language Selector -->
             <div class="language-selector">
-                <select id="language-switcher" onchange="switchLanguage(this.value)">
+                <select id="language-switcher">
                     <option value="en">EN</option>
                     <option value="fr">FR</option>
                     <option value="es">ES</option>
-                </select>
+                </select>                
             </div>
             
         </div>
     </header>
 </section>
-
